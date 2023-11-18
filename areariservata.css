@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --headerBgColor: rgb(255,255,255);
+    --headerTxtColor: rgb(0,0,0);
+    --linkColor: rgb(0,0,0);
+    --visitedLinkColor: #2868FF;
+    --bodyBgColor: rgb(255,255,255);
+    --font-body-family: "Roboto Condensed", sans-serif;
+}
+
+html {
+    font-size: 100%;
+    font-family: var(--font-body-family);
+    line-height: 1.5em;
+    margin: auto;
+    background-color: var(--bodyBgColor);
+}
+
+/********************************************
+****************** HEADER *******************
+********************************************/
+
+header {
+    padding: 0.5em 0;
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+    border-bottom: 2px solid var(--headerTxtColor);
+}
+
+#headercontainer {
+    max-width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#headercontainer h1 { 
+    width: 7%;
+    align-self: center;
+    margin-right: 1%;
+    font-size: 3em;
+    line-height: 1.5em;
+    text-indent: -999em;
+    background-image: url('./images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#menu {
+    flex-grow: 2;
+    align-self: center;
+    text-align: left;
+}
+
+#menu ul {
+    padding: 1em;
+    margin: auto;
+    list-style-type: none;
+}
+
+#menu ul li {
+    display: inline-block;
+    padding: 0 1.5em;
+}
+
+#menu ul li:last-child {
+    float: right;
+}
+
+#menu a:link {
+    color: var(--linkColor);
+}
+
+#menu a:visited {
+    color: var(--visitedLinkColor);
+}
+
+/********************************************
+******************* BODY ********************
+********************************************/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/********************************************
+****************** FOOTER *******************
+********************************************/
+
+footer {
+    background-color: var(--footerBgColor);
+    color: var(--footerTxtColor);
+    padding: 1em;
+    margin-top: auto;
+    border-top: 2px solid var(--headerTxtColor);
+    text-align: center;
+}
