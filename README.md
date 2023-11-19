@@ -9,3 +9,4 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
 ------- DOMANDE VARIE:
 1) Va bene la nav dentro l'header?
 2) Ho dovuto aggiungere un div per contenere l'header, potrebbe andare bene?
+3) Tasto modifica va bene? Se con lo screen reader vai ai vari link non sentiresti solo "modifica modifica modifica ...."

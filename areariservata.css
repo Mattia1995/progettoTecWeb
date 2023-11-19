@@ -8,7 +8,10 @@
     --headerTxtColor: rgb(0,0,0);
     --linkColor: rgb(0,0,0);
     --visitedLinkColor: #2868FF;
+    --linkHoverColor: rgb(255,255,255);
+    --flagColor: #2868FF;
     --bodyBgColor: rgb(255,255,255);
+    --txtColor: rgb(0,0,0);
     --font-body-family: "Roboto Condensed", sans-serif;
 }
 
@@ -28,17 +31,17 @@ header {
     padding: 0.5em 0;
     background-color: var(--headerBgColor);
     color: var(--headerTxtColor);
-    border-bottom: 2px solid var(--headerTxtColor);
+    border-bottom: 2px solid var(--flagColor);
 }
 
-#headercontainer {
+#header-container {
     max-width: 1024px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
 }
 
-#headercontainer h1 { 
+#header-container h1 { 
     width: 7%;
     align-self: center;
     margin-right: 1%;
@@ -90,6 +93,73 @@ body {
 }
 
 /********************************************
+******************* MAIN ********************
+********************************************/
+
+main {
+    color: var(--txtColor);
+    margin: 1.5em auto;
+    max-width: 1024px;
+}
+
+main h2 {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/********************************************
+************** AREA RISERVATA ***************
+********************************************/
+#lista-articoli {
+    list-style-type: none;
+}
+
+#lista-articoli li {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+#lista-articoli li img {
+    width: 13%;
+    margin-right: 2%;
+    align-self: center;
+}
+
+#lista-articoli li dl {
+    width: 73%;
+    margin-right: 2%;
+    align-self: center;
+}
+
+#lista-articoli li dl dt {
+    font-weight: bold;
+    float: left;
+    padding-right: 0.5em;
+}
+
+#lista-articoli li a {
+    width: 9%;
+    color: var(--linkColor);
+    padding: 0.6em 0;
+    border: 2px solid var(--flagColor);
+    text-align: center;
+    align-self: center;
+    text-decoration: none;
+    transition: .2s;
+}
+
+#lista-articoli li a:hover {
+    background-color: var(--flagColor);
+    color: var(--linkHoverColor);
+}
+
+#lista-articoli li a span{
+    display: inline-block;
+    text-indent: -999em;
+}
+
+/********************************************
 ****************** FOOTER *******************
 ********************************************/
 
@@ -98,6 +168,6 @@ footer {
     color: var(--footerTxtColor);
     padding: 1em;
     margin-top: auto;
-    border-top: 2px solid var(--headerTxtColor);
+    border-top: 2px solid var(--flagColor);
     text-align: center;
 }
