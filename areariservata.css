@@ -23,6 +23,12 @@ html {
     background-color: var(--bodyBgColor);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /********************************************
 ****************** HEADER *******************
 ********************************************/
@@ -84,27 +90,30 @@ header {
 }
 
 /********************************************
-******************* BODY ********************
-********************************************/
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/********************************************
 ******************* MAIN ********************
 ********************************************/
 
 main {
     color: var(--txtColor);
-    margin: 1.5em auto;
+    margin: 1em auto;
     max-width: 1024px;
+}
+
+main #breadcrumb {
+    margin: 0.5em 0 1.5em 0;
 }
 
 main h2 {
     margin-bottom: 1em;
     text-align: center;
+}
+
+main a {
+    color: var(--linkColor);
+}
+
+main a:visited {
+    color: var(--visitedLinkColor);
 }
 
 /********************************************
@@ -115,7 +124,7 @@ main h2 {
     margin-bottom: 3em;
 }
 
-#area-riservata a {
+#area-riservata #crea-articolo, #area-riservata ul li a{
     padding: 0.35em 0;
     border: 2px solid var(--linkColor);
     color: var(--linkColor);
@@ -123,22 +132,22 @@ main h2 {
     transition: .2s;
 }
 
-#area-riservata a:hover {
+#area-riservata #crea-articolo:hover, #area-riservata ul li a:hover {
     background-color: var(--linkColor);
     color: var(--linkHoverColor);
 }
 
-#area-riservata a:visited {
+#area-riservata #crea-articolo:visited, #area-riservata ul li a:visited {
     color: var(--flagColor);
     border-color: var(--flagColor);
 }
 
-#area-riservata a:visited:hover {
+#area-riservata #crea-articolo:visited:hover, #area-riservata ul li a:visited:hover {
     color: var(--linkHoverColor);
     background-color: var(--flagColor);
 }
 
-#area-riservata > a {
+#area-riservata #crea-articolo {
     width: 15%;
     float: right;
     text-decoration: none;
