@@ -111,25 +111,37 @@ main h2 {
 ************** AREA RISERVATA ***************
 ********************************************/
 #lista-articoli {
+    display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
 }
 
 #lista-articoli li {
+    width: 31%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
+    padding-right: 1em;
+}
+
+#lista-articoli li:nth-child(2n) {
+    padding: 0 1em;
+}
+
+#lista-articoli li:nth-child(3n) {
+    padding-right: 0;
+    padding-left: 1em;
 }
 
 #lista-articoli li img {
-    width: 13%;
-    margin-right: 2%;
+    width: 40%;
     align-self: center;
 }
 
 #lista-articoli li dl {
-    width: 73%;
-    margin-right: 2%;
-    align-self: center;
+    width: 100%;
+    flex-grow: 2;
 }
 
 #lista-articoli li dl dt {
@@ -139,19 +151,31 @@ main h2 {
 }
 
 #lista-articoli li a {
-    width: 9%;
-    color: var(--linkColor);
+    width: 98%;
+    display: block;
+    align-self: flex-end;
     padding: 0.6em 0;
-    border: 2px solid var(--flagColor);
+    margin-top: 1.5em;
+    border: 2px solid var(--linkColor);
+    color: var(--linkColor);
     text-align: center;
-    align-self: center;
     text-decoration: none;
     transition: .2s;
 }
 
 #lista-articoli li a:hover {
-    background-color: var(--flagColor);
+    background-color: var(--linkColor);
     color: var(--linkHoverColor);
+}
+
+#lista-articoli li a:visited {
+    color: var(--flagColor);
+    border-color: var(--flagColor);
+}
+
+#lista-articoli li a:visited:hover {
+    color: var(--linkHoverColor);
+    background-color: var(--flagColor);
 }
 
 #lista-articoli li a span{
