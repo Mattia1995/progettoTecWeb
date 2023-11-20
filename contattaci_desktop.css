@@ -1,0 +1,50 @@
+/*GLOBAL*/
+
+header h1 {}
+
+#breadcrumb {}
+
+.aiuti-navigazione {
+	visibility: hidden;
+}
+
+/*CONTATTACI*/
+
+.container {
+	width: 80%;
+    display: block;
+    margin: auto;
+	text-align: center;
+    /*border: 10px solid saddlebrown;*/
+}
+
+.container > h2  {
+    margin: auto;
+    width: 30em;
+}
+
+.container > p > span {
+	display: block;
+	margin-top: 1em;
+}
+
+#contactsForm {
+	display: block;
+    margin: auto;
+    width: 30em;
+    text-align: left;
+}
+
+#contactsForm > label, #contactsForm > input[type=submit] {
+	display: block;
+	margin-top: 2em;
+}
+
+#contactsForm > input[type=text], #contactsForm > input[type=tel], #contactsForm > textarea {
+	width: 90%;
+}
+
+#contactsForm > input[type=submit] {
+	margin-left: auto;
+	margin-right: auto;
+}

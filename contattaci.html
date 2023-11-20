@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Contattaci - [nome_store]</title>
+		
+		<meta name="description" content="Contatta [nome_store] per informazioni sugli strumenti musicali in vendita, o per richiedere un appuntamento in negozio">
+		<meta name="keyword" content="chitarre, bassi, pianoforti, strumenti musicali, negozio, Padova, telefono, email, richiesta, contatti">
+		<meta name="author" content="[nome_gruppo]">
+		
+		<link rel="stylesheet" type="text/css" href="contattaci_desktop.css" media="screen and (min-width:601px)">
+		<link rel="stylesheet" type="text/css" href="contattaci_mobile.css" media="screen and (max-width:600px)">
+		<link rel="stylesheet" type="text/css" href="contattaci_print.css" media="print">
+	</head>
+	
+	<body>
+	
+		<header>
+			<h1>CONTATTACI</h1>
+		</header>
+		
+		<nav id="breadcrumb">
+			<p>Ti trovi in: <a href="index.html"><span lang="en">Home</span></a> &gt; &gt; Contattaci</p>
+		</nav>
+		
+		<a class="aiuti-navigazione" href="#contenuto">Salta il menù e vai al contenuto</a>
+		
+		<nav id="menu"><!-- todo --></nav>
+		
+		<main id="contenuto">
+			
+			<div class="container">
+				<h2>I nostri contatti</h2>
+				<p>
+					<span>Telefono: 0423 4545435</span>
+					<span>Email: <a href="mailto:[nome_store]@email.it">[nome_store]@email.it</a></span>
+				</p>
+			</div>
+		
+			<div class="container">
+				<h2>Compila il seguente modulo per richiedere informazioni</h2>
+				
+				<form id="contactsForm" method="post" action="contattaci.php">
+					<!--<messaggiFormContattaci />--><!-- todo -->
+						
+					<label for="nome">Nome:</label>
+					<input type="text" name="nome" id="nome" placeholder="Mario Rossi">
+					
+					<label for="numero">Numero di telefono o cellulare:</label>
+					<input type="tel" name="numero" id="numero" placeholder="+39 346 123 4567">
+					
+					<label for="messaggio">La tua richiesta:</label>
+					<textarea id="messaggio" name="messaggio" placeholder="Buongiorno, vi chiedo un'informazione su..." rows="6"></textarea>
+					
+					<input type="submit" id="submit" name="submit" value="Invia richiesta">
+					
+				</form>
+			</div>
+		
+		</main>
+		
+		<a class="aiuti-navigazione" href="#contenuto">Torna su al contenuto</a>
+
+		<footer><!-- todo --></footer>
+
+	</body>
+	
+</html>
