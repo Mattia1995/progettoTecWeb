@@ -203,12 +203,6 @@ main a:visited {
     text-decoration: none;
 }
 
-#area-riservata ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-}
-
 #area-riservata li {
     width: 100%;
     display: flex;
