@@ -6,52 +6,69 @@
 		<title>Contattaci - [nome_store]</title>
 		
 		<meta name="description" content="Contatta [nome_store] per informazioni sugli strumenti musicali in vendita, o per richiedere un appuntamento in negozio">
-		<meta name="keyword" content="chitarre, bassi, pianoforti, strumenti musicali, negozio, Padova, telefono, email, richiesta, contatti">
+		<meta name="keyword" content="strumenti musicali negozio Padova, [nome_store] contatti">
 		<meta name="author" content="[nome_gruppo]">
 		
-		<link rel="stylesheet" type="text/css" href="contattaci_desktop.css" media="screen and (min-width:601px)">
-		<link rel="stylesheet" type="text/css" href="contattaci_mobile.css" media="screen and (max-width:600px)">
+        <link rel="stylesheet" media="screen" href="style.css">
+		
+		<!--<link rel="stylesheet" type="text/css" href="contattaci_desktop.css" media="screen and (min-width:601px)">
+		<link rel="stylesheet" type="text/css" href="contattaci_mobile.css" media="screen and (max-width:600px)">-->
 		<link rel="stylesheet" type="text/css" href="contattaci_print.css" media="print">
 	</head>
 	
 	<body>
 	
 		<header>
-			<h1>CONTATTACI</h1>
+            <div id="header-container">
+			
+                <h1>CONTATTACI</h1>
+				<a class="aiuti-navigazione" href="#contenuto">Salta il menù e vai al contenuto</a>
+				
+                <nav id="menu">
+                    <ul>
+                        <li lang="en"><a href="home.html">Home</a></li>
+                        <li><a href="chisiamo.html">Chi siamo</a></li>
+                        <li><a href="vetrina.html">Vetrina</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li>Area riservata</li>
+                    </ul>
+                </nav>
+            </div>
 		</header>
 		
-		<nav id="breadcrumb">
-			<p>Ti trovi in: <a href="index.html"><span lang="en">Home</span></a> &gt; &gt; Contattaci</p>
-		</nav>
-		
-		<a class="aiuti-navigazione" href="#contenuto">Salta il menù e vai al contenuto</a>
-		
-		<nav id="menu"><!-- todo --></nav>
-		
 		<main id="contenuto">
+		
+			<nav id="breadcrumb">
+                <p>Ti trovi in: <a href="home.html" lang="en">Home</a> &gt;&gt; Contattaci</p>
+            </nav>
 			
 			<div class="container">
 				<h2>I nostri contatti</h2>
-				<p>
-					<span>Telefono: 0423 4545435</span>
-					<span>Email: <a href="mailto:[nome_store]@email.it">[nome_store]@email.it</a></span>
-				</p>
+				<dl>
+					<dt>Telefono</dt>
+					<dd>0423 4545435</dd>
+					<dt><span lang="en">E-mail</span></dt>
+					<dd><a href="mailto:[nome_store]@email.it">[nome_store]@email.it</a></dd>
+				</dl>
 			</div>
 		
 			<div class="container">
 				<h2>Compila il seguente modulo per richiedere informazioni</h2>
 				
-				<form id="contactsForm" method="post" action="contattaci.php">
+				<form id="contactsForm" method="post" action="contattaci.php" autocomplete="on">
 					<!--<messaggiFormContattaci />--><!-- todo -->
 						
-					<label for="nome">Nome:</label>
-					<input type="text" name="nome" id="nome" placeholder="Mario Rossi">
+					<label id="labelNome" for="nome">Nome</label>
+					<input type="text" name="nome" id="nome" aria-labelledby="labelNome" aria-describedby="descNome" placeholder="Mario Rossi" required>
+					<span id="descNome" class="aiuti-navigazione">Inserisci qui il tuo nome</span>
 					
-					<label for="numero">Numero di telefono o cellulare:</label>
-					<input type="tel" name="numero" id="numero" placeholder="+39 346 123 4567">
+					<label id="labelEmail" for="email"><span lang="en">E-mail</span></label>
+					<input type="email" name="email" id="email" aria-labelledby="labelEmail" aria-describedby="descEmail" placeholder="mario@esempio.it" required>
+					<span id="descEmail" class="aiuti-navigazione">Inserisci qui la tua <span lang="en">e-mail</span></span>
 					
-					<label for="messaggio">La tua richiesta:</label>
-					<textarea id="messaggio" name="messaggio" placeholder="Buongiorno, vi chiedo un'informazione su..." rows="6"></textarea>
+					<label id="labelMessaggio" for="messaggio">Messaggio</label>
+					<textarea name="messaggio" id="messaggio" aria-labelledby="labelMessaggio" aria-describedby="descMessaggio" placeholder="Digita il tuo messaggio qui" rows="6" autocomplete="off" required></textarea>
+					<span id="descMessaggio" class="aiuti-navigazione">Inserisci qui la tua richiesta</span>
 					
 					<input type="submit" id="submit" name="submit" value="Invia richiesta">
 					
@@ -62,7 +79,9 @@
 		
 		<a class="aiuti-navigazione" href="#contenuto">Torna su al contenuto</a>
 
-		<footer><!-- todo --></footer>
+		<footer>
+            <p>[nome_gruppo] - <span lang="en">All rights reserved</span></p>
+        </footer>
 
 	</body>
 	
