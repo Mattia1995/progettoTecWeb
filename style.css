@@ -119,6 +119,53 @@ main a:visited {
 }
 
 /********************************************
+****************** LOGIN ********************
+********************************************/
+#accedi-area-riservata {
+    width: 1024px;
+}
+
+#login-form {
+    width: 40%;
+    margin: auto;
+    margin-top: 5em;
+    padding: 3em;
+    -webkit-box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
+    -moz-box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
+    box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
+}
+
+#login-form form {
+    margin-top: 2em;
+    text-align: center;
+}
+
+#login-form form fieldset {
+    border: none;
+}
+
+#login-form form input {
+    display: block;
+    margin: 0.8em auto;
+    margin-bottom: 1em;
+    padding: 0.4em 0.2em;
+}
+
+#login-form form input[type="submit"] {
+    padding: 0.6em 3em;
+    margin-top: 2em;
+    border: 2px solid var(--linkColor);
+    color: var(--linkColor);
+    background-color: var(--bodyBgColor);
+    transition: .2s;
+}
+
+#login-form form input[type="submit"]:hover {
+    background-color: var(--linkColor);
+    color: var(--linkHoverColor);
+}
+
+/********************************************
 ************** AREA RISERVATA ***************
 ********************************************/
 #area-riservata h2 {
