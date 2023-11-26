@@ -29,6 +29,11 @@ body {
     min-height: 100vh;
 }
 
+.aiuti-navigazione {
+    position: absolute;
+    text-indent: -999em;
+}
+
 /********************************************
 ****************** HEADER *******************
 ********************************************/
@@ -121,19 +126,14 @@ main a:visited {
 /********************************************
 ****************** LOGIN ********************
 ********************************************/
-#accedi-area-riservata {
+#login-area-riservata {
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 #login-form {
     width: 40%;
-    margin: auto;
-    margin-top: 5em;
+    margin: 4em auto;
     padding: 3em;
-    -webkit-box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
-    -moz-box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
     box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
 }
 
@@ -144,6 +144,11 @@ main a:visited {
 
 #login-form form fieldset {
     border: none;
+}
+
+#login-form form fieldset legend{
+    position: absolute;
+    text-indent: -999em;
 }
 
 #login-form form input {
