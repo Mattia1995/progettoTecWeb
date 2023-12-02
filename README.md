@@ -33,3 +33,12 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
 1) Che campi mettiamo nel form di inserimento del prodotto? Gestiamo ad es. il prezzo scontato?
 2) Aiuti alla navigazione dovrebbero saltare la breadcrumb no??
 3) In nuovo articolo e lista articoli manca del testo che spieghi qualcosa secondo voi?
+4) Campi form non dovrebbero essere troppo grandi, li facciamo più brutti ma della grandezza giusta?
+5) Pagina area riservata secondo voi va bene senza underline
+
+
+------- COSE DA CONTROLLARE PAGINE PROGETTO:
+1) Validare le pagine sia parte html che parte CSS.
+2) Aggiungere sempre Keywords e description.
+3) Aggiungere aiuti alla navigazione in tutte le pagine.
+4) Verificare che non ci siano link rotti (toglie punti).

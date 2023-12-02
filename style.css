@@ -259,7 +259,6 @@ footer {
     text-indent: -999em;
 }
 
-
 /********************************************
 ********* AREA RISERVATA ARTICOLO ***********
 ********************************************/
@@ -306,4 +305,74 @@ footer {
 #gestione-articolo-form span{
     display: block;
     margin-bottom: 0.4em;
+}
+
+/********************************************
+************* AREA RISERVATA ****************
+********************************************/
+#area-riservata {
+    width: 100%;
+}
+
+#area-riservata h2 {
+    margin-bottom: 0.7em
+}
+
+#area-riservata > p {
+    text-align: center;
+}
+
+#area-riservata #contenitore-link {
+    display: grid;
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3em;
+}
+
+#area-riservata #contenitore-link a {
+    display: flex;
+    padding: 2em;
+    text-decoration: none;
+    transition: .2s;
+    background-color: var(--txtColor);
+    color: var(--bodyBgColor);
+    border: 2px solid var(--bodyBgColor);
+}
+
+#area-riservata #contenitore-link a:visited {
+    background-color: var(--flagColor);
+    color: var(--bodyBgColor);
+}
+
+#area-riservata #contenitore-link a .text-box p {
+    font-size: 1em;
+}
+
+#area-riservata #contenitore-link a .text-box p:first-child {
+    font-size: 1.8em;
+    line-height: 2em;
+    text-decoration: underline;
+}
+
+#area-riservata #contenitore-link .icon-box{
+    padding-left: 2em;
+    flex-grow: 2;
+    text-align: center;
+    font-size: 2.4em;
+    line-height: 2em;
+    align-self: center;
+}
+
+#area-riservata #contenitore-link a:hover {
+    background-color: var(--bodyBgColor);
+    border: 2px solid var(--txtColor);
+    color: var(--txtColor);
+}
+
+#area-riservata #contenitore-link a:visited:hover {
+    background-color: var(--bodyBgColor);
+    border: 2px solid var(--flagColor);
+    color: var(--flagColor);
 }
