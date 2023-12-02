@@ -13,6 +13,8 @@
     --bodyBgColor: rgb(255,255,255);
     --txtColor: rgb(0,0,0);
     --font-body-family: "Roboto Condensed", sans-serif;
+    --linkColorForRgba: 0,0,0;
+    --visitedLinkColorForRgba: 40,104,255;
 }
 
 html {
@@ -322,42 +324,54 @@ footer {
     text-align: center;
 }
 
-#area-riservata #contenitore-link {
+#area-riservata ul {
     display: grid;
     width: 100%;
     margin-top: 3em;
     margin-bottom: 5em;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3em;
+    list-style: none;
 }
 
-#area-riservata #contenitore-link a {
+#area-riservata ul li {
+    background-position: center;
+    background-size: cover;
+}
+
+#area-riservata ul a {
     display: flex;
-    padding: 2em;
+    padding: 4em 2em;
     text-decoration: none;
-    transition: .2s;
+    transition: .4s;
     -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
-    background-color: var(--txtColor);
     color: var(--bodyBgColor);
-    border: 2px solid var(--bodyBgColor);
+    background-color: rgba(var(--linkColorForRgba), 0.7);
 }
 
-#area-riservata #contenitore-link a:visited {
-    background-color: var(--flagColor);
-    color: var(--bodyBgColor);
+#area-riservata ul a:visited {
+    background-color: rgba(var(--visitedLinkColorForRgba), 0.7);
 }
 
-#area-riservata #contenitore-link a .text-box p {
+#area-riservata ul a:hover {
+    background-color: rgba(var(--linkColorForRgba), 0.9);
+}
+
+#area-riservata ul a:visited:hover {
+    background-color: rgba(var(--visitedLinkColorForRgba), 0.9);
+}
+
+#area-riservata ul a .text-box p {
     font-size: 1em;
 }
 
-#area-riservata #contenitore-link a .text-box p:first-child {
+#area-riservata ul a .text-box p:first-child {
     font-size: 1.8em;
     line-height: 2em;
     text-decoration: underline;
 }
 
-#area-riservata #contenitore-link .icon-box{
+#area-riservata ul .icon-box{
     padding-left: 2em;
     flex-grow: 2;
     text-align: center;
@@ -366,14 +380,10 @@ footer {
     align-self: center;
 }
 
-#area-riservata #contenitore-link a:hover {
-    background-color: var(--bodyBgColor);
-    border: 2px solid var(--txtColor);
-    color: var(--txtColor);
+#contenitore-link-articoli {
+    background-image: url(./images/piano.png);
 }
 
-#area-riservata #contenitore-link a:visited:hover {
-    background-color: var(--bodyBgColor);
-    border: 2px solid var(--flagColor);
-    color: var(--flagColor);
+#contenitore-link-richieste {
+    background-image: url(./images/messaggi.png);
 }
