@@ -336,6 +336,7 @@ footer {
     padding: 2em;
     text-decoration: none;
     transition: .2s;
+    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
     background-color: var(--txtColor);
     color: var(--bodyBgColor);
     border: 2px solid var(--bodyBgColor);
