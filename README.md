@@ -16,13 +16,19 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
     -> Non mettere il placeholder.
 
 
-5) Label non accetta l'attributo lang? (ad esempio per mettere la lingua di "Username").
+5) Label accetta l'attributo lang? (ad esempio per mettere la lingua di "Username").
     -> Si può usare lang sulle label anzi meglio usarlo.
 6) Serve sempre la legend nei form?
-    -> Non per forza, se si usa fieldset meglio di si ma fieldset non è obbligatorio se non si fa un raggruppamento sensato dei campi, se non si vuole usare fieldset usare div.
+    -> Non per forza, se si usa fieldset meglio di si ma fieldset non è obbligatorio se non si fa un raggruppamento sensato dei campi. Se non si vuole usare fieldset usare div.
 7) Vanno bene i div per riga nei form?
     -> Si va bene come struttura
 8) Serve la descrizione nella form?
-    -> Non per forza dipende dal caso, 
+    -> Non per forza dipende dal caso, meglio non aggiungere molti aria-* se il form è già chiaro.
 9) Area riservata keyword ecc non vanno bloccati?
     -> Metterle sempre perché la prof lancia test automatici ma non pensarci troppo, non servono per i browser.
+
+
+
+------- DOMANDE MATTIA PER GRUPPO:
+1) Che campi mettiamo nel form di inserimento del prodotto? Gestiamo ad es. il prezzo scontato?
+2) Aiuti alla navigazione dovrebbero saltare la breadcrumb no??

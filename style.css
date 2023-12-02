@@ -142,25 +142,23 @@ main a:visited {
     text-align: center;
 }
 
-#login-form form fieldset {
-    border: none;
-}
-
-#login-form form fieldset legend{
-    position: absolute;
-    text-indent: -999em;
+#login-form form div {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #login-form form input {
     display: block;
-    margin: 0.8em auto;
+    margin-top: 0.8em;
     margin-bottom: 1em;
     padding: 0.4em 0.2em;
 }
 
 #login-form form input[type="submit"] {
     padding: 0.6em 3em;
-    margin-top: 2em;
+    margin-top: 1.4em;
     border: 2px solid var(--linkColor);
     color: var(--linkColor);
     background-color: var(--bodyBgColor);
@@ -186,7 +184,8 @@ main a:visited {
     border: 2px solid var(--linkColor);
     color: var(--linkColor);
     text-align: center;
-    transition: .2s;
+    transition: .2s; 
+    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
 }
 
 #area-riservata #crea-articolo:hover, #area-riservata ul li a:hover {
@@ -245,6 +244,55 @@ main a:visited {
 #area-riservata li a span{
     display: inline-block;
     text-indent: -999em;
+}
+
+
+/********************************************
+********* AREA RISERVATA ARTICOLO ***********
+********************************************/
+#gestione-articolo-form {
+    width: 55%;
+    margin: auto;
+}
+
+#gestione-articolo-form label {
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+#gestione-articolo-form input, #gestione-articolo-form textarea {
+    width: 98%;
+    margin-bottom: 1em;
+    padding: 0.6em 0.3em;
+}
+
+#gestione-articolo-form input[type="radio"]{
+    width: 5%;
+}
+
+#gestione-articolo-form label{
+    width: auto;
+    display: inline;
+}
+
+#gestione-articolo-form form input[type="submit"] {
+    width: 100%;
+    padding: 0.6em 3em;
+    margin-top: 2em;
+    border: 2px solid var(--linkColor);
+    color: var(--linkColor);
+    background-color: var(--bodyBgColor);
+    transition: .2s;
+}
+
+#gestione-articolo-form form input[type="submit"]:hover {
+    background-color: var(--linkColor);
+    color: var(--linkHoverColor);
+}
+
+#gestione-articolo-form span{
+    display: block;
+    margin-bottom: 0.4em;
 }
 
 /********************************************
