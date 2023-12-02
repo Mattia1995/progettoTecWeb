@@ -36,13 +36,13 @@
                 <form action="#azioneDaInserire" method="post" enctype="multipart/form-data">
                     <div>
                         <label for="nomeArticolo">Nome:</label>
-                        <input type="text" name="nomeArticolo" id="nomeArticolo">
+                        <input type="text" name="nomeArticolo" id="nomeArticolo" required>
                         <label for="descrizioneArticolo">Descrizione:</label>
-                        <textarea id="descrizioneArticolo" name="descrizioneArticolo" rows="4" cols="50"></textarea>
+                        <textarea id="descrizioneArticolo" name="descrizioneArticolo" rows="4" cols="50" required></textarea>
                         <label for="prezzo">Prezzo:</label>
-                        <input type="number" name="prezzo" id="prezzo" step=".01">
+                        <input type="number" name="prezzo" id="prezzo" step=".01" required>
                         <label for="immagineArticolo">Immagine articolo:</label>
-                        <input type="file" name="immagineArticolo" id="immagineArticolo">
+                        <input type="file" name="immagineArticolo" id="immagineArticolo" required>
                         <span>Categoria:</span>              
                         <div>
                             <input type="radio" id="batteria" name="categoria_articolo" value="Batteria">
