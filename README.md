@@ -32,3 +32,4 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
 ------- DOMANDE MATTIA PER GRUPPO:
 1) Che campi mettiamo nel form di inserimento del prodotto? Gestiamo ad es. il prezzo scontato?
 2) Aiuti alla navigazione dovrebbero saltare la breadcrumb no??
+3) In nuovo articolo e lista articoli manca del testo che spieghi qualcosa secondo voi?
