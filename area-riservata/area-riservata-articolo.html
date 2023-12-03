@@ -44,7 +44,9 @@
                         <input type="number" name="prezzo" id="prezzo" step=".01" required>
                         <label for="immagineArticolo">Immagine articolo:</label>
                         <input type="file" name="immagineArticolo" id="immagineArticolo" required>
-                        <span>Categoria:</span>              
+                    </div>
+                    <fieldset>
+                        <legend>Categoria:</legend>
                         <div>
                             <input type="radio" id="batteria" name="categoria_articolo" value="Batteria">
                             <label for="batteria">Batteria</label>
@@ -57,8 +59,9 @@
                             <input type="radio" id="pianoforte" name="categoria_articolo" value="Pianoforte">
                             <label for="pianoforte">Pianoforte</label>
                         </div>
-                        <!-- AGGIUNGERE INSERIMENTO IMMAGINE PRODOTTO -->
-
+                    </fieldset>
+                    <!-- AGGIUNGERE INSERIMENTO IMMAGINE PRODOTTO -->
+                    <div>
                         <!-- TODO: Gestire regole validazione campi form -->
                         <input type="submit">
                     </div>

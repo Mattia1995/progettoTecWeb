@@ -304,8 +304,11 @@ footer {
     color: var(--linkHoverColor);
 }
 
-#gestione-articolo-form span{
-    display: block;
+#gestione-articolo-form fieldset {
+    border: none;
+}
+
+#gestione-articolo-form fieldset legend{
     margin-bottom: 0.4em;
 }
 
