@@ -37,11 +37,6 @@ body {
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-::placeholder {
-	 color: #767676;
-	 opacity: 1;
-}
-
 /********************************************
 ****************** HEADER *******************
 ********************************************/
@@ -239,7 +234,7 @@ main a:visited {
     margin-top: 2em;
 }
 
-#contactsForm input, #contactsForm > textarea {
+#contactsForm input, #contactsForm textarea {
 	width: 80%;
     display: block;
     margin: 0.8em auto;
