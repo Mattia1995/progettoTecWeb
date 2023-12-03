@@ -57,18 +57,21 @@
 				
 				<form id="contactsForm" method="post" action="contattaci.php" autocomplete="on">
 					<!--<messaggiFormContattaci />--><!-- todo -->
-						
+					
+					<div>
 					<label id="labelNome" for="nome">Nome</label>
-					<input type="text" name="nome" id="nome" aria-labelledby="labelNome" aria-describedby="descNome" placeholder="Mario Rossi" required>
-					<span id="descNome" class="aiuti-navigazione">Inserisci qui il tuo nome</span>
+					<input type="text" name="nome" id="nome" required>
+					</div>
 					
+					<div>
 					<label id="labelEmail" for="email"><span lang="en">E-mail</span></label>
-					<input type="email" name="email" id="email" aria-labelledby="labelEmail" aria-describedby="descEmail" placeholder="mario@esempio.it" required>
-					<span id="descEmail" class="aiuti-navigazione">Inserisci qui la tua <span lang="en">e-mail</span></span>
+					<input type="email" name="email" id="email" required>
+					</div>
 					
+					<div>
 					<label id="labelMessaggio" for="messaggio">Messaggio</label>
-					<textarea name="messaggio" id="messaggio" aria-labelledby="labelMessaggio" aria-describedby="descMessaggio" placeholder="Digita il tuo messaggio qui" rows="6" autocomplete="off" required></textarea>
-					<span id="descMessaggio" class="aiuti-navigazione">Inserisci qui la tua richiesta</span>
+					<textarea name="messaggio" id="messaggio" rows="6" autocomplete="off" required></textarea>
+					</div>
 					
 					<input type="submit" id="submit" name="submit" value="Invia richiesta">
 					
