@@ -42,3 +42,4 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
 2) Aggiungere sempre Keywords e description.
 3) Aggiungere aiuti alla navigazione in tutte le pagine.
 4) Verificare che non ci siano link rotti (toglie punti).
+5) Fare dei test con gli strumenti indicati dalla prof (slide 96 accessibilità) -> Total validator da usare in lab, la prof usa questo per validare i progetti.
