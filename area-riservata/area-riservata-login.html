@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>TODO: NOME_NEGOZIO</title>
+        <meta name="keywords" content="Login area riservata">
+        <meta name="description" content="Pagina di login per accedere area riservata">
+        <link rel="stylesheet" media="screen" href="../style.css">
+    </head>
+    <body>
+        <header>
+            <div id="header-container">
+                <a class="aiuti-navigazione" href="#area-riservata-login">Vai al contenuto</a>
+                <h1>NOME_NEGOZIO</h1>
+                <nav id="menu">
+                    <ul>
+                        <li lang="en"><a href="../home.html">Home</a></li>
+                        <li><a href="../chisiamo.html">Chi siamo</a></li>
+                        <li><a href="../vetrina.html">Vetrina</a></li>
+                        <li><a href="../contatti.html">Contatti</a></li>
+                        <li>Area riservata</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="area-riservata-login">
+            <nav id="breadcrumb">
+                <p>Ti trovi in: <a href="../home.html" lang="en">Home</a> &gt;&gt; Accedi area riservata</p>
+            </nav>
+            <div id="login-form">
+                <h2>Accedi area riservata</h2>
+                <form action="#azioneDaInserire" method="post">
+                    <div>
+                        <label for="username" lang="en">Username</label>
+                        <input type="text" name="username" id="username" maxlength="20" required>
+                        <label for="password" lang="en">Password</label>
+                        <input type="password" name="password" id="password" minlength="8" maxlength="20" required>
+                        <!-- TODO: Gestire regole validazione campi form -->
+                        <input type="submit">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <a class="aiuti-navigazione" href="#area-riservata-login">Torna su al contenuto</a>
+        <footer>
+            <p>NOME GRUPPO - <span lang="en">All rights reserved</span></p>
+        </footer>
+    </body>
+</html>
