@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Contatti - [nome_store]</title>
+		
+		<meta name="description" content="Contatta [nome_store] per informazioni sugli strumenti musicali in vendita, o per richiedere un appuntamento in negozio">
+		<meta name="keyword" content="strumenti musicali negozio Padova, [nome_store] contatti">
+		<meta name="author" content="[nome_gruppo]">
+		
+        <link rel="stylesheet" media="screen" href="style.css">
+		
+		<!--<link rel="stylesheet" type="text/css" href="contatti_desktop.css" media="screen and (min-width:601px)">
+		<link rel="stylesheet" type="text/css" href="contatti_mobile.css" media="screen and (max-width:600px)">-->
+		<link rel="stylesheet" type="text/css" href="contatti_print.css" media="print">
+	</head>
+	
+	<body>
+	
+		<header>
+            <div id="header-container">
+			
+                <h1>CONTATTI</h1>
+				<a class="aiuti-navigazione" href="#contenuto">Salta il menù e vai al contenuto</a>
+				
+                <nav id="menu">
+                    <ul>
+                        <li lang="en"><a href="home.html">Home</a></li>
+                        <li><a href="chisiamo.html">Chi siamo</a></li>
+                        <li><a href="vetrina.html">Vetrina</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+						<li><a href="dove_siamo.html">Dove siamo</a></li>
+                        <li>Area riservata</li>
+                    </ul>
+                </nav>
+            </div>
+		</header>
+		
+		<main id="contenuto">
+		
+			<nav id="breadcrumb">
+                <p>Ti trovi in: <a href="home.html" lang="en">Home</a> &gt;&gt; Contatti</p>
+            </nav>
+			
+			<div class="container">
+				<h2>I nostri contatti</h2>
+				<dl>
+					<dt>Telefono</dt>
+					<dd>0423 4545435</dd>
+					<dt lang="en">E-mail</dt>
+					<dd><a href="mailto:[nome_store]@email.it">[nome_store]@email.it</a></dd>
+				</dl>
+			</div>
+		
+			<div class="container">
+				<h2>Compila il seguente modulo per richiedere informazioni</h2>
+				
+				<form id="contactsForm" method="post" action="contattaci.php" autocomplete="on">
+					<!--<messaggiFormContattaci />--><!-- todo -->
+					
+					<div>
+					<label id="labelNome" for="nome">Nome</label>
+					<input type="text" name="nome" id="nome" required>
+					</div>
+					
+					<div>
+					<label id="labelEmail" for="email" lang="en">E-mail</label>
+					<input type="email" name="email" id="email" required>
+					</div>
+					
+					<div>
+					<label id="labelMessaggio" for="messaggio">Messaggio</label>
+					<textarea name="messaggio" id="messaggio" rows="6" autocomplete="off" required></textarea>
+					</div>
+					
+					<input type="submit" id="submit" name="submit" value="Invia richiesta">
+					
+				</form>
+			</div>
+		
+		</main>
+		
+		<a class="aiuti-navigazione" href="#contenuto">Torna su al contenuto</a>
+
+		<footer>
+            <p>[nome_gruppo] - <span lang="en">All rights reserved</span></p>
+        </footer>
+
+	</body>
+	
+</html>
