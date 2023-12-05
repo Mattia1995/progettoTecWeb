@@ -29,6 +29,8 @@ body {
     min-height: 100vh;
 }
 
+
+
 /********************************************
 ****************** HEADER *******************
 ********************************************/
@@ -91,6 +93,8 @@ header {
     color: var(--visitedLinkColor);
 }
 
+
+
 /********************************************
 ******************* MAIN ********************
 ********************************************/
@@ -126,35 +130,87 @@ main a:visited {
 
 #vetrina{
     display: grid;
-    background-color: var(--bodyBgColor); /* var(--bodyBgColor) */
-    /* border: 1px solid rgb(230, 230, 230); */
-    border-radius: 4px;
+    background-color: var(--bodyBgColor);
     /* grid-template-columns: repeat(auto-fit, minmax(9em, 1fr)); */
-    grid-template-columns: auto auto auto auto;
-    column-gap: 0.5em;
-    row-gap: 0.5em;
-    padding: 0.5em;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 0.8em;
+    row-gap: 0.8em;
 }
-.elementovetrina{
-    border: 1px solid rgb(230, 230, 230);
-    border-radius: 4px; /* da capire come far sparire l'angolino dell'immagine che compre il bordo tondo */
+.prodottovetrina{
+    border: 1.5px solid var(--flagColor);
+    border-radius: 10px;
+    list-style-type: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.prodottovetrina img{
+    display: block;
+    width: 100%;
+    margin:auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.prodottovetrina dl{
+    padding: 0.8em;
+}
+.prodottovetrina dl > dt{
+    font-weight: bold;
+    float: left;
+    padding-right: 0.3em;
+}
+.prodottovetrina a{
+    color: var(--linkColor);
+    display:block;
+    text-align:center;
+
+    padding: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+
+    border: 1px solid var(--flagColor);
+    border-radius: 10px;
+}
+.prodottovetrina dl a:visited{
+    color: var(--visitedLinkColor);
+}
+.nomeprodotto{
+    font-weight: bold;
+    font-size: 120%;
+    padding-bottom: 0.5em;
+}
+.prezzoprodotto{
+    padding-top: 0.5em;
+}
+.dtinvisibileprodotto{
+    display: none;
+}
+
+
+
+
+/********************************************
+************* PRODOTTO SINGOLO **************
+********************************************/
+
+.prodottosingolo{
+    background-color: var(--bodyBgColor);
+    /*padding: 0.5em;*/
     list-style-type: none;
     /* padding: 0.5em;*/
     /* text-align: left; */ /* Serve metterlo o è di default? */
 }
-.elementovetrina img{
+.prodottosingolo img{
     display: block;
-    width: 100%;
+    float: left;
+    width: 50%;
     margin:auto;
 }
-#vetrina .elementovetrina{
-    background-color: rgba(255, 255, 255, 0.8); /* Solo di prova */
-}
-.elementovetrina dl{
+.prodottosingolo dl{
     background-color: rgba(255, 255, 255, 0.8); /* Solo di prova */
     padding: 0.5em;
 }
-.elementovetrina dl > dt{
+.prodottosingolo dl > dt{
     font-weight: bold;
     float: left;
     padding-right: 0.3em;
@@ -165,6 +221,7 @@ main a:visited {
 /********************************************
 ************** AREA RISERVATA ***************
 ********************************************/
+
 #area-riservata h2 {
     display: inline-block;
     line-height: 2em;
@@ -242,6 +299,8 @@ main a:visited {
     display: inline-block;
     text-indent: -999em;
 }
+
+
 
 /********************************************
 ****************** FOOTER *******************
