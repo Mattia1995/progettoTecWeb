@@ -43,3 +43,25 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
 3) Aggiungere aiuti alla navigazione in tutte le pagine.
 4) Verificare che non ci siano link rotti (toglie punti).
 5) Fare dei test con gli strumenti indicati dalla prof (slide 96 accessibilità) -> Total validator da usare in lab, la prof usa questo per validare i progetti.
+6) Pagina 404 carina
+7) Controllare che input piccoli o grandi (1 lettera, 35 lettere) non distruggano la pagina vetrina
+
+
+
+
+------- COSE DA FARE:
+1) CSS: Mobile e print
+2) Database (MariaDB)
+    - Strutturare DB
+    - Diagramma ER
+
+
+
+
+------- COSE DA FARE DOPO:
+1) PHP
+2) Javascript
+    - Controlli/protezioni per campi non compilati
+    - 
+
+
