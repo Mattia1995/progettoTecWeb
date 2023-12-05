@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>TODO: NOME_NEGOZIO</title>
+        <meta name="keywords" content="Gestione articolo">
+        <meta name="description" content="Pagina di gestione articolo area riservata">
+        <link rel="stylesheet" media="screen" href="../style.css">
+    </head>
+    <body>
+        <header>
+            <div id="header-container">
+                <a class="aiuti-navigazione" href="#area-riservata-articolo">Vai al contenuto</a>
+                <h1>NOME_NEGOZIO</h1>
+                <nav id="menu">
+                    <ul>
+                        <li lang="en"><a href="../home.html">Home</a></li>
+                        <li><a href="chisiamo.html">Chi siamo</a></li>
+                        <li><a href="vetrina.html">Vetrina</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="area-riservata.html">Area riservata</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="area-riservata-articolo">
+            <nav id="breadcrumb">
+                <p>Ti trovi in: 
+                    <a href="../home.html" lang="en">Home</a> &gt;&gt;
+                    <a href="area-riservata.html" lang="en">Area riservata</a> &gt;&gt;
+                    <a href="area-riservata-gestione-articoli.html">Articoli</a> &gt;&gt;
+                    Nuovo articolo
+                </p>
+            </nav>
+            <h2>Nuovo articolo</h2>
+            <div id="gestione-articolo-form">
+                <form action="#azioneDaInserire" method="post" enctype="multipart/form-data">
+                    <div>
+                        <label for="nomeArticolo">Nome:</label>
+                        <input type="text" name="nomeArticolo" id="nomeArticolo" required>
+                        <label for="descrizioneArticolo">Descrizione:</label>
+                        <textarea id="descrizioneArticolo" name="descrizioneArticolo" rows="4" cols="50" required></textarea>
+                        <label for="prezzo">Prezzo:</label>
+                        <input type="number" name="prezzo" id="prezzo" step=".01" required>
+                        <label for="immagineArticolo">Immagine articolo:</label>
+                        <input type="file" name="immagineArticolo" id="immagineArticolo" required>
+                    </div>
+                    <fieldset>
+                        <legend>Categoria:</legend>
+                        <div>
+                            <input type="radio" id="batteria" name="categoria_articolo" value="Batteria">
+                            <label for="batteria">Batteria</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="chitarra" name="categoria_articolo" value="Chitarra">
+                            <label for="chitarra">Chitarra</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="pianoforte" name="categoria_articolo" value="Pianoforte">
+                            <label for="pianoforte">Pianoforte</label>
+                        </div>
+                    </fieldset>
+                    <!-- AGGIUNGERE INSERIMENTO IMMAGINE PRODOTTO -->
+                    <div>
+                        <!-- TODO: Gestire regole validazione campi form -->
+                        <input type="submit">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <a class="aiuti-navigazione" href="#area-riservata-articolo">Torna su al contenuto</a>
+        <footer>
+            <p>NOME GRUPPO - <span lang="en">All rights reserved</span></p>
+        </footer>
+    </body>
+</html>
