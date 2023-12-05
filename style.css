@@ -339,29 +339,24 @@ footer {
 
 #area-riservata ul li {
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
+    transition: .5s;
+}
+
+#area-riservata ul li:hover {
+    background-size: 130%;
 }
 
 #area-riservata ul a {
     display: flex;
     padding: 4em 2em;
     text-decoration: none;
-    transition: .4s;
-    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
     color: var(--bodyBgColor);
-    background-color: rgba(var(--linkColorForRgba), 0.7);
+    background-color: rgba(var(--linkColorForRgba), 0.8);
 }
 
 #area-riservata ul a:visited {
-    background-color: rgba(var(--visitedLinkColorForRgba), 0.7);
-}
-
-#area-riservata ul a:hover {
-    background-color: rgba(var(--linkColorForRgba), 0.9);
-}
-
-#area-riservata ul a:visited:hover {
-    background-color: rgba(var(--visitedLinkColorForRgba), 0.9);
+    background-color: rgba(var(--visitedLinkColorForRgba), 0.8);
 }
 
 #area-riservata ul a .text-box p {
