@@ -214,7 +214,6 @@ main a:visited {
 .container {
     width: 80%;
 	text-align: center;
-    margin: auto;
     margin-top: 5em;
     padding: 3em;
     -webkit-box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
@@ -255,6 +254,14 @@ main a:visited {
 #contactsForm input[type="submit"]:hover {
     background-color: var(--linkColor);
     color: var(--linkHoverColor);
+}
+
+/********************************************
+****************** DOVE SIAMO *******************
+********************************************/
+
+address {
+	margin: 1.5em;
 }
 
 /********************************************
