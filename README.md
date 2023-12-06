@@ -4,7 +4,6 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
 
 
 
-
 ------- DOMANDE VARIE:
 1) Va bene la nav dentro l'header?
     -> Si va bene.
@@ -14,6 +13,7 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
     -> Rimosso span e messo nel title del tag a.
 4) Contrasto nel placeholder.
     -> Non mettere il placeholder.
+
 
 
 5) Label accetta l'attributo lang? (ad esempio per mettere la lingua di "Username").
@@ -37,6 +37,7 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
 5) Pagina area riservata secondo voi va bene senza underline
 
 
+
 ------- COSE DA CONTROLLARE PAGINE PROGETTO:
 1) Validare le pagine sia parte html che parte CSS.
 2) Aggiungere sempre Keywords e description.
@@ -48,13 +49,11 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
 
 
 
-
 ------- COSE DA FARE:
 1) CSS: Mobile e print
 2) Database (MariaDB)
     - Strutturare DB
     - Diagramma ER
-
 
 
 
