@@ -137,9 +137,10 @@ main a:visited {
     display: grid;
     background-color: var(--bodyBgColor);
     /* grid-template-columns: repeat(auto-fit, minmax(9em, 1fr)); */
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 24% 24% 24% 24%;
     column-gap: 0.8em;
     row-gap: 0.8em;
+    margin-bottom: 1em;
 }
 .prodottovetrina{
     border: 1.5px solid var(--flagColor);
