@@ -14,8 +14,6 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
     -> Rimosso span e messo nel title del tag a.
 4) Contrasto nel placeholder.
     -> Non mettere il placeholder.
-
-
 5) Label accetta l'attributo lang? (ad esempio per mettere la lingua di "Username").
     -> Si può usare lang sulle label anzi meglio usarlo.
 6) Serve sempre la legend nei form?
@@ -27,14 +25,9 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
 9) Area riservata keyword ecc non vanno bloccati?
     -> Metterle sempre perché la prof lancia test automatici ma non pensarci troppo, non servono per i browser.
 
+10) Va bene button nella pagina della richiesta?
+11) Va bene la gestione per firefox per l'hover dei bottoni nella lista degli articoli? 
 
-
-------- DOMANDE MATTIA PER GRUPPO:
-1) Che campi mettiamo nel form di inserimento del prodotto? Gestiamo ad es. il prezzo scontato?
-2) Aiuti alla navigazione dovrebbero saltare la breadcrumb no??
-3) In nuovo articolo e lista articoli manca del testo che spieghi qualcosa secondo voi?
-4) Campi form non dovrebbero essere troppo grandi, li facciamo più brutti ma della grandezza giusta?
-5) Pagina area riservata secondo voi va bene senza underline
 
 
 ------- COSE DA CONTROLLARE PAGINE PROGETTO:

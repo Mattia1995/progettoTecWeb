@@ -609,6 +609,30 @@ footer {
 }
 
 /********************************************
+********** AREA RISERVATA RICHIESTA *********
+********************************************/
+#area-riservata-richiesta button {
+    background-color: transparent;
+    padding: 0.8em;
+    font-size: 1.1em;
+    margin: auto;
+    display: block;
+    margin-top: 1.5em; 
+    transition: .2s; 
+    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
+}
+
+#area-riservata-richiesta > p {
+    text-align: center;
+}
+
+#area-riservata-richiesta button:hover {
+    color: var(--linkHoverColor);
+    background-color: var(--flagColor);
+    border-color: var(--flagColor);
+}
+
+/********************************************
 ******************* HOME ********************
 ********************************************/
 
