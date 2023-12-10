@@ -2,9 +2,9 @@
 <html lang="it">
     <head>
         <meta charset="UTF-8">
-        <title>TODO: NOME_NEGOZIO</title>
-        <meta name="keywords" content="Gestione articoli">
-        <meta name="description" content="Pagina di gestione articoli area riservata">
+        <title>Melodia area riservata gestione richieste</title>
+        <meta name="keywords" content="Gestione richieste">
+        <meta name="description" content="Pagina di gestione richieste area riservata">
         <link rel="stylesheet" media="screen" href="../style.css">
     </head>
     <body>
@@ -24,7 +24,7 @@
                 </nav>
             </div>
         </header>
-        <main id="area-riservata-gestione-articoli"><!-- DA CAMBIARE ID -->
+        <main id="area-riservata-gestione-richieste"><!-- DA CAMBIARE ID -->
             <nav id="breadcrumb">
                 <p>
                     Ti trovi in:
@@ -34,15 +34,58 @@
                 </p>
             </nav>
             <h2>Richieste</h2>
-            <ul>
+            <ul id="lista-richieste">
                 <li>
-                    <ul>
-                        <li>email@email.it</li>
-                        <li>Titolo della richiesta</li>
-                        <li>20/12/2023</li>
-                        <li>Stato</li>
-                    </ul>
-                    <a href="areariservata-dettaglio-articolo.html" title="Modifica Batteria mapex armony AR628SRA">ENTRA</a>
+                    <dl class="richiesta richiesta-da-leggere">
+                        <dt>Stato richiesta:</dt>
+                        <dd class="stato">DA LEGGERE</dd>
+                        <dt>Data richiesta:</dt>
+                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
+                        <dt>Nome richiedente:</dt>
+                        <dd>Antonio Rossi</dd>
+                        <dt>Testo richiesta:</dt>
+                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
+                    </dl>
+                    <a href="area-riservata-richiesta.html" title="Vai al dettaglio richiesta">></a>
+                </li>
+                <li>
+                    <dl class="richiesta richiesta-da-leggere">
+                        <dt>Stato richiesta:</dt>
+                        <dd class="stato">DA LEGGERE</dd>
+                        <dt>Data richiesta:</dt>
+                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
+                        <dt>Nome richiedente:</dt>
+                        <dd>Antonio Rossi</dd>
+                        <dt>Testo richiesta:</dt>
+                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
+                    </dl>
+                    <a href="#" title="Vai al dettaglio richiesta">></a>
+                </li>
+                <li>
+                    <dl class="richiesta">
+                        <dt>Stato richiesta:</dt>
+                        <dd class="stato">EVASA</dd>
+                        <dt>Data richiesta:</dt>
+                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
+                        <dt>Nome richiedente:</dt>
+                        <dd>Antonio Rossi</dd>
+                        <dt>Testo richiesta:</dt>
+                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
+                    </dl>
+                    <a href="#" title="Vai al dettaglio richiesta">></a>
+                </li>
+                <li>
+                    <dl class="richiesta">
+                        <dt>Stato richiesta:</dt>
+                        <dd class="stato">EVASA</dd>
+                        <dt>Data richiesta:</dt>
+                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
+                        <dt>Nome richiedente:</dt>
+                        <dd>Antonio Rossi</dd>
+                        <dt>Testo richiesta:</dt>
+                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
+                    </dl>
+                    <a href="#" title="Vai al dettaglio richiesta">></a>
                 </li>
             </ul>
         </main>
