@@ -101,8 +101,6 @@ header {
     color: var(--visitedLinkColor);
 }
 
-
-
 /********************************************
 ******************* MAIN ********************
 ********************************************/
@@ -118,7 +116,7 @@ main #breadcrumb {
 }
 
 main h2 {
-    margin-bottom: 1em;
+    margin: 1em 0;
     text-align: center;
 }
 
@@ -129,8 +127,6 @@ main a {
 main a:visited {
     color: var(--visitedLinkColor);
 }
-
-
 
 /********************************************
 ***************** VETRINA *******************
@@ -194,9 +190,6 @@ main a:visited {
     display: none;
 }
 
-
-
-
 /********************************************
 ************* PRODOTTO SINGOLO **************
 ********************************************/
@@ -224,12 +217,8 @@ main a:visited {
     padding-right: 0.3em;
 }
 
-
-
-
-
 /********************************************
-****************** CONTATTACI *******************
+****************** CONTATTACI ***************
 ********************************************/
 
 .container {
@@ -278,7 +267,7 @@ main a:visited {
 }
 
 /********************************************
-****************** DOVE SIAMO *******************
+****************** DOVE SIAMO ***************
 ********************************************/
 
 address {
@@ -288,7 +277,6 @@ address {
 /********************************************
 ****************** FOOTER *******************
 ********************************************/
-
 footer {
     background-color: var(--footerBgColor);
     color: var(--footerTxtColor);
@@ -309,7 +297,7 @@ footer {
     width: 40%;
     margin: 4em auto;
     padding: 3em;
-    box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
+    box-shadow: 0px 0px 32px 8px rgba(var(--visitedLinkColorForRgba), 0.13);
 }
 
 #login-form form {
@@ -343,6 +331,80 @@ footer {
 #login-form form input[type="submit"]:hover {
     background-color: var(--linkColor);
     color: var(--linkHoverColor);
+}
+
+/********************************************
+************* AREA RISERVATA ****************
+********************************************/
+#area-riservata {
+    width: 100%;
+}
+
+#area-riservata h2 {
+    margin: 0.7em 0;
+}
+
+#area-riservata > p {
+    text-align: center;
+}
+
+#area-riservata ul {
+    display: grid;
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3em;
+    list-style: none;
+}
+
+#area-riservata ul li {
+    background-position: center;
+    background-size: 100%;
+    transition: .5s;
+}
+
+#area-riservata ul li:hover {
+    background-size: 130%;
+}
+
+#area-riservata ul a {
+    display: flex;
+    padding: 4em 2em;
+    text-decoration: none;
+    color: var(--bodyBgColor);
+    background-color: rgba(var(--linkColorForRgba), 0.8);
+}
+
+#area-riservata ul a:visited {
+    background-color: rgba(var(--visitedLinkColorForRgba), 0.8);
+}
+
+#area-riservata ul a .text-box p {
+    font-size: 1em;
+}
+
+#area-riservata ul a .text-box p:first-child {
+    font-size: 1.8em;
+    line-height: 2em;
+    text-decoration: underline;
+}
+
+#area-riservata ul .icon-box{
+    padding-left: 2em;
+    flex-grow: 2;
+    text-align: center;
+    font-size: 2.4em;
+    line-height: 2em;
+    align-self: center;
+}
+
+#contenitore-link-articoli {
+    background-image: url(./images/piano.png);
+}
+
+#contenitore-link-richieste {
+    background-image: url(./images/messaggi.png);
 }
 
 /********************************************
@@ -470,80 +532,6 @@ footer {
 
 #gestione-articolo-form fieldset legend{
     margin-bottom: 0.4em;
-}
-
-/********************************************
-************* AREA RISERVATA ****************
-********************************************/
-#area-riservata {
-    width: 100%;
-}
-
-#area-riservata h2 {
-    margin-bottom: 0.7em
-}
-
-#area-riservata > p {
-    text-align: center;
-}
-
-#area-riservata ul {
-    display: grid;
-    width: 100%;
-    margin-top: 3em;
-    margin-bottom: 5em;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 3em;
-    list-style: none;
-}
-
-#area-riservata ul li {
-    background-position: center;
-    background-size: 100%;
-    transition: .5s;
-}
-
-#area-riservata ul li:hover {
-    background-size: 130%;
-}
-
-#area-riservata ul a {
-    display: flex;
-    padding: 4em 2em;
-    text-decoration: none;
-    color: var(--bodyBgColor);
-    background-color: rgba(var(--linkColorForRgba), 0.8);
-}
-
-#area-riservata ul a:visited {
-    background-color: rgba(var(--visitedLinkColorForRgba), 0.8);
-}
-
-#area-riservata ul a .text-box p {
-    font-size: 1em;
-}
-
-#area-riservata ul a .text-box p:first-child {
-    font-size: 1.8em;
-    line-height: 2em;
-    text-decoration: underline;
-}
-
-#area-riservata ul .icon-box{
-    padding-left: 2em;
-    flex-grow: 2;
-    text-align: center;
-    font-size: 2.4em;
-    line-height: 2em;
-    align-self: center;
-}
-
-#contenitore-link-articoli {
-    background-image: url(./images/piano.png);
-}
-
-#contenitore-link-richieste {
-    background-image: url(./images/messaggi.png);
 }
 
 /********************************************
