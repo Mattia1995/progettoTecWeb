@@ -101,8 +101,6 @@ header {
     color: var(--visitedLinkColor);
 }
 
-
-
 /********************************************
 ******************* MAIN ********************
 ********************************************/
@@ -118,7 +116,7 @@ main #breadcrumb {
 }
 
 main h2 {
-    margin-bottom: 1em;
+    margin: 1em 0;
     text-align: center;
 }
 
@@ -129,8 +127,6 @@ main a {
 main a:visited {
     color: var(--visitedLinkColor);
 }
-
-
 
 /********************************************
 ***************** VETRINA *******************
@@ -194,42 +190,35 @@ main a:visited {
     display: none;
 }
 
-
-
-
 /********************************************
 ************* PRODOTTO SINGOLO **************
 ********************************************/
 
-.prodottosingolo{
+#prodottosingolo{
     background-color: var(--bodyBgColor);
     /*padding: 0.5em;*/
     list-style-type: none;
     /* padding: 0.5em;*/
     /* text-align: left; */ /* Serve metterlo o è di default? */
 }
-.prodottosingolo img{
+#prodottosingolo img{
     display: block;
     float: left;
     width: 50%;
     margin:auto;
 }
-.prodottosingolo dl{
+#prodottosingolo dl{
     background-color: rgba(255, 255, 255, 0.8); /* Solo di prova */
     padding: 0.5em;
 }
-.prodottosingolo dl > dt{
+#prodottosingolo dl > dt{
     font-weight: bold;
     float: left;
     padding-right: 0.3em;
 }
 
-
-
-
-
 /********************************************
-****************** CONTATTACI *******************
+****************** CONTATTACI ***************
 ********************************************/
 
 .container {
@@ -237,9 +226,9 @@ main a:visited {
 	text-align: center;
     margin-top: 5em;
     padding: 3em;
-    -webkit-box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
-    -moz-box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
-    box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
+    -webkit-box-shadow: 0px 0px 32px 8px rgba(var(--visitedLinkColorForRgba), 0.13);
+    -moz-box-shadow: 0px 0px 32px 8px rgba(var(--visitedLinkColorForRgba), 0.13);
+    box-shadow: 0px 0px 32px 8px rgba(var(--visitedLinkColorForRgba), 0.13);
 }
 
 .container > dl > dt {
@@ -278,7 +267,7 @@ main a:visited {
 }
 
 /********************************************
-****************** DOVE SIAMO *******************
+****************** DOVE SIAMO ***************
 ********************************************/
 
 address {
@@ -288,7 +277,6 @@ address {
 /********************************************
 ****************** FOOTER *******************
 ********************************************/
-
 footer {
     background-color: var(--footerBgColor);
     color: var(--footerTxtColor);
@@ -309,7 +297,7 @@ footer {
     width: 40%;
     margin: 4em auto;
     padding: 3em;
-    box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
+    box-shadow: 0px 0px 32px 8px rgba(var(--visitedLinkColorForRgba), 0.13);
 }
 
 #login-form form {
@@ -343,6 +331,80 @@ footer {
 #login-form form input[type="submit"]:hover {
     background-color: var(--linkColor);
     color: var(--linkHoverColor);
+}
+
+/********************************************
+************* AREA RISERVATA ****************
+********************************************/
+#area-riservata {
+    width: 100%;
+}
+
+#area-riservata h2 {
+    margin: 0.7em 0;
+}
+
+#area-riservata > p {
+    text-align: center;
+}
+
+#area-riservata ul {
+    display: grid;
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3em;
+    list-style: none;
+}
+
+#area-riservata ul li {
+    background-position: center;
+    background-size: 100%;
+    transition: .5s;
+}
+
+#area-riservata ul li:hover {
+    background-size: 130%;
+}
+
+#area-riservata ul a {
+    display: flex;
+    padding: 4em 2em;
+    text-decoration: none;
+    color: var(--bodyBgColor);
+    background-color: rgba(var(--linkColorForRgba), 0.8);
+}
+
+#area-riservata ul a:visited {
+    background-color: rgba(var(--visitedLinkColorForRgba), 0.8);
+}
+
+#area-riservata ul a .text-box p {
+    font-size: 1em;
+}
+
+#area-riservata ul a .text-box p:first-child {
+    font-size: 1.8em;
+    line-height: 2em;
+    text-decoration: underline;
+}
+
+#area-riservata ul .icon-box{
+    padding-left: 2em;
+    flex-grow: 2;
+    text-align: center;
+    font-size: 2.4em;
+    line-height: 2em;
+    align-self: center;
+}
+
+#contenitore-link-articoli {
+    background-image: url(./images/piano.png);
+}
+
+#contenitore-link-richieste {
+    background-image: url(./images/messaggi.png);
 }
 
 /********************************************
@@ -473,85 +535,6 @@ footer {
 }
 
 /********************************************
-************* AREA RISERVATA ****************
-********************************************/
-#area-riservata {
-    width: 100%;
-}
-
-#area-riservata h2 {
-    margin-bottom: 0.7em
-}
-
-#area-riservata > p {
-    text-align: center;
-}
-
-#area-riservata ul {
-    display: grid;
-    width: 100%;
-    margin-top: 3em;
-    margin-bottom: 5em;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 3em;
-    list-style: none;
-}
-
-#area-riservata ul li {
-    background-position: center;
-    background-size: cover;
-}
-
-#area-riservata ul a {
-    display: flex;
-    padding: 4em 2em;
-    text-decoration: none;
-    transition: .4s;
-    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
-    color: var(--bodyBgColor);
-    background-color: rgba(var(--linkColorForRgba), 0.7);
-}
-
-#area-riservata ul a:visited {
-    background-color: rgba(var(--visitedLinkColorForRgba), 0.7);
-}
-
-#area-riservata ul a:hover {
-    background-color: rgba(var(--linkColorForRgba), 0.9);
-}
-
-#area-riservata ul a:visited:hover {
-    background-color: rgba(var(--visitedLinkColorForRgba), 0.9);
-}
-
-#area-riservata ul a .text-box p {
-    font-size: 1em;
-}
-
-#area-riservata ul a .text-box p:first-child {
-    font-size: 1.8em;
-    line-height: 2em;
-    text-decoration: underline;
-}
-
-#area-riservata ul .icon-box{
-    padding-left: 2em;
-    flex-grow: 2;
-    text-align: center;
-    font-size: 2.4em;
-    line-height: 2em;
-    align-self: center;
-}
-
-#contenitore-link-articoli {
-    background-image: url(./images/piano.png);
-}
-
-#contenitore-link-richieste {
-    background-image: url(./images/messaggi.png);
-}
-
-/********************************************
 ******************* HOME ********************
 ********************************************/
 
@@ -565,7 +548,6 @@ footer {
     
 }
 
-  
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -602,8 +584,8 @@ footer {
     justify-content: space-between;
     align-items: normal;
     align-content: normal;
-  }
-  
+}
+
 .prodotti-items{
     display: block;
     flex-grow: 0;
@@ -619,12 +601,9 @@ footer {
     transition: transform .1s;
 
 }
-  
 .prodotti-items:hover {
     transform: scale(1.2);
 }
-  
-
 
 .passione h3{
     padding-top: 1em;
@@ -663,14 +642,11 @@ hr{
 .grid5 { grid-area: 3 / 1 / 5 / 2; }
 .grid6 { grid-area: 4 / 4 / 6 / 6; }
 
-
-
 .il-team h3{
     padding-top: 1em;
     padding-bottom: 1em;
     font-size: 30px;
 }
-
 
 .team-section {
     width: 100%;
@@ -679,7 +655,6 @@ hr{
     padding: 20px;
     box-sizing: border-box;
 }
-
 
 .team-section p{
     font-size: large;
@@ -702,5 +677,3 @@ hr{
     font-size: 1rem;
     font-weight: bold;
 }
-
-
