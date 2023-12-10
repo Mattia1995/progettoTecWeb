@@ -415,6 +415,7 @@ footer {
     display: inline-block;
     line-height: 2em;
     margin-bottom: 2em;
+    margin-top: 0;
 }
 
 #area-riservata-gestione-articoli #crea-articolo, #area-riservata-gestione-articoli ul li a{
