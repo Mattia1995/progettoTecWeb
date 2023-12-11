@@ -559,18 +559,33 @@ footer {
     border-bottom: none;
 }
 
-#lista-richieste li a{
-    width: 15%;
+#lista-richieste li a{    
+    width: 9%;
     display: block;
     float: right;
-    text-align: right;
-    font-size: 1.8em;
-    line-height: 1.2em;
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 1.4em;
     color: var(--linkColor);
+    border: 1px solid var(--linkColor);
+    text-decoration: none;
+    transition: .2s; 
+    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
+}
+
+#lista-richieste li a:hover {
+    background-color: var(--linkColor);
+    color: var(--linkHoverColor);
 }
 
 #lista-richieste li a:visited{
     color: var(--flagColor);
+    border-color: var(--flagColor);
+}
+
+#lista-richieste li a:visited:hover {
+    color: var(--linkHoverColor);
+    background-color: var(--flagColor);
 }
 
 .richiesta {
