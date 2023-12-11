@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 12pt; /* NON SI USANO EM E % SI USANO PUNTI */
+    font-family: "Times New Roman, serif"; /* USARE FONT CON GRAZIE */
+    line-height: 1.5em; /* METTERE SEMPRE 1.5 */
+    margin: auto;
+    background-color: white;
+}
+
+header {
+    text-align: left;
+    padding: 1em 0;
+    margin: 0.5em 9;
+}
+
+header h1 {
+    content: url('./images/logo.png');
+    margin: auto;
+    width: 4cm;
+}
+
+#menu {
+    display: none;
+}
+
+#breadcrumb {
+    padding: 0.5em 0;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    font-weight: bold;
+}
+
+.aiuti-navigazione {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    font-size: 10pt;
+    font-style: italic;
+    border-top: 1px solid #DDD;
+    padding: 1.3em 0.5em;
+    margin-top: 2em;
+}
+
+h2 {
+    margin-bottom: 0.5em;
+}
+
+/********************************************
+***** AREA RISERVATA GESTIONE RICHIESTE *****
+********************************************/
+#lista-richieste a {
+    display: none;
+}
+
+#lista-richieste li {
+    margin-bottom: 1.1em;
+}
+
+.richiesta dt {
+    font-weight: bold;
+}
+
+.richiesta dt, .richiesta dd {
+    display: inline-block;
+}
+
+.richiesta dd:not(:last-child)::after {
+    content: " - ";
+}
+
+/********************************************
+********** AREA RISERVATA RICHIESTA *********
+********************************************/
+#area-riservata-richiesta button {
+    display: none;
+}

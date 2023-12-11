@@ -26,7 +26,8 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
     -> Metterle sempre perché la prof lancia test automatici ma non pensarci troppo, non servono per i browser.
 
 10) Va bene button nella pagina della richiesta?
-11) Va bene la gestione per firefox per l'hover dei bottoni nella lista degli articoli? 
+11) Va bene la gestione per firefox per l'hover dei bottoni nella lista degli articoli?
+12) Va bene la gestione dei DT e DL nella pagina delle richieste?
 
 
 

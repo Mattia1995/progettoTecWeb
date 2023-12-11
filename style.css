@@ -555,6 +555,7 @@ footer {
     border-bottom: 1px solid var(--flagColor);
     overflow: hidden;
 }
+
 #lista-richieste li:last-child{
     border-bottom: none;
 }
