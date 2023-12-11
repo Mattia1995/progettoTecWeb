@@ -58,13 +58,13 @@ header {
 }
 
 #header-container h1 { 
-    width: 7%;
+    width: 9%;
     align-self: center;
     margin-right: 1%;
     font-size: 3em;
-    line-height: 1.5em;
+    line-height: 1.8em;
     text-indent: -999em;
-    background-image: url('./images/logo.png');
+    background-image: url(./images/logo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -106,9 +106,10 @@ header {
 ********************************************/
 
 main {
-    color: var(--txtColor);
-    margin: 0em auto;
     max-width: 1024px;
+    width: 100%;
+    margin: 0em auto;
+    color: var(--txtColor);
 }
 
 main #breadcrumb {
@@ -414,6 +415,7 @@ footer {
     display: inline-block;
     line-height: 2em;
     margin-bottom: 2em;
+    margin-top: 0;
 }
 
 #area-riservata-gestione-articoli #crea-articolo, #area-riservata-gestione-articoli ul li a{
@@ -497,18 +499,21 @@ footer {
 }
 
 #gestione-articolo-form input, #gestione-articolo-form textarea {
-    width: 98%;
+    width: 97%;
     margin-bottom: 1em;
     padding: 0.6em 0.3em;
-}
-
-#gestione-articolo-form input[type="radio"]{
-    width: 5%;
 }
 
 #gestione-articolo-form label{
     width: auto;
     display: inline;
+}
+
+#gestione-articolo-form select {
+    width: 48%;
+    padding: 0.5em 0.3em;
+    margin-top: 0.4em;
+    display: block;
 }
 
 #gestione-articolo-form form input[type="submit"] {
@@ -526,12 +531,120 @@ footer {
     color: var(--linkHoverColor);
 }
 
-#gestione-articolo-form fieldset {
-    border: none;
+.form-row-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
 }
 
-#gestione-articolo-form fieldset legend{
-    margin-bottom: 0.4em;
+.form-row-container .form-col-50{
+    width: 48%;
+    margin-left: 2%;
+}
+
+.form-row-container .form-col-50:first-child{
+    margin-left: 0;
+    margin-right: 2%;
+}
+
+/********************************************
+***** AREA RISERVATA GESTIONE RICHIESTE *****
+********************************************/
+#lista-richieste li{
+    padding: 0.8em 0;
+    border-bottom: 1px solid var(--flagColor);
+    overflow: hidden;
+}
+#lista-richieste li:last-child{
+    border-bottom: none;
+}
+
+#lista-richieste li a{    
+    width: 9%;
+    display: block;
+    float: right;
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 1.4em;
+    color: var(--linkColor);
+    border: 1px solid var(--linkColor);
+    text-decoration: none;
+    transition: .2s; 
+    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
+}
+
+#lista-richieste li a:hover {
+    background-color: var(--linkColor);
+    color: var(--linkHoverColor);
+}
+
+#lista-richieste li a:visited{
+    color: var(--flagColor);
+    border-color: var(--flagColor);
+}
+
+#lista-richieste li a:visited:hover {
+    color: var(--linkHoverColor);
+    background-color: var(--flagColor);
+}
+
+.richiesta {
+    width: 85%;
+    display: flex;
+    float: left;
+    padding-top: 0.5em;
+}
+
+.richiesta dt{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.richiesta dd{
+    padding: 0 1em;
+    border-right: 1px solid black;
+}
+
+.richiesta dd:last-child{
+    border-right: none;
+}
+
+.richiesta .descrizione {
+    flex-grow: 3;
+}
+
+.richiesta .stato {
+    min-width: 14%;
+}
+
+.richiesta.richiesta-da-leggere {
+    font-weight: bold;
+}
+
+/********************************************
+********** AREA RISERVATA RICHIESTA *********
+********************************************/
+#area-riservata-richiesta button {
+    background-color: transparent;
+    padding: 0.8em;
+    font-size: 1.1em;
+    margin: auto;
+    display: block;
+    margin-top: 1.5em; 
+    transition: .2s; 
+    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
+}
+
+#area-riservata-richiesta > p {
+    text-align: center;
+}
+
+#area-riservata-richiesta button:hover {
+    color: var(--linkHoverColor);
+    background-color: var(--flagColor);
+    border-color: var(--flagColor);
 }
 
 /********************************************
