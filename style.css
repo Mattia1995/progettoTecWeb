@@ -136,7 +136,6 @@ main a:visited {
 #vetrina{
     display: grid;
     background-color: var(--bodyBgColor);
-    /* grid-template-columns: repeat(auto-fit, minmax(9em, 1fr)); */
     grid-template-columns: 24% 24% 24% 24%;
     column-gap: 0.8em;
     row-gap: 0.8em;
@@ -145,7 +144,7 @@ main a:visited {
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: space-between;
+    
 
     border: 1.5px solid var(--flagColor);
     border-radius: 10px;
@@ -156,12 +155,13 @@ main a:visited {
 .prodottovetrina img{
     display: block;
     width: 100%;
-    margin:auto;
+    
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 .prodottovetrina dl{
     padding: 0.8em;
+    flex-grow: 2;
 }
 .prodottovetrina dl > dt{
     font-weight: bold;
@@ -193,7 +193,7 @@ main a:visited {
     padding-top: 0.5em;
 }
 .dtinvisibileprodotto{
-    display: none;
+    display: none; /* DEVO Spostare di -999em (a sinistra) */
 }
 
 
@@ -225,7 +225,6 @@ main a:visited {
     float: left;
     padding-right: 0.3em;
 }
-
 
 
 
