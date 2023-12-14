@@ -227,8 +227,6 @@ main a:visited {
 	text-align: center;
     margin-top: 5em;
     padding: 3em;
-    -webkit-box-shadow: 0px 0px 32px 8px rgba(var(--visitedLinkColorForRgba), 0.13);
-    -moz-box-shadow: 0px 0px 32px 8px rgba(var(--visitedLinkColorForRgba), 0.13);
     box-shadow: 0px 0px 32px 8px rgba(var(--visitedLinkColorForRgba), 0.13);
 }
 
