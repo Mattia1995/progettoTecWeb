@@ -31,6 +31,14 @@ body {
     min-height: 100vh;
 }
 
+body a {
+    color: var(--linkColor);
+}
+
+body a:visited {
+    color: var(--visitedLinkColor);
+}
+
 .aiuti-navigazione {
 	position: absolute;
 	height: 1px;
@@ -112,21 +120,15 @@ main {
     color: var(--txtColor);
 }
 
-main #breadcrumb {
-    margin: 0.5em 0 0.5em 0;
-}
-
 main h2 {
     margin: 1em 0;
     text-align: center;
 }
 
-main a {
-    color: var(--linkColor);
-}
-
-main a:visited {
-    color: var(--visitedLinkColor);
+#breadcrumb {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0.5em auto;
 }
 
 /********************************************
@@ -288,10 +290,6 @@ footer {
 /********************************************
 ****************** LOGIN ********************
 ********************************************/
-#area-riservata-login {
-    width: 100%;
-}
-
 #login-form {
     width: 40%;
     margin: 4em auto;

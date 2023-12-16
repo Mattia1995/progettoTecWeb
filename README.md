@@ -48,3 +48,5 @@ NB PHP:
 - Controllare quando non c'è connessione o quando non viene restituito niente.
     -> Dare output capibile dall'utente.
 - Consiglio -> Uso i vari segnaposti.
+- Testare errori di validazioni, bisogna ritornare la lista degli errori e deve essere una lista (ul -> li) valida e accessivile quindi se non ci sono errori non buttare fuori la lista in output.
+- RIPORTARE L'INPUT CHE AVEVA DATO L'UTENTE IN CASO DI ERRORE.
