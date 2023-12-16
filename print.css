@@ -36,6 +36,10 @@ header h1 {
     font-weight: bold;
 }
 
+#breadcrumb a{
+    color: black;
+}
+
 .aiuti-navigazione {
     display: none;
 }
@@ -51,6 +55,60 @@ footer {
 
 h2 {
     margin-bottom: 0.5em;
+}
+
+
+/********************************************
+*************** AREA RISERVATA **************
+********************************************/
+#area-riservata .icon-box{
+    display: none;
+}
+
+#area-riservata .text-box{
+    margin: 1em 0;
+}
+
+#area-riservata a{
+    color: black;
+}
+
+
+/********************************************
+***** AREA RISERVATA GESTIONE ARTICOLI ******
+********************************************/
+
+#area-riservata-gestione-articoli .link-button {
+    display: none;
+}
+
+#area-riservata-gestione-articoli h2 {
+    text-align: center;
+}
+
+#area-riservata-gestione-articoli ul {
+    margin-top: 2em;
+}
+
+#area-riservata-gestione-articoli li {
+    overflow: hidden;
+    display: flex;
+}
+
+#area-riservata-gestione-articoli img {
+    width: 15%;
+}
+
+#area-riservata-gestione-articoli dl {
+    margin-left: 2em;
+    flex-grow: 2;
+    align-self: center;
+}
+
+#area-riservata-gestione-articoli dl dt {
+    font-weight: bold;
+    float: left;
+    padding-right: 0.5em;
 }
 
 /********************************************
@@ -79,6 +137,6 @@ h2 {
 /********************************************
 ********** AREA RISERVATA RICHIESTA *********
 ********************************************/
-#area-riservata-richiesta button {
+#area-riservata-richiesta .link-button {
     display: none;
 }
