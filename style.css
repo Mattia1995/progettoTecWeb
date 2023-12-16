@@ -66,13 +66,13 @@ header {
 }
 
 #header-container h1 { 
-    width: 9%;
+    width: 7%;
     align-self: center;
     margin-right: 1%;
     font-size: 3em;
-    line-height: 1.8em;
+    line-height: 1.5em;
     text-indent: -999em;
-    background-image: url(./images/logo.png);
+    background-image: url('./images/logo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -114,13 +114,12 @@ header {
 ********************************************/
 
 main {
-    max-width: 1024px;
-    width: 100%;
-    margin: 0em auto;
     color: var(--txtColor);
+    margin: 0em auto;
+    max-width: 1024px;
 }
 
-main h2 {
+main h2, h3 {
     margin: 1em 0;
     text-align: center;
 }
@@ -132,96 +131,36 @@ main h2 {
 }
 
 /********************************************
-***************** VETRINA *******************
+****************** CHI SIAMO *******************
 ********************************************/
 
-#vetrina{
+.grid-alternate {
     display: grid;
-    background-color: var(--bodyBgColor);
-    /* grid-template-columns: repeat(auto-fit, minmax(9em, 1fr)); */
-    grid-template-columns: 25% 25% 25% 25%;
-    column-gap: 0.8em;
-    row-gap: 0.8em;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto auto auto auto auto;
+    gap: 1em 1em;
+	padding: 1em;
 }
-.prodottovetrina{
-    border: 1.5px solid var(--flagColor);
-    border-radius: 10px;
-    list-style-type: none;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-.prodottovetrina img{
-    display: block;
-    width: 100%;
-    margin:auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.prodottovetrina dl{
-    padding: 0.8em;
-}
-.prodottovetrina dl > dt{
-    font-weight: bold;
-    float: left;
-    padding-right: 0.3em;
-}
-.prodottovetrina a{
-    color: var(--linkColor);
-    display:block;
-    text-align:center;
 
-    padding: 0.5em;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-bottom: 1em;
+.grid-alternate img{
+    max-width:100%;
+    max-height:100%;
+}
 
-    border: 1px solid var(--flagColor);
-    border-radius: 10px;
+.grid1-alt p {
+    font-size: 1.5em;
+	line-height: 1.5em;
 }
-.prodottovetrina dl a:visited{
-    color: var(--visitedLinkColor);
-}
-.nomeprodotto{
-    font-weight: bold;
-    font-size: 120%;
-    padding-bottom: 0.5em;
-}
-.prezzoprodotto{
-    padding-top: 0.5em;
-}
-.dtinvisibileprodotto{
-    display: none;
-}
+    
+.grid1-alt { grid-area: 1 / 1 / 1 / 6; }
+.grid2-alt { grid-area: 2 / 1 / 2 / 4; }
+.grid3-alt { grid-area: 2 / 4 / 2 / 6; }
+.grid4-alt { grid-area: 3 / 1 / 3 / 3; }
+.grid5-alt { grid-area: 3 / 3 / 3 / 6; }
+.grid6-alt { grid-area: 4 / 1 / 4 / 6; }
 
 /********************************************
-************* PRODOTTO SINGOLO **************
-********************************************/
-
-#prodottosingolo{
-    background-color: var(--bodyBgColor);
-    /*padding: 0.5em;*/
-    list-style-type: none;
-    /* padding: 0.5em;*/
-    /* text-align: left; */ /* Serve metterlo o è di default? */
-}
-#prodottosingolo img{
-    display: block;
-    float: left;
-    width: 50%;
-    margin:auto;
-}
-#prodottosingolo dl{
-    background-color: rgba(255, 255, 255, 0.8); /* Solo di prova */
-    padding: 0.5em;
-}
-#prodottosingolo dl > dt{
-    font-weight: bold;
-    float: left;
-    padding-right: 0.3em;
-}
-
-/********************************************
-****************** CONTATTACI ***************
+****************** CONTATTACI *******************
 ********************************************/
 
 .container {
@@ -268,7 +207,7 @@ main h2 {
 }
 
 /********************************************
-****************** DOVE SIAMO ***************
+****************** DOVE SIAMO *******************
 ********************************************/
 
 address {
@@ -278,6 +217,7 @@ address {
 /********************************************
 ****************** FOOTER *******************
 ********************************************/
+
 footer {
     background-color: var(--footerBgColor);
     color: var(--footerTxtColor);
@@ -294,7 +234,7 @@ footer {
     width: 40%;
     margin: 4em auto;
     padding: 3em;
-    box-shadow: 0px 0px 32px 8px rgba(var(--visitedLinkColorForRgba), 0.13);
+    box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
 }
 
 #login-form form {
@@ -331,87 +271,12 @@ footer {
 }
 
 /********************************************
-************* AREA RISERVATA ****************
-********************************************/
-#area-riservata {
-    width: 100%;
-}
-
-#area-riservata h2 {
-    margin: 0.7em 0;
-}
-
-#area-riservata > p {
-    text-align: center;
-}
-
-#area-riservata ul {
-    display: grid;
-    width: 100%;
-    margin-top: 3em;
-    margin-bottom: 5em;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 3em;
-    list-style: none;
-}
-
-#area-riservata ul li {
-    background-position: center;
-    background-size: 100%;
-    transition: .5s;
-}
-
-#area-riservata ul li:hover {
-    background-size: 130%;
-}
-
-#area-riservata ul a {
-    display: flex;
-    padding: 4em 2em;
-    text-decoration: none;
-    color: var(--bodyBgColor);
-    background-color: rgba(var(--linkColorForRgba), 0.8);
-}
-
-#area-riservata ul a:visited {
-    background-color: rgba(var(--visitedLinkColorForRgba), 0.8);
-}
-
-#area-riservata ul a .text-box p {
-    font-size: 1em;
-}
-
-#area-riservata ul a .text-box p:first-child {
-    font-size: 1.8em;
-    line-height: 2em;
-    text-decoration: underline;
-}
-
-#area-riservata ul .icon-box{
-    padding-left: 2em;
-    flex-grow: 2;
-    text-align: center;
-    font-size: 2.4em;
-    line-height: 2em;
-    align-self: center;
-}
-
-#contenitore-link-articoli {
-    background-image: url(./images/piano.png);
-}
-
-#contenitore-link-richieste {
-    background-image: url(./images/messaggi.png);
-}
-
-/********************************************
 ***** AREA RISERVATA GESTIONE ARTICOLI ******
 ********************************************/
 #area-riservata-gestione-articoli h2 {
     display: inline-block;
     line-height: 2em;
     margin-bottom: 2em;
-    margin-top: 0;
 }
 
 #area-riservata-gestione-articoli #crea-articolo, #area-riservata-gestione-articoli ul li a{
@@ -475,21 +340,18 @@ footer {
 }
 
 #gestione-articolo-form input, #gestione-articolo-form textarea {
-    width: 97%;
+    width: 98%;
     margin-bottom: 1em;
     padding: 0.6em 0.3em;
+}
+
+#gestione-articolo-form input[type="radio"]{
+    width: 5%;
 }
 
 #gestione-articolo-form label{
     width: auto;
     display: inline;
-}
-
-#gestione-articolo-form select {
-    width: 48%;
-    padding: 0.5em 0.3em;
-    margin-top: 0.4em;
-    display: block;
 }
 
 #gestione-articolo-form form input[type="submit"] {
@@ -507,24 +369,16 @@ footer {
     color: var(--linkHoverColor);
 }
 
-.form-row-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 98%;
+#gestione-articolo-form fieldset {
+    border: none;
 }
 
-.form-row-container .form-col-50{
-    width: 48%;
-    margin-left: 2%;
-}
-
-.form-row-container .form-col-50:first-child{
-    margin-left: 0;
-    margin-right: 2%;
+#gestione-articolo-form fieldset legend{
+    margin-bottom: 0.4em;
 }
 
 /********************************************
-***** AREA RISERVATA GESTIONE RICHIESTE *****
+************* AREA RISERVATA ****************
 ********************************************/
 #lista-richieste li{
     padding: 0.8em 0;
@@ -543,18 +397,14 @@ footer {
     line-height: 1.4em;
 }
 
-.richiesta {
-    width: 85%;
-    display: flex;
-    float: left;
-    padding-top: 0.5em;
+#area-riservata ul a .text-box p {
+    font-size: 1em;
 }
 
-.richiesta dt{
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
+#area-riservata ul a .text-box p:first-child {
+    font-size: 1.8em;
+    line-height: 2em;
+    text-decoration: underline;
 }
 
 .richiesta dd{
@@ -583,6 +433,9 @@ footer {
 ********************************************/
 #area-riservata-richiesta > p {
     text-align: center;
+    font-size: 2.4em;
+    line-height: 2em;
+    align-self: center;
 }
 
 #area-riservata-richiesta a{    
@@ -632,6 +485,7 @@ footer {
     
 }
 
+  
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -668,8 +522,8 @@ footer {
     justify-content: space-between;
     align-items: normal;
     align-content: normal;
-}
-
+  }
+  
 .prodotti-items{
     display: block;
     flex-grow: 0;
@@ -683,8 +537,8 @@ footer {
     max-width:90%;
     max-height:90%;
     transition: transform .1s;
-
 }
+
 .prodotti-items:hover {
     transform: scale(1.2);
 }
