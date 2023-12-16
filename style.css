@@ -416,32 +416,12 @@ footer {
 
 #area-riservata-gestione-articoli #crea-articolo, #area-riservata-gestione-articoli ul li a{
     padding: 0.35em 0;
-    border: 2px solid var(--linkColor);
-    color: var(--linkColor);
-    text-align: center;
-    transition: .2s; 
-    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
-}
-
-#area-riservata-gestione-articoli #crea-articolo:hover, #area-riservata-gestione-articoli ul li a:hover {
-    background-color: var(--linkColor);
-    color: var(--linkHoverColor);
-}
-
-#area-riservata-gestione-articoli #crea-articolo:visited, #area-riservata-gestione-articoli ul li a:visited {
-    color: var(--flagColor);
-    border-color: var(--flagColor);
-}
-
-#area-riservata-gestione-articoli #crea-articolo:visited:hover, #area-riservata-gestione-articoli ul li a:visited:hover {
-    color: var(--linkHoverColor);
-    background-color: var(--flagColor);
+    border-width: 2px;
 }
 
 #area-riservata-gestione-articoli #crea-articolo {
     width: 15%;
     float: right;
-    text-decoration: none;
 }
 
 #area-riservata-gestione-articoli li {
@@ -558,31 +538,9 @@ footer {
 
 #lista-richieste li a{    
     width: 9%;
-    display: block;
     float: right;
-    text-align: center;
     font-size: 1.6em;
     line-height: 1.4em;
-    color: var(--linkColor);
-    border: 1px solid var(--linkColor);
-    text-decoration: none;
-    transition: .2s; 
-    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
-}
-
-#lista-richieste li a:hover {
-    background-color: var(--linkColor);
-    color: var(--linkHoverColor);
-}
-
-#lista-richieste li a:visited{
-    color: var(--flagColor);
-    border-color: var(--flagColor);
-}
-
-#lista-richieste li a:visited:hover {
-    color: var(--linkHoverColor);
-    background-color: var(--flagColor);
 }
 
 .richiesta {
@@ -623,25 +581,41 @@ footer {
 /********************************************
 ********** AREA RISERVATA RICHIESTA *********
 ********************************************/
-#area-riservata-richiesta button {
-    background-color: transparent;
-    padding: 0.8em;
-    font-size: 1.1em;
-    margin: auto;
-    display: block;
-    margin-top: 1.5em; 
-    transition: .2s; 
-    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
-}
-
 #area-riservata-richiesta > p {
     text-align: center;
 }
 
-#area-riservata-richiesta button:hover {
+#area-riservata-richiesta a{    
+    width: 42%;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin: 1em auto;
+    padding: 0.5em 0;
+}
+
+.link-button {
+    display: block;
+    color: var(--linkColor);
+    border: 1px solid var(--linkColor);
+    text-align: center;
+    text-decoration: none;
+    transition: .2s;
+    -moz-transition: none;
+}
+
+.link-button:hover {
+    background-color: var(--linkColor);
+    color: var(--linkHoverColor);
+}
+
+.link-button:visited{
+    color: var(--flagColor);
+    border-color: var(--flagColor);
+}
+
+.link-button:visited:hover {
     color: var(--linkHoverColor);
     background-color: var(--flagColor);
-    border-color: var(--flagColor);
 }
 
 /********************************************
