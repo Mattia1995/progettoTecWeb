@@ -52,14 +52,40 @@
                                 <input type="number" name="prezzo_scontato" id="prezzo_scontato" step=".01">
                             </div>
                         </div>
-                        <label for="immagineArticolo">Immagine articolo:</label>
-                        <input type="file" name="immagineArticolo" id="immagineArticolo" required>
-                        <label for="categoriaArticolo">Categoria articolo:</label>
-                        <select name="categoriaArticolo" id="categoriaArticolo" required>
-                            <option value="batteria">Batteria</option>
-                            <option value="chitarra">Chitarra</option>
-                            <option value="pianoforte">Pianoforte</option>
-                        </select>
+                        <div class="form-row-container">
+                            <div class="form-col-50">
+                                <label for="immagineArticolo">Immagine articolo:</label>
+                                <input type="file" name="immagineArticolo" id="immagineArticolo" required>
+                            </div>
+                            <div class="form-col-50">
+                                <label for="categoriaArticolo">Categoria articolo:</label>
+                                <select name="categoriaArticolo" id="categoriaArticolo" required>
+                                    <option value="batteria">Batteria</option>
+                                    <option value="chitarra">Chitarra</option>
+                                    <option value="pianoforte">Pianoforte</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row-container">
+                            <div class="form-col-50">
+                                <label for="marchioArticolo">Marchio:</label>
+                                <input type="text" name="marchioArticolo" id="marchioArticolo" required>
+                            </div>
+                            <div class="form-col-50">
+                                <label for="tipologiaArticolo">Tipologia:</label>
+                                <input type="text" name="tipologiaArticolo" id="tipologiaArticolo" required>    
+                            </div>
+                        </div>
+                        <div class="form-row-container">
+                            <div class="form-col-50">
+                                <label for="materialeArticolo">Materiale:</label>
+                                <input type="text" name="materialeArticolo" id="materialeArticolo" required>
+                            </div>
+                            <div class="form-col-50">
+                                <label for="coloreArticolo">Colore:</label>
+                                <input type="text" name="coloreArticolo" id="coloreArticolo" required>    
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <!-- TODO: Gestire regole validazione campi form -->

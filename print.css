@@ -57,6 +57,24 @@ h2 {
     margin-bottom: 0.5em;
 }
 
+/********************************************
+****************** LOGIN ********************
+********************************************/
+
+#login-form input, #login-form textarea{
+    margin-bottom: 1em;
+}
+
+#login-form label{
+    display: block;
+}
+
+#login-form input[type="submit"]{
+    display: block;
+    background: none;
+    border: 1px solid black;
+    padding: 0.3em 1em;
+}
 
 /********************************************
 *************** AREA RISERVATA **************
@@ -72,7 +90,6 @@ h2 {
 #area-riservata a{
     color: black;
 }
-
 
 /********************************************
 ***** AREA RISERVATA GESTIONE ARTICOLI ******
@@ -93,6 +110,7 @@ h2 {
 #area-riservata-gestione-articoli li {
     overflow: hidden;
     display: flex;
+    margin-bottom: 2em;
 }
 
 #area-riservata-gestione-articoli img {
@@ -109,6 +127,28 @@ h2 {
     font-weight: bold;
     float: left;
     padding-right: 0.5em;
+}
+
+/********************************************
+********* AREA RISERVATA ARTICOLO ***********
+********************************************/
+
+#area-riservata-articolo h2 {
+    text-align: center;
+}
+
+#area-riservata-articolo input, #area-riservata-articolo textarea{
+    margin-bottom: 1em;
+}
+
+#area-riservata-articolo label[for="descrizioneArticolo"]{
+    display: block;
+}
+
+#area-riservata-articolo input[type="submit"]{
+    background: none;
+    border: 1px solid black;
+    padding: 0.3em 1em;
 }
 
 /********************************************
@@ -137,6 +177,10 @@ h2 {
 /********************************************
 ********** AREA RISERVATA RICHIESTA *********
 ********************************************/
+#area-riservata-richiesta p {
+    text-align: justify;
+}
+
 #area-riservata-richiesta .link-button {
     display: none;
 }
