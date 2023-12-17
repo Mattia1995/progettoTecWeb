@@ -4,9 +4,9 @@
 }
 
 html {
-    font-size: 12pt; /* NON SI USANO EM E % SI USANO PUNTI */
-    font-family: "Times New Roman, serif"; /* USARE FONT CON GRAZIE */
-    line-height: 1.5em; /* METTERE SEMPRE 1.5 */
+    font-size: 12pt;
+    font-family: "Times New Roman, serif";
+    line-height: 1.5em;
     margin: auto;
     background-color: white;
 }
@@ -14,7 +14,7 @@ html {
 header {
     text-align: left;
     padding: 1em 0;
-    margin: 0.5em 9;
+    margin: 0.5em 0;
 }
 
 header h1 {
