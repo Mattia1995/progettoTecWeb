@@ -57,23 +57,36 @@ h2 {
     margin-bottom: 0.5em;
 }
 
-/********************************************
-****************** LOGIN ********************
-********************************************/
-
-#login-form input, #login-form textarea{
+form input, form textarea{
     margin-bottom: 1em;
 }
 
-#login-form label{
+form label{
     display: block;
 }
 
-#login-form input[type="submit"]{
+form input[type="submit"]{
     display: block;
     background: none;
     border: 1px solid black;
     padding: 0.3em 1em;
+}
+
+/********************************************
+****************** DOVE SIAMO ***************
+********************************************/
+
+.container {
+    margin-bottom: 1em;
+}
+
+#dove-siamo .container a {
+    display: none;
+}
+
+.container dt {
+    margin-top: 0.5em;
+    font-weight: bold;
 }
 
 /********************************************
@@ -137,18 +150,8 @@ h2 {
     text-align: center;
 }
 
-#area-riservata-articolo input, #area-riservata-articolo textarea{
-    margin-bottom: 1em;
-}
-
 #area-riservata-articolo label[for="descrizioneArticolo"]{
     display: block;
-}
-
-#area-riservata-articolo input[type="submit"]{
-    background: none;
-    border: 1px solid black;
-    padding: 0.3em 1em;
 }
 
 /********************************************
