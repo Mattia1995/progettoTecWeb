@@ -576,7 +576,7 @@ footer {
 
 .cover-image {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-image: url('./imgs/chitarre.jpg');
     background-size: cover;
     background-position: center;
@@ -599,7 +599,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 255, 0.3); /* Imposta il colore e l'opacità desiderati */
+    background-color: rgba(0, 0, 255, 0.3);
 }
 
 .prodotti{
@@ -642,17 +642,69 @@ footer {
 }
 
 .passione h3{
-    padding-top: 1em;
-    padding-bottom: 1em;
     font-size: 30px;
+    margin-top: 1em;
+    margin-bottom: 0;
+    padding-bottom: 0.3em;
+    text-align: left;
+    margin-top: 2em;
 }
 
-.grid-box {
+
+.passion-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; 
+    grid-template-columns: repeat(4, 1fr) 0;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+    
+.passion-1 { 
+    grid-area: 1 / 1 / 3 / 3;
+    height: 600px;
+}
+
+
+.passion-2 {
+    grid-area: 1 / 3 / 3 / 5; 
+    height: 600px;  
+}
+
+.passion-3 { 
+    grid-area: 3 / 1 / 5 / 3; 
+    height: 600px;  
+}
+
+.passion-4 { 
+    grid-area: 3 / 3 / 5 / 5; 
+    height: 600px;  
+}
+
+.passion-5 { 
+    grid-area: 5 / 1 / 7 / 3; 
+    height: 600px;  
+}
+
+.passion-6 { 
+    grid-area: 5 / 3 / 7 / 5; 
+    height: 600px;  
+} 
+
+.passion-grid img{
+    max-width:100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.passione p {
+    font-size: 1.45em;
+    line-height: 1.3em;
+    text-align: center;
+    margin: 0em 2em;
+    padding: 30% 0;
 }
 
 hr{
@@ -660,28 +712,14 @@ hr{
     color: var(--flagColor);
 }
 
-.grid-box img{
-    max-width:100%;
-    max-height:100%;
-}
-
-.grid-box p {
-    font-size: 1.5em;
-    line-height: 1em;
-    padding: 1em;
-}
-
-.grid1 { grid-area: 1 / 1 / 3 / 3; }
-.grid2 { grid-area: 1 / 3 / 2 / 6; }
-.grid3 { grid-area: 2 / 4 / 4 / 6; }
-.grid4 { grid-area: 3 / 2 / 5 / 4; }
-.grid5 { grid-area: 3 / 1 / 5 / 2; }
-.grid6 { grid-area: 4 / 4 / 6 / 6; }
 
 .il-team h3{
-    padding-top: 1em;
-    padding-bottom: 1em;
     font-size: 30px;
+    margin-top: 1em;
+    margin-bottom: 0;
+    padding-bottom: 0.3em;
+    text-align: left;
+    margin-top: 3em;
 }
 
 .team-section {
