@@ -175,11 +175,9 @@ main h2, h3 {
 
 .prodottoVetrina{
     list-style-type: none;
-
     display: flex;
     flex-direction: column;
     align-items: start;
-
     border: 1.5px solid var(--flagColor);
     border-radius: 10px;
 }
