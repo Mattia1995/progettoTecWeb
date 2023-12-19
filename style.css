@@ -137,22 +137,22 @@ main h2, h3 {
 
 .grid-alternate {
     display: grid;
-    background-color: var(--bodyBgColor);
-    grid-template-columns: 24% 24% 24% 24%;
-    column-gap: 0.8em;
-    row-gap: 0.8em;
+    grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto auto auto auto auto;
+    gap: 1em 1em;
+	padding: 1em;
 }
 
 .grid-alternate img{
-    max-width:100%;
-    max-height:100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .grid1-alt p {
     font-size: 1.5em;
 	line-height: 1.5em;
 }
-    
+
 .grid1-alt { grid-area: 1 / 1 / 1 / 6; }
 .grid2-alt { grid-area: 2 / 1 / 2 / 4; }
 .grid3-alt { grid-area: 2 / 4 / 2 / 6; }
