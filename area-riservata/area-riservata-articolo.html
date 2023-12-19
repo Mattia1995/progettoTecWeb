@@ -2,7 +2,7 @@
 <html lang="it">
     <head>
         <meta charset="UTF-8">
-        <title>TODO: NOME_NEGOZIO</title>
+        <title>Melodia area riservata articolo</title>
         <meta name="keywords" content="Gestione articolo">
         <meta name="description" content="Pagina di gestione articolo area riservata">
         <link rel="stylesheet" media="screen" href="../style.css">
@@ -15,10 +15,11 @@
                 <nav id="menu">
                     <ul>
                         <li lang="en"><a href="../home.html">Home</a></li>
-                        <li><a href="chisiamo.html">Chi siamo</a></li>
-                        <li><a href="vetrina.html">Vetrina</a></li>
-                        <li><a href="contatti.html">Contatti</a></li>
-                        <li><a href="area-riservata.html">Area riservata</a></li>
+                        <li><a href="../chisiamo.html">Chi siamo</a></li>
+                        <li><a href="../vetrina.html">Vetrina</a></li>
+                        <li><a href="../contatti.html">Contatti</a></li>
+						<li><a href="../dove_siamo.html">Dove siamo</a></li>
+                        <li><a href="dashboard-area-riservata.html"><span lang="en">Dashboard</span> area riservata</a></li>
                     </ul>
                 </nav>
             </div>
@@ -27,7 +28,7 @@
             <nav id="breadcrumb">
                 <p>Ti trovi in: 
                     <a href="../home.html" lang="en">Home</a> &gt;&gt;
-                    <a href="area-riservata.html" lang="en">Area riservata</a> &gt;&gt;
+                    <a href="dashboard-area-riservata.html"><span lang="en">Dashboard</span> area riservata</a> &gt;&gt;
                     <a href="area-riservata-gestione-articoli.html">Articoli</a> &gt;&gt;
                     Nuovo articolo
                 </p>
@@ -40,27 +41,25 @@
                         <input type="text" name="nomeArticolo" id="nomeArticolo" required>
                         <label for="descrizioneArticolo">Descrizione:</label>
                         <textarea id="descrizioneArticolo" name="descrizioneArticolo" rows="4" cols="50" required></textarea>
-                        <label for="prezzo">Prezzo:</label>
-                        <input type="number" name="prezzo" id="prezzo" step=".01" required>
+                        <div class="form-row-container">
+                            <div class="form-col-50">
+                                <label for="prezzo">Prezzo:</label>
+                                <input type="number" name="prezzo" id="prezzo" step=".01" required>
+                            </div>
+                            <div class="form-col-50">
+                                <label for="prezzo_scontato">Prezzo scontato:</label>
+                                <input type="number" name="prezzo_scontato" id="prezzo_scontato" step=".01">
+                            </div>
+                        </div>
                         <label for="immagineArticolo">Immagine articolo:</label>
                         <input type="file" name="immagineArticolo" id="immagineArticolo" required>
+                        <label for="categoriaArticolo">Categoria articolo:</label>
+                        <select name="categoriaArticolo" id="categoriaArticolo" required>
+                            <option value="batteria">Batteria</option>
+                            <option value="chitarra">Chitarra</option>
+                            <option value="pianoforte">Pianoforte</option>
+                        </select>
                     </div>
-                    <fieldset>
-                        <legend>Categoria:</legend>
-                        <div>
-                            <input type="radio" id="batteria" name="categoria_articolo" value="Batteria">
-                            <label for="batteria">Batteria</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="chitarra" name="categoria_articolo" value="Chitarra">
-                            <label for="chitarra">Chitarra</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="pianoforte" name="categoria_articolo" value="Pianoforte">
-                            <label for="pianoforte">Pianoforte</label>
-                        </div>
-                    </fieldset>
-                    <!-- AGGIUNGERE INSERIMENTO IMMAGINE PRODOTTO -->
                     <div>
                         <!-- TODO: Gestire regole validazione campi form -->
                         <input type="submit">
@@ -70,7 +69,7 @@
         </main>
         <a class="aiuti-navigazione" href="#area-riservata-articolo">Torna su al contenuto</a>
         <footer>
-            <p>NOME GRUPPO - <span lang="en">All rights reserved</span></p>
+            <p>Melodia - <span lang="en">All rights reserved</span></p>
         </footer>
     </body>
 </html>

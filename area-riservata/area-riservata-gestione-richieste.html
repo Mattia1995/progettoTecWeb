@@ -2,9 +2,9 @@
 <html lang="it">
     <head>
         <meta charset="UTF-8">
-        <title>TODO: NOME_NEGOZIO</title>
-        <meta name="keywords" content="Gestione articoli">
-        <meta name="description" content="Pagina di gestione articoli area riservata">
+        <title>Melodia area riservata gestione richieste</title>
+        <meta name="keywords" content="Gestione richieste">
+        <meta name="description" content="Pagina di gestione richieste area riservata">
         <link rel="stylesheet" media="screen" href="../style.css">
     </head>
     <body>
@@ -18,25 +18,80 @@
                         <li><a href="../chisiamo.html">Chi siamo</a></li>
                         <li><a href="../vetrina.html">Vetrina</a></li>
                         <li><a href="../contatti.html">Contatti</a></li>
-                        <li>Area riservata</li>
+						<li><a href="../dove_siamo.html">Dove siamo</a></li>
+                        <li><a href="dashboard-area-riservata.html"><span lang="en">Dashboard</span> area riservata</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <main id="area-riservata-gestione-richieste">
+        <main id="area-riservata-gestione-richieste"><!-- DA CAMBIARE ID -->
             <nav id="breadcrumb">
                 <p>
                     Ti trovi in:
                     <a href="../home.html" lang="en">Home</a> &gt;&gt;
-                    <a href="area-riservata.html" lang="en">Area riservata</a> &gt;&gt;
-                    Articoli
+                    <a href="dashboard-area-riservata.html"><span lang="en">Dashboard</span> area riservata</a> &gt;&gt;
+                    Richieste
                 </p>
             </nav>
             <h2>Richieste</h2>
+            <ul id="lista-richieste">
+                <li>
+                    <dl class="richiesta richiesta-da-leggere">
+                        <dt>Stato richiesta:</dt>
+                        <dd class="stato">DA LEGGERE</dd>
+                        <dt>Data richiesta:</dt>
+                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
+                        <dt>Nome richiedente:</dt>
+                        <dd>Antonio Rossi</dd>
+                        <dt>Testo richiesta:</dt>
+                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
+                    </dl>
+                    <a href="area-riservata-richiesta.html" title="Vai al dettaglio richiesta">></a>
+                </li>
+                <li>
+                    <dl class="richiesta richiesta-da-leggere">
+                        <dt>Stato richiesta:</dt>
+                        <dd class="stato">DA LEGGERE</dd>
+                        <dt>Data richiesta:</dt>
+                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
+                        <dt>Nome richiedente:</dt>
+                        <dd>Antonio Rossi</dd>
+                        <dt>Testo richiesta:</dt>
+                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
+                    </dl>
+                    <a href="#" title="Vai al dettaglio richiesta">></a>
+                </li>
+                <li>
+                    <dl class="richiesta">
+                        <dt>Stato richiesta:</dt>
+                        <dd class="stato">EVASA</dd>
+                        <dt>Data richiesta:</dt>
+                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
+                        <dt>Nome richiedente:</dt>
+                        <dd>Antonio Rossi</dd>
+                        <dt>Testo richiesta:</dt>
+                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
+                    </dl>
+                    <a href="prova" title="Vai al dettaglio richiesta">></a>
+                </li>
+                <li>
+                    <dl class="richiesta">
+                        <dt>Stato richiesta:</dt>
+                        <dd class="stato">EVASA</dd>
+                        <dt>Data richiesta:</dt>
+                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
+                        <dt>Nome richiedente:</dt>
+                        <dd>Antonio Rossi</dd>
+                        <dt>Testo richiesta:</dt>
+                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
+                    </dl>
+                    <a href="prova" title="Vai al dettaglio richiesta">></a>
+                </li>
+            </ul>
         </main>
         <a class="aiuti-navigazione" href="#area-riservata-gestione-richieste">Torna su al contenuto</a>
         <footer>
-            <p>NOME GRUPPO - <span lang="en">All rights reserved</span></p>
+            <p>Melodia - <span lang="en">All rights reserved</span></p>
         </footer>
     </body>
 </html>
