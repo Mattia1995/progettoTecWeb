@@ -23,9 +23,12 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
     -> Non per forza dipende dal caso, meglio non aggiungere molti aria-* se il form è già chiaro.
 9) Area riservata keyword ecc non vanno bloccati?
     -> Metterle sempre perché la prof lancia test automatici ma non pensarci troppo, non servono per i browser.
-
-10) Va bene button nella pagina della richiesta?
+10) Va bene button nella pagina della richiesta? 
+    -> Meglio link con link a una get del server che memorizza (Vedo appunti stefano ha fatto un esempio a lezione).
 11) Va bene la gestione per firefox per l'hover dei bottoni nella lista degli articoli? 
+    -> ok mettere in relazione.
+12) h1 capire se lasciare il nome del negozio? 
+    -> o 2 h1 o h1 nome negozio e h2 nome pagina.
 
 
 
@@ -56,3 +59,14 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
     - 
 
 
+
+
+
+NB PHP:
+- Per i form testare che cambiando i parametri passati in get non dia errore.
+- Aggiugnere come campi a DB anche l'alt delle immagini (ad es. sui prodotti).
+- Controllare quando non c'è connessione o quando non viene restituito niente.
+    -> Dare output capibile dall'utente.
+- Consiglio -> Uso i vari segnaposti.
+- Testare errori di validazioni, bisogna ritornare la lista degli errori e deve essere una lista (ul -> li) valida e accessivile quindi se non ci sono errori non buttare fuori la lista in output.
+- RIPORTARE L'INPUT CHE AVEVA DATO L'UTENTE IN CASO DI ERRORE.

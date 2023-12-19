@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 12pt;
+    font-family: "Times New Roman, serif";
+    line-height: 1.5em;
+    margin: auto;
+    background-color: white;
+}
+
+header {
+    text-align: left;
+    padding: 1em 0;
+    margin: 0.5em 0;
+}
+
+header h1 {
+    content: url('./images/logo.png');
+    margin: auto;
+    width: 4cm;
+}
+
+#menu {
+    display: none;
+}
+
+#breadcrumb {
+    padding: 0.5em 0;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    font-weight: bold;
+}
+
+#breadcrumb a{
+    color: black;
+}
+
+.aiuti-navigazione {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    font-size: 10pt;
+    font-style: italic;
+    border-top: 1px solid #DDD;
+    padding: 1.3em 0.5em;
+    margin-top: 2em;
+}
+
+h2 {
+    margin-bottom: 0.5em;
+}
+
+form input, form textarea{
+    margin-bottom: 1em;
+}
+
+form label{
+    display: block;
+}
+
+form input[type="submit"]{
+    display: block;
+    background: none;
+    border: 1px solid black;
+    padding: 0.3em 1em;
+}
+
+/********************************************
+****************** DOVE SIAMO ***************
+********************************************/
+
+.container {
+    margin-bottom: 1em;
+}
+
+#dove-siamo .container a {
+    display: none;
+}
+
+.container dt {
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+/********************************************
+*************** AREA RISERVATA **************
+********************************************/
+#area-riservata .icon-box{
+    display: none;
+}
+
+#area-riservata .text-box{
+    margin: 1em 0;
+}
+
+#area-riservata a{
+    color: black;
+}
+
+/********************************************
+***** AREA RISERVATA GESTIONE ARTICOLI ******
+********************************************/
+
+#area-riservata-gestione-articoli .link-button {
+    display: none;
+}
+
+#area-riservata-gestione-articoli h2 {
+    text-align: center;
+}
+
+#area-riservata-gestione-articoli ul {
+    margin-top: 2em;
+}
+
+#area-riservata-gestione-articoli li {
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 2em;
+}
+
+#area-riservata-gestione-articoli img {
+    width: 15%;
+}
+
+#area-riservata-gestione-articoli dl {
+    margin-left: 2em;
+    flex-grow: 2;
+    align-self: center;
+}
+
+#area-riservata-gestione-articoli dl dt {
+    font-weight: bold;
+    float: left;
+    padding-right: 0.5em;
+}
+
+/********************************************
+********* AREA RISERVATA ARTICOLO ***********
+********************************************/
+
+#area-riservata-articolo h2 {
+    text-align: center;
+}
+
+#area-riservata-articolo label[for="descrizioneArticolo"]{
+    display: block;
+}
+
+/********************************************
+***** AREA RISERVATA GESTIONE RICHIESTE *****
+********************************************/
+#lista-richieste a {
+    display: none;
+}
+
+#lista-richieste li {
+    margin-bottom: 1.1em;
+}   
+
+.richiesta dt {
+    font-weight: bold;
+}
+
+.richiesta dt, .richiesta dd {
+    display: inline-block;
+}
+
+.richiesta dd:not(:last-child)::after {
+    content: " - ";
+}
+
+/********************************************
+********** AREA RISERVATA RICHIESTA *********
+********************************************/
+#area-riservata-richiesta p {
+    text-align: justify;
+}
+
+#area-riservata-richiesta .link-button {
+    display: none;
+}

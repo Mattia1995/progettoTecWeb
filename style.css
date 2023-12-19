@@ -31,6 +31,14 @@ body {
     min-height: 100vh;
 }
 
+body a {
+    color: var(--linkColor);
+}
+
+body a:visited {
+    color: var(--visitedLinkColor);
+}
+
 .aiuti-navigazione {
 	position: absolute;
 	height: 1px;
@@ -106,26 +114,21 @@ header {
 ********************************************/
 
 main {
-    color: var(--txtColor);
-    margin: 0em auto;
     max-width: 1024px;
+    width: 100%;
+    margin: 0.5em auto 2em auto;
+    color: var(--txtColor);
 }
 
-main #breadcrumb {
-    margin: 0.5em 0 0.5em 0;
-}
-
-main h2 {
-    margin-bottom: 1em;
+main h2, h3 {
+    margin: 1em 0;
     text-align: center;
 }
 
-main a {
-    color: var(--linkColor);
-}
-
-main a:visited {
-    color: var(--visitedLinkColor);
+#breadcrumb {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0.5em auto;
 }
 
 /********************************************
@@ -320,17 +323,14 @@ main a:visited {
 
 
 /********************************************
-****************** CONTATTACI *******************
+****************** CONTATTACI ***************
 ********************************************/
 
 .container {
-    width: 80%;
 	text-align: center;
     margin-top: 5em;
     padding: 3em;
-    -webkit-box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
-    -moz-box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
-    box-shadow: 0px 0px 32px 8px rgba(40, 104, 255, 0.13);
+    box-shadow: 0px 0px 32px 8px rgba(var(--visitedLinkColorForRgba), 0.13);
 }
 
 .container > dl > dt {
@@ -371,7 +371,7 @@ main a:visited {
 
 
 /********************************************
-****************** DOVE SIAMO *******************
+****************** DOVE SIAMO ***************
 ********************************************/
 
 address {
@@ -394,10 +394,6 @@ footer {
 /********************************************
 ****************** LOGIN ********************
 ********************************************/
-#area-riservata-login {
-    width: 100%;
-}
-
 #login-form {
     width: 40%;
     margin: 4em auto;
@@ -442,6 +438,80 @@ footer {
 
 
 /********************************************
+************* AREA RISERVATA ****************
+********************************************/
+#area-riservata {
+    width: 100%;
+}
+
+#area-riservata h2 {
+    margin: 0.7em 0;
+}
+
+#area-riservata > p {
+    text-align: center;
+}
+
+#area-riservata ul {
+    display: grid;
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3em;
+    list-style: none;
+}
+
+#area-riservata ul li {
+    background-position: center;
+    background-size: 100%;
+    transition: .5s;
+}
+
+#area-riservata ul li:hover {
+    background-size: 130%;
+}
+
+#area-riservata ul a {
+    display: flex;
+    padding: 4em 2em;
+    text-decoration: none;
+    color: var(--bodyBgColor);
+    background-color: rgba(var(--linkColorForRgba), 0.8);
+}
+
+#area-riservata ul a:visited {
+    background-color: rgba(var(--visitedLinkColorForRgba), 0.8);
+}
+
+#area-riservata ul a .text-box p {
+    font-size: 1em;
+}
+
+#area-riservata ul a .text-box p:first-child {
+    font-size: 1.8em;
+    line-height: 2em;
+    text-decoration: underline;
+}
+
+#area-riservata ul .icon-box{
+    padding-left: 2em;
+    flex-grow: 2;
+    text-align: center;
+    font-size: 2.4em;
+    line-height: 2em;
+    align-self: center;
+}
+
+#contenitore-link-articoli {
+    background-image: url(./images/piano.png);
+}
+
+#contenitore-link-richieste {
+    background-image: url(./images/messaggi.png);
+}
+
+/********************************************
 ***** AREA RISERVATA GESTIONE ARTICOLI ******
 ********************************************/
 #area-riservata-gestione-articoli h2 {
@@ -452,32 +522,12 @@ footer {
 
 #area-riservata-gestione-articoli #crea-articolo, #area-riservata-gestione-articoli ul li a{
     padding: 0.35em 0;
-    border: 2px solid var(--linkColor);
-    color: var(--linkColor);
-    text-align: center;
-    transition: .2s; 
-    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
-}
-
-#area-riservata-gestione-articoli #crea-articolo:hover, #area-riservata-gestione-articoli ul li a:hover {
-    background-color: var(--linkColor);
-    color: var(--linkHoverColor);
-}
-
-#area-riservata-gestione-articoli #crea-articolo:visited, #area-riservata-gestione-articoli ul li a:visited {
-    color: var(--flagColor);
-    border-color: var(--flagColor);
-}
-
-#area-riservata-gestione-articoli #crea-articolo:visited:hover, #area-riservata-gestione-articoli ul li a:visited:hover {
-    color: var(--linkHoverColor);
-    background-color: var(--flagColor);
+    border-width: 2px;
 }
 
 #area-riservata-gestione-articoli #crea-articolo {
     width: 15%;
     float: right;
-    text-decoration: none;
 }
 
 #area-riservata-gestione-articoli li {
@@ -534,7 +584,7 @@ footer {
 }
 
 #gestione-articolo-form input, #gestione-articolo-form textarea {
-    width: 98%;
+    width: 96%;
     margin-bottom: 1em;
     padding: 0.6em 0.3em;
 }
@@ -548,8 +598,15 @@ footer {
     display: inline;
 }
 
-#gestione-articolo-form form input[type="submit"] {
+#gestione-articolo-form select {
     width: 100%;
+    padding: 0.5em 0.3em;
+    margin-top: 0.4em;
+    display: block;
+}
+
+#gestione-articolo-form form input[type="submit"]{
+    width: 98%;
     padding: 0.6em 3em;
     margin-top: 2em;
     border: 2px solid var(--linkColor);
@@ -558,72 +615,45 @@ footer {
     transition: .2s;
 }
 
-#gestione-articolo-form form input[type="submit"]:hover {
+#gestione-articolo-form form input[type="submit"]:hover{
     background-color: var(--linkColor);
     color: var(--linkHoverColor);
 }
+.form-row-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+}
 
-#gestione-articolo-form fieldset {
+.form-row-container .form-col-50{
+    width: 48%;
+    margin-left: 2%;
     border: none;
 }
 
-#gestione-articolo-form fieldset legend{
-    margin-bottom: 0.4em;
+.form-row-container .form-col-50:first-child{
+    margin-left: 0;
+    margin-right: 2%;
 }
-
-
-
 
 /********************************************
-************* AREA RISERVATA ****************
+***** AREA RISERVATA GESTIONE RICHIESTE *****
 ********************************************/
-#area-riservata {
-    width: 100%;
+#lista-richieste li{
+    padding: 0.8em 0;
+    border-bottom: 1px solid var(--flagColor);
+    overflow: hidden;
 }
 
-#area-riservata h2 {
-    margin-bottom: 0.7em
+#lista-richieste li:last-child{
+    border-bottom: none;
 }
 
-#area-riservata > p {
-    text-align: center;
-}
-
-#area-riservata ul {
-    display: grid;
-    width: 100%;
-    margin-top: 3em;
-    margin-bottom: 5em;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 3em;
-    list-style: none;
-}
-
-#area-riservata ul li {
-    background-position: center;
-    background-size: cover;
-}
-
-#area-riservata ul a {
-    display: flex;
-    padding: 4em 2em;
-    text-decoration: none;
-    transition: .4s;
-    -moz-transition: none; /* TODO: CHIEDERE ALLA PROF SE VA BENE, TOLTO PERCHE' NON FUNZIONA SU FIREFOX IL TRANSITION CON IL VISITED. */
-    color: var(--bodyBgColor);
-    background-color: rgba(var(--linkColorForRgba), 0.7);
-}
-
-#area-riservata ul a:visited {
-    background-color: rgba(var(--visitedLinkColorForRgba), 0.7);
-}
-
-#area-riservata ul a:hover {
-    background-color: rgba(var(--linkColorForRgba), 0.9);
-}
-
-#area-riservata ul a:visited:hover {
-    background-color: rgba(var(--visitedLinkColorForRgba), 0.9);
+#lista-richieste li a{    
+    width: 9%;
+    float: right;
+    font-size: 1.6em;
+    line-height: 1.4em;
 }
 
 #area-riservata ul a .text-box p {
@@ -636,21 +666,79 @@ footer {
     text-decoration: underline;
 }
 
-#area-riservata ul .icon-box{
-    padding-left: 2em;
-    flex-grow: 2;
+.richiesta {
+    width: 85%;
+    display: flex;
+    float: left;
+    padding-top: 0.5em;
+}
+
+.richiesta dt{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.richiesta dd{
+    padding: 0 1em;
+    border-right: 1px solid black;
+}
+
+.richiesta dd:last-child{
+    border-right: none;
+}
+
+.richiesta .descrizione {
+    flex-grow: 3;
+}
+
+.richiesta .stato {
+    min-width: 14%;
+}
+
+.richiesta.richiesta-da-leggere {
+    font-weight: bold;
+}
+
+/********************************************
+********** AREA RISERVATA RICHIESTA *********
+********************************************/
+#area-riservata-richiesta > p {
     text-align: center;
-    font-size: 2.4em;
-    line-height: 2em;
-    align-self: center;
 }
 
-#contenitore-link-articoli {
-    background-image: url(./images/piano.png);
+#area-riservata-richiesta a{    
+    width: 42%;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin: 1em auto;
+    padding: 0.5em 0;
 }
 
-#contenitore-link-richieste {
-    background-image: url(./images/messaggi.png);
+.link-button {
+    display: block;
+    color: var(--linkColor);
+    border: 1px solid var(--linkColor);
+    text-align: center;
+    text-decoration: none;
+    transition: .2s;
+    -moz-transition: none;
+}
+
+.link-button:hover {
+    background-color: var(--linkColor);
+    color: var(--linkHoverColor);
+}
+
+.link-button:visited{
+    color: var(--flagColor);
+    border-color: var(--flagColor);
+}
+
+.link-button:visited:hover {
+    color: var(--linkHoverColor);
+    background-color: var(--flagColor);
 }
 
 /********************************************
@@ -659,7 +747,7 @@ footer {
 
 .cover-image {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-image: url('./imgs/chitarre.jpg');
     background-size: cover;
     background-position: center;
@@ -667,7 +755,6 @@ footer {
     
 }
 
-  
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -683,7 +770,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 255, 0.3); /* Imposta il colore e l'opacità desiderati */
+    background-color: rgba(0, 0, 255, 0.3);
 }
 
 .prodotti{
@@ -704,8 +791,8 @@ footer {
     justify-content: space-between;
     align-items: normal;
     align-content: normal;
-  }
-  
+}
+
 .prodotti-items{
     display: block;
     flex-grow: 0;
@@ -719,27 +806,76 @@ footer {
     max-width:90%;
     max-height:90%;
     transition: transform .1s;
-
 }
-  
+
 .prodotti-items:hover {
     transform: scale(1.2);
 }
-  
-
 
 .passione h3{
-    padding-top: 1em;
-    padding-bottom: 1em;
     font-size: 30px;
+    margin-top: 1em;
+    margin-bottom: 0;
+    padding-bottom: 0.3em;
+    text-align: left;
+    margin-top: 2em;
 }
 
-.grid-box {
+
+.passion-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; 
+    grid-template-columns: repeat(4, 1fr) 0;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+    
+.passion-1 { 
+    grid-area: 1 / 1 / 3 / 3;
+    height: 600px;
+}
+
+
+.passion-2 {
+    grid-area: 1 / 3 / 3 / 5; 
+    height: 600px;  
+}
+
+.passion-3 { 
+    grid-area: 3 / 1 / 5 / 3; 
+    height: 600px;  
+}
+
+.passion-4 { 
+    grid-area: 3 / 3 / 5 / 5; 
+    height: 600px;  
+}
+
+.passion-5 { 
+    grid-area: 5 / 1 / 7 / 3; 
+    height: 600px;  
+}
+
+.passion-6 { 
+    grid-area: 5 / 3 / 7 / 5; 
+    height: 600px;  
+} 
+
+.passion-grid img{
+    max-width:100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.passione p {
+    font-size: 1.45em;
+    line-height: 1.3em;
+    text-align: center;
+    margin: 0em 2em;
+    padding: 30% 0;
 }
 
 hr{
@@ -747,32 +883,15 @@ hr{
     color: var(--flagColor);
 }
 
-.grid-box img{
-    max-width:100%;
-    max-height:100%;
-}
-
-.grid-box p {
-    font-size: 1.5em;
-    line-height: 1em;
-    padding: 1em;
-}
-    
-.grid1 { grid-area: 1 / 1 / 3 / 3; }
-.grid2 { grid-area: 1 / 3 / 2 / 6; }
-.grid3 { grid-area: 2 / 4 / 4 / 6; }
-.grid4 { grid-area: 3 / 2 / 5 / 4; }
-.grid5 { grid-area: 3 / 1 / 5 / 2; }
-.grid6 { grid-area: 4 / 4 / 6 / 6; }
-
-
 
 .il-team h3{
-    padding-top: 1em;
-    padding-bottom: 1em;
     font-size: 30px;
+    margin-top: 1em;
+    margin-bottom: 0;
+    padding-bottom: 0.3em;
+    text-align: left;
+    margin-top: 3em;
 }
-
 
 .team-section {
     width: 100%;
@@ -781,7 +900,6 @@ hr{
     padding: 20px;
     box-sizing: border-box;
 }
-
 
 .team-section p{
     font-size: large;
@@ -803,4 +921,55 @@ hr{
     margin-top: 5px;
     font-size: 1rem;
     font-weight: bold;
+}
+
+
+/********************************************
+******************* 404 ********************
+********************************************/
+
+
+.row-404{
+    display: flex;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+.row-404 .col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.row-404 .col-2 img{
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+.row-404 .col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0px;
+    text-align: center;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  
+}
+
+.row-404 .col-2 h3{
+    font-size: 35px;
+    line-height: 40px;
+    margin: 25px 0px;
+    text-align: center;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  
+}
+
+.row-404 .col-2 p{
+    text-align: center;
+    margin: 25px 0px;
+    padding-left: 3em;
+    padding-right: 3em;
 }

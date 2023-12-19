@@ -3,17 +3,14 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>Contatti - [nome_store]</title>
+		<title>Contatti - MELODIA</title>
 		
-		<meta name="description" content="Contatta [nome_store] per informazioni sugli strumenti musicali in vendita, o per richiedere un appuntamento in negozio">
-		<meta name="keyword" content="strumenti musicali negozio Padova, [nome_store] contatti">
-		<meta name="author" content="[nome_gruppo]">
+		<meta name="description" content="Contatta MELODIA per informazioni sugli strumenti musicali in vendita, o per richiedere un appuntamento in negozio">
+		<meta name="keyword" content="MELODIA, contatti, informazioni, numero di telefono, e-mail">
+		<meta name="author" content="Melodia">
 		
-        <link rel="stylesheet" media="screen" href="style.css">
-		
-		<!--<link rel="stylesheet" type="text/css" href="contatti_desktop.css" media="screen and (min-width:601px)">
-		<link rel="stylesheet" type="text/css" href="contatti_mobile.css" media="screen and (max-width:600px)">-->
-		<link rel="stylesheet" type="text/css" href="contatti_print.css" media="print">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+		<link rel="stylesheet" type="text/css" media="print" href="print.css" >
 	</head>
 	
 	<body>
@@ -21,8 +18,8 @@
 		<header>
             <div id="header-container">
 			
-                <h1>CONTATTI</h1>
-				<a class="aiuti-navigazione" href="#contenuto">Salta il menù e vai al contenuto</a>
+                <h1>MELODIA</h1>
+				<a class="aiuti-navigazione" href="#contenuto">Vai al contenuto</a>
 				
                 <nav id="menu">
                     <ul>
@@ -37,24 +34,23 @@
             </div>
 		</header>
 		
-		<main id="contenuto">
+		<nav id="breadcrumb">
+			<p>Ti trovi in: <a href="home.html" lang="en">Home</a> &gt;&gt; Contatti</p>
+		</nav>
 		
-			<nav id="breadcrumb">
-                <p>Ti trovi in: <a href="home.html" lang="en">Home</a> &gt;&gt; Contatti</p>
-            </nav>
-			
+		<main id="contenuto">
 			<div class="container">
-				<h2>I nostri contatti</h2>
+				<h2>Contatti</h2>
 				<dl>
-					<dt>Telefono</dt>
+					<dt>Numero di telefono</dt>
 					<dd>0423 4545435</dd>
 					<dt lang="en">E-mail</dt>
-					<dd><a href="mailto:[nome_store]@email.it">[nome_store]@email.it</a></dd>
+					<dd><a href="mailto:melodia@email.it">melodia@email.it</a></dd>
 				</dl>
 			</div>
 		
 			<div class="container">
-				<h2>Compila il seguente modulo per richiedere informazioni</h2>
+				<h3>Compila il seguente modulo per richiedere informazioni</h3>
 				
 				<form id="contactsForm" method="post" action="contattaci.php" autocomplete="on">
 					<!--<messaggiFormContattaci />--><!-- todo -->
@@ -82,7 +78,7 @@
 		</main>
 		
 		<a class="aiuti-navigazione" href="#contenuto">Torna su al contenuto</a>
-        <footer>
+		<footer>
             <p>Melodia - <span lang="en">All rights reserved</span></p>
         </footer>
 	</body>

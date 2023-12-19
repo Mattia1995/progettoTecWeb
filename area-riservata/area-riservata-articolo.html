@@ -6,12 +6,13 @@
         <meta name="keywords" content="Gestione articolo">
         <meta name="description" content="Pagina di gestione articolo area riservata">
         <link rel="stylesheet" media="screen" href="../style.css">
+        <link rel="stylesheet" media="print" href="../print.css">
     </head>
     <body>
         <header>
             <div id="header-container">
                 <a class="aiuti-navigazione" href="#area-riservata-articolo">Vai al contenuto</a>
-                <h1>NOME_NEGOZIO</h1>
+                <h1>Melodia</h1>
                 <nav id="menu">
                     <ul>
                         <li lang="en"><a href="../home.html">Home</a></li>
@@ -24,15 +25,15 @@
                 </nav>
             </div>
         </header>
+        <nav id="breadcrumb">
+            <p>Ti trovi in: 
+                <a href="../home.html" lang="en">Home</a> &gt;&gt;
+                <a href="dashboard-area-riservata.html">Area riservata</a> &gt;&gt;
+                <a href="area-riservata-gestione-articoli.html">Articoli</a> &gt;&gt;
+                Nuovo articolo
+            </p>
+        </nav>
         <main id="area-riservata-articolo">
-            <nav id="breadcrumb">
-                <p>Ti trovi in: 
-                    <a href="../home.html" lang="en">Home</a> &gt;&gt;
-                    <a href="dashboard-area-riservata.html"><span lang="en">Dashboard</span> area riservata</a> &gt;&gt;
-                    <a href="area-riservata-gestione-articoli.html">Articoli</a> &gt;&gt;
-                    Nuovo articolo
-                </p>
-            </nav>
             <h2>Nuovo articolo</h2>
             <div id="gestione-articolo-form">
                 <form action="#azioneDaInserire" method="post" enctype="multipart/form-data">
@@ -51,18 +52,45 @@
                                 <input type="number" name="prezzo_scontato" id="prezzo_scontato" step=".01">
                             </div>
                         </div>
-                        <label for="immagineArticolo">Immagine articolo:</label>
-                        <input type="file" name="immagineArticolo" id="immagineArticolo" required>
-                        <label for="categoriaArticolo">Categoria articolo:</label>
-                        <select name="categoriaArticolo" id="categoriaArticolo" required>
-                            <option value="batteria">Batteria</option>
-                            <option value="chitarra">Chitarra</option>
-                            <option value="pianoforte">Pianoforte</option>
-                        </select>
+                        <div class="form-row-container">
+                            <div class="form-col-50">
+                                <label for="immagineArticolo">Immagine articolo:</label>
+                                <input type="file" name="immagineArticolo" id="immagineArticolo" required>
+                            </div>
+                            <div class="form-col-50">
+                                <label for="categoriaArticolo">Categoria articolo:</label>
+                                <select name="categoriaArticolo" id="categoriaArticolo" required>
+                                    <option value="">Seleziona un valore</option>
+                                    <option value="batteria">Batteria</option>
+                                    <option value="chitarra">Chitarra</option>
+                                    <option value="pianoforte">Pianoforte</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row-container">
+                            <div class="form-col-50">
+                                <label for="marchioArticolo">Marchio:</label>
+                                <input type="text" name="marchioArticolo" id="marchioArticolo" required>
+                            </div>
+                            <div class="form-col-50">
+                                <label for="tipologiaArticolo">Tipologia:</label>
+                                <input type="text" name="tipologiaArticolo" id="tipologiaArticolo" required>    
+                            </div>
+                        </div>
+                        <div class="form-row-container">
+                            <div class="form-col-50">
+                                <label for="materialeArticolo">Materiale:</label>
+                                <input type="text" name="materialeArticolo" id="materialeArticolo" required>
+                            </div>
+                            <div class="form-col-50">
+                                <label for="coloreArticolo">Colore:</label>
+                                <input type="text" name="coloreArticolo" id="coloreArticolo" required>    
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <!-- TODO: Gestire regole validazione campi form -->
-                        <input type="submit">
+                        <input type="submit" class="link-button">
                     </div>
                 </form>
             </div>
