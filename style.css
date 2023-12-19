@@ -165,6 +165,14 @@ main h2, h3 {
 ***************** VETRINA *******************
 ********************************************/
 
+#vetrina {
+    display: grid;
+    background-color: var(--bodyBgColor);
+    grid-template-columns: 24% 24% 24% 24%;
+    column-gap: 0.8em;
+    row-gap: 0.8em;
+}
+
 .prodottoVetrina{
     list-style-type: none;
 
@@ -235,15 +243,12 @@ main h2, h3 {
 
 
 /********************************************
-********* PAGINA PRODOTTO SINGOLO ***********
+************* PRODOTTO SINGOLO **************
 ********************************************/
 
 .prodottoSingolo{
     background-color: var(--bodyBgColor);
-    /*padding: 0.5em;*/
     list-style-type: none;
-    /* padding: 0.5em;*/
-    /* text-align: left; */ /* Serve metterlo o è di default? */
 }
 
 .nomeProdottoSingolo{
