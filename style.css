@@ -181,6 +181,7 @@ main h2, h3 {
     border: 1.5px solid var(--flagColor);
     border-radius: 10px;
 }
+
 .prodottoVetrina img{
     display: block;
     width: 100%;
@@ -188,10 +189,12 @@ main h2, h3 {
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
 }
+
 .info{
     padding: 0.8em;
     flex-grow: 2;
 }
+
 .categoriaProdottoVetrina{
     display: block;
     width: 100%;
@@ -200,11 +203,13 @@ main h2, h3 {
     border-top: 1.5px solid var(--flagColor);
     border-bottom: 1.5px solid var(--flagColor);
 }
+
 .prodottoVetrina dl > dt{
     font-weight: bold;
     float: left;
     padding-right: 0.3em;
 }
+
 .prodottoVetrina a{
     color: var(--linkColor);
     display: block;
@@ -218,18 +223,22 @@ main h2, h3 {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+
 .prodottoVetrina a:visited{
     color: var(--visitedLinkColor);
 }
+
 .prodottoVetrina a:hover{
     color: var(--linkHoverColor);
     background-color: var(--flagColor);
 }
+
 .nomeProdottoVetrina{
     font-weight: bold;
     font-size: 110%;
     padding-bottom: 0.5em;
 }
+
 .dtNonAmbiguoProdotto{
     position:absolute; /* DEVO Spostare di -999em (a sinistra) */
     left:-999em;
@@ -251,7 +260,7 @@ main h2, h3 {
 
 .nomeProdottoSingolo{
     font-weight: bold;
-    font-size: 110%;   
+    font-size: 110%;
     text-align: center;
     padding-top: 0.5em;
     padding-left: 0.5em;
@@ -294,13 +303,16 @@ main h2, h3 {
     border-top: 1.5px solid var(--flagColor);
     border-bottom: 1.5px solid var(--flagColor);
 }
+
 #prodottoSingolo .linkContattaci:visited{
     color: var(--visitedLinkColor);
 }
+
 #prodottoSingolo .linkContattaci:hover{
     color: var(--linkHoverColor);
     background-color: var(--flagColor);
 }
+
 #tabellaInfoProdotto{
     text-align: center;
     width: 47%;
@@ -309,6 +321,7 @@ main h2, h3 {
     margin-left: auto;
     margin-right: auto;
 }
+
 #tabellaInfoProdotto th, #tabellaInfoProdotto td{
     text-align: left;
     font-weight: normal;
