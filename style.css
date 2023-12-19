@@ -132,15 +132,15 @@ main h2, h3 {
 }
 
 /********************************************
-****************** CHI SIAMO *******************
+****************** CHI SIAMO ****************
 ********************************************/
 
 .grid-alternate {
     display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: auto auto auto auto auto;
-    gap: 1em 1em;
-	padding: 1em;
+    background-color: var(--bodyBgColor);
+    grid-template-columns: 24% 24% 24% 24%;
+    column-gap: 0.8em;
+    row-gap: 0.8em;
 }
 
 .grid-alternate img{
@@ -159,6 +159,174 @@ main h2, h3 {
 .grid4-alt { grid-area: 3 / 1 / 3 / 3; }
 .grid5-alt { grid-area: 3 / 3 / 3 / 6; }
 .grid6-alt { grid-area: 4 / 1 / 4 / 6; }
+
+
+/********************************************
+***************** VETRINA *******************
+********************************************/
+
+#vetrina {
+    display: grid;
+    background-color: var(--bodyBgColor);
+    grid-template-columns: 24% 24% 24% 24%;
+    column-gap: 0.8em;
+    row-gap: 0.8em;
+}
+
+.prodottoVetrina{
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    border: 1.5px solid var(--flagColor);
+    border-radius: 10px;
+}
+.prodottoVetrina img{
+    display: block;
+    width: 100%;
+    
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+.info{
+    padding: 0.8em;
+    flex-grow: 2;
+}
+.categoriaProdottoVetrina{
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    border-top: 1.5px solid var(--flagColor);
+    border-bottom: 1.5px solid var(--flagColor);
+}
+.prodottoVetrina dl > dt{
+    font-weight: bold;
+    float: left;
+    padding-right: 0.3em;
+}
+.prodottoVetrina a{
+    color: var(--linkColor);
+    display: block;
+    text-align: center;
+    align-self: center;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    width: 100%;
+
+    border-top: 1.5px solid var(--flagColor);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.prodottoVetrina a:visited{
+    color: var(--visitedLinkColor);
+}
+.prodottoVetrina a:hover{
+    color: var(--linkHoverColor);
+    background-color: var(--flagColor);
+}
+.nomeProdottoVetrina{
+    font-weight: bold;
+    font-size: 110%;
+    padding-bottom: 0.5em;
+}
+.dtNonAmbiguoProdotto{
+    position:absolute; /* DEVO Spostare di -999em (a sinistra) */
+    left:-999em;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto auto auto auto auto;
+    gap: 1em 1em;
+	padding: 1em;
+}
+
+
+/********************************************
+************* PRODOTTO SINGOLO **************
+********************************************/
+
+.prodottoSingolo{
+    background-color: var(--bodyBgColor);
+    list-style-type: none;
+}
+
+.nomeProdottoSingolo{
+    font-weight: bold;
+    font-size: 110%;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prodottoSingolo img{
+    float: left;
+    width: 50%;
+    margin-right: 1em;
+}
+
+.prodottoSingolo dl{
+    border-top: 1.5px solid var(--flagColor);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prodottoSingolo dl > dt{
+    float: left;
+}
+
+.prodottoSingolo .linkContattaci{
+    color: var(--linkColor);
+    width: 100%;
+    display: block;
+    text-align: center;
+    align-self: center;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border-top: 1.5px solid var(--flagColor);
+    border-bottom: 1.5px solid var(--flagColor);
+}
+
+.prodottoSingolo .linkContattaci:visited{
+    color: var(--visitedLinkColor);
+}
+
+.prodottoSingolo .linkContattaci:hover{
+    color: var(--linkHoverColor);
+    background-color: var(--flagColor);
+}
+
+#tabellaInfoProdotto{
+    text-align: center;
+    width: 47%;
+    border-collapse: collapse;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tabellaInfoProdotto th, #tabellaInfoProdotto td{
+    text-align: left;
+    font-weight: normal;
+
+    border: 1px solid var(--flagColor);
+
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
 
 /********************************************
 ****************** CONTATTACI ***************
@@ -206,6 +374,7 @@ main h2, h3 {
     color: var(--linkHoverColor);
 }
 
+
 /********************************************
 ****************** DOVE SIAMO ***************
 ********************************************/
@@ -213,6 +382,7 @@ main h2, h3 {
 address {
 	margin: 1.5em;
 }
+
 
 /********************************************
 ****************** FOOTER *******************
@@ -227,9 +397,11 @@ footer {
     text-align: center;
 }
 
+
 /********************************************
 ****************** LOGIN ********************
 ********************************************/
+
 #login-form {
     width: 40%;
     margin: 4em auto;
@@ -270,9 +442,11 @@ footer {
     color: var(--linkHoverColor);
 }
 
+
 /********************************************
 ************* AREA RISERVATA ****************
 ********************************************/
+
 #area-riservata {
     width: 100%;
 }
@@ -344,9 +518,11 @@ footer {
     background-image: url(./images/messaggi.png);
 }
 
+
 /********************************************
 ***** AREA RISERVATA GESTIONE ARTICOLI ******
 ********************************************/
+
 #area-riservata-gestione-articoli h2 {
     display: inline-block;
     line-height: 2em;
@@ -400,9 +576,11 @@ footer {
     text-indent: -999em;
 }
 
+
 /********************************************
 ********* AREA RISERVATA ARTICOLO ***********
 ********************************************/
+
 #gestione-articolo-form {
     width: 55%;
     margin: auto;
@@ -465,6 +643,8 @@ footer {
     margin-left: 0;
     margin-right: 2%;
 }
+
+
 /********************************************
 ***** AREA RISERVATA GESTIONE RICHIESTE *****
 ********************************************/
@@ -530,9 +710,11 @@ footer {
     font-weight: bold;
 }
 
+
 /********************************************
 ********** AREA RISERVATA RICHIESTA *********
 ********************************************/
+
 #area-riservata-richiesta > p {
     text-align: center;
 }
@@ -569,6 +751,7 @@ footer {
     color: var(--linkHoverColor);
     background-color: var(--flagColor);
 }
+
 
 /********************************************
 ******************* HOME ********************
@@ -650,7 +833,6 @@ footer {
     margin-top: 2em;
 }
 
-
 .passion-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr) 0;
@@ -663,7 +845,6 @@ footer {
     grid-area: 1 / 1 / 3 / 3;
     height: 600px;
 }
-
 
 .passion-2 {
     grid-area: 1 / 3 / 3 / 5; 
@@ -712,7 +893,6 @@ hr{
     color: var(--flagColor);
 }
 
-
 .il-team h3{
     font-size: 30px;
     margin-top: 1em;
@@ -756,7 +936,6 @@ hr{
 /********************************************
 ******************* 404 ********************
 ********************************************/
-
 
 .row-404{
     display: flex;
