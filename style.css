@@ -246,7 +246,7 @@ main h2, h3 {
 ************* PRODOTTO SINGOLO **************
 ********************************************/
 
-.prodottoSingolo{
+#prodottoSingolo{
     background-color: var(--bodyBgColor);
     list-style-type: none;
 }
@@ -263,13 +263,13 @@ main h2, h3 {
     margin-right: auto;
 }
 
-.prodottoSingolo img{
+#prodottoSingolo img{
     float: left;
     width: 50%;
     margin-right: 1em;
 }
 
-.prodottoSingolo dl{
+#prodottoSingolo dl{
     border-top: 1.5px solid var(--flagColor);
     padding-top: 1em;
     padding-bottom: 1em;
@@ -279,11 +279,11 @@ main h2, h3 {
     margin-right: auto;
 }
 
-.prodottoSingolo dl > dt{
+#prodottoSingolo dl > dt{
     float: left;
 }
 
-.prodottoSingolo .linkContattaci{
+#prodottoSingolo .linkContattaci{
     color: var(--linkColor);
     width: 100%;
     display: block;
@@ -296,16 +296,13 @@ main h2, h3 {
     border-top: 1.5px solid var(--flagColor);
     border-bottom: 1.5px solid var(--flagColor);
 }
-
-.prodottoSingolo .linkContattaci:visited{
+#prodottoSingolo .linkContattaci:visited{
     color: var(--visitedLinkColor);
 }
-
-.prodottoSingolo .linkContattaci:hover{
+#prodottoSingolo .linkContattaci:hover{
     color: var(--linkHoverColor);
     background-color: var(--flagColor);
 }
-
 #tabellaInfoProdotto{
     text-align: center;
     width: 47%;
@@ -314,7 +311,6 @@ main h2, h3 {
     margin-left: auto;
     margin-right: auto;
 }
-
 #tabellaInfoProdotto th, #tabellaInfoProdotto td{
     text-align: left;
     font-weight: normal;
