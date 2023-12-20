@@ -25,12 +25,6 @@ CREATE TABLE categories (
 	PRIMARY KEY (category_id)
 );
 
-CREATE TABLE images (
-	image_id INT NOT NULL,
-    image blob NOT NULL,
-	PRIMARY KEY (image_id)
-);
-
 CREATE TABLE products (
 	products_id INT NOT NULL,
 	name VARCHAR(256) NOT NULL,
@@ -38,7 +32,11 @@ CREATE TABLE products (
 	description VARCHAR(2048) NOT NULL,
 	price DECIMAL NOT NULL,
 	discounted_price DECIMAL, -- se NULL, allora non c'è sconto
-	image_id INT NOT NULL,
+	brand VARCHAR(256) NOT NULL,
+	color VARCHAR(256) NOT NULL,
+	material VARCHAR(256) NOT NULL,
+	image_url VARCHAR(256) NOT NULL,
+	image_alt VARCHAR(256) NOT NULL,
 	created_by VARCHAR(256) NOT NULL, -- riporta l'username dell'account creatore
 	creation_date DATETIME NOT NULL,
 	last_edited_by VARCHAR(256) NOT NULL, -- riporta l'username dell'account che ha fatto la modifica più recente (uguale a created_by per il prodotto appena creato)
@@ -46,7 +44,6 @@ CREATE TABLE products (
 	-- questi ultimi 4 campi sono visibili solo dall'area riservata, quando si modifica un prodotto già inserito in precedenza
 	PRIMARY KEY (products_id),
 	FOREIGN KEY (category_id) REFERENCES categories(category_id),
-    FOREIGN KEY (image_id)  REFERENCES images(image_id),
 	FOREIGN KEY (created_by) REFERENCES accounts(username),
 	FOREIGN KEY (last_edited_by) REFERENCES accounts(username)
 );
