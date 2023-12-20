@@ -381,6 +381,17 @@ main h2, h3 {
     color: var(--linkHoverColor);
 }
 
+.errorText {
+	display: inline-block;
+	width: 22em;
+	padding: 2em;
+	border-left: 6px solid var(--flagColor);
+	border-right: 6px solid var(--flagColor);
+	border-radius: 20px;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
 
 /********************************************
 ****************** DOVE SIAMO ***************
