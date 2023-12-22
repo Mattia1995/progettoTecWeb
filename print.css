@@ -73,6 +73,54 @@ form input[type="submit"]{
 }
 
 /********************************************
+******************** HOME *******************
+********************************************/
+
+.prodotti {
+    display: none;
+}
+
+.passion-grid {
+    margin-top: 0.5em;
+}
+
+.passion-1, .passion-4, .passion-5 {
+    display: none;
+}
+
+.passion-2, .passion-3, .passion-6 {
+    margin-bottom: 1em;
+}
+
+.team-section {
+    margin-top: 1em;
+    overflow: hidden;
+}
+
+.profile {
+    width: 25%;
+    float: left;
+}
+
+.profile img {
+    width: 35%;
+    margin: auto;
+    display: block;
+}
+
+.profile .name{
+    text-align: center;
+}
+
+.team-section p{
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+}
+
+/********************************************
 ****************** DOVE SIAMO ***************
 ********************************************/
 
@@ -87,6 +135,18 @@ form input[type="submit"]{
 .container dt {
     margin-top: 0.5em;
     font-weight: bold;
+}
+
+/********************************************
+****************** CHI SIAMO ****************
+********************************************/
+
+.grid1-alt, .grid3-alt, .grid5-alt {
+    margin-bottom: 1em;
+}
+
+.grid-alternate img {
+    display: none;
 }
 
 /********************************************
