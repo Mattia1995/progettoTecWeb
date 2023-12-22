@@ -374,6 +374,7 @@ main h2, h3 {
     color: var(--linkColor);
     background-color: var(--bodyBgColor);
     transition: .2s;
+    -moz-transition: none;
 }
 
 #contactsForm input[type="submit"]:hover {
@@ -453,6 +454,7 @@ footer {
     color: var(--linkColor);
     background-color: var(--bodyBgColor);
     transition: .2s;
+    -moz-transition: none;
 }
 
 #login-form form input[type="submit"]:hover {
@@ -491,6 +493,7 @@ footer {
     background-position: center;
     background-size: 100%;
     transition: .5s;
+    -moz-transition: none;
 }
 
 #area-riservata ul li:hover {
@@ -639,6 +642,7 @@ footer {
     color: var(--linkColor);
     background-color: var(--bodyBgColor);
     transition: .2s;
+    -moz-transition: none;
 }
 
 #gestione-articolo-form form input[type="submit"]:hover{
@@ -775,17 +779,26 @@ footer {
 ******************* HOME ********************
 ********************************************/
 
+#home {
+    max-width: none;
+}
+
+#home-container {
+    max-width: 1024px;
+    margin: auto;
+}
+
 .cover-image {
     width: 100%;
-    height: 80vh;
+    height: 65vh;
     background-image: url('./imgs/chitarre.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
-    
 }
 
 .text-overlay {
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -794,13 +807,23 @@ footer {
     color: white;
 }
 
+.text-overlay p:first-child {
+    font-size: 3em;
+    line-height: 1.5em;
+}
+
+.text-overlay p {
+    font-size: 2em;
+    line-height: 1em;
+}
+
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 255, 0.3);
+    background-color: rgba(var(--visitedLinkColorForRgba), 0.6);
 }
 
 .prodotti{
@@ -827,18 +850,22 @@ footer {
     display: block;
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
+}
+
+.prodotti-items a{
+    display: block;
 }
 
 .prodotti-items img{
+    margin: auto;
+    display: block;
     max-width:90%;
-    max-height:90%;
-    transition: transform .1s;
+    max-height: 90%;
+    transition: .3s;
+    -moz-transition: none;
 }
 
-.prodotti-items:hover {
+.prodotti-items:hover img{
     transform: scale(1.2);
 }
 
