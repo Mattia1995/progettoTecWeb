@@ -229,6 +229,8 @@ main h2, h3 {
 }
 
 .prodottoVetrina a:hover{
+    transition: 0.2s;
+    -moz-transition: none;
     color: var(--linkHoverColor);
     background-color: var(--flagColor);
 }
@@ -309,11 +311,13 @@ main h2, h3 {
 }
 
 #prodottoSingolo .linkContattaci:hover{
+    transition: 0.2s;
+    -moz-transition: none;
     color: var(--linkHoverColor);
     background-color: var(--flagColor);
 }
 
-#tabellaInfoProdotto{
+#listaTabellaInfoProdotto{
     text-align: center;
     width: 47%;
     border-collapse: collapse;
@@ -322,7 +326,7 @@ main h2, h3 {
     margin-right: auto;
 }
 
-#tabellaInfoProdotto th, #tabellaInfoProdotto td{
+#listaTabellaInfoProdotto th, #listaTabellaInfoProdotto td{
     text-align: left;
     font-weight: normal;
 
