@@ -247,3 +247,14 @@ form input[type="submit"]{
 #area-riservata-richiesta .link-button {
     display: none;
 }
+
+/********************************************
+******************** 404 ********************
+********************************************/
+#pagina-404 img{
+    display: none;
+}
+
+#pagina-404 .col-2 h1, #pagina-404 .col-2 h3 {
+    margin-bottom: 0.5em;
+}
