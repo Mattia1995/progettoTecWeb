@@ -183,6 +183,32 @@ form input[type="submit"]{
     display: none;
 }
 
+
+/********************************************
+************* PRODOTTO SINGOLO **************
+********************************************/
+
+#prodottoSingolo img{
+    display: block;
+    width: 30%;
+    margin: auto;
+}
+
+#prodottoSingolo a {
+    display: none;
+}
+
+#prodottoSingolo dl dt {
+    float: left;
+    margin-right: 0.4em;
+    font-weight: bold;
+}
+
+#prodottoSingolo dl dd {
+    margin-bottom: 0.4em;
+}
+
+
 /********************************************
 *************** AREA RISERVATA **************
 ********************************************/
