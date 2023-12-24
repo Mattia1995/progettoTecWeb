@@ -229,6 +229,8 @@ main h2, h3 {
 }
 
 .prodottoVetrina a:hover{
+    transition: 0.2s;
+    -moz-transition: none;
     color: var(--linkHoverColor);
     background-color: var(--flagColor);
 }
@@ -262,12 +264,7 @@ main h2, h3 {
     font-weight: bold;
     font-size: 110%;
     text-align: center;
-    padding-top: 0.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-bottom: 1em;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0.5em 0.5em 1em 0.5em;
 }
 
 #prodottoSingolo img{
@@ -276,18 +273,16 @@ main h2, h3 {
     margin-right: 1em;
 }
 
-#prodottoSingolo dl{
+#prodottoSingolo #infoPrincipaliProdotto > dt{
+    float: left;
+}
+
+#prodottoSingolo #infoPrincipaliProdotto{
     border-top: 1.5px solid var(--flagColor);
     padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#prodottoSingolo dl > dt{
-    float: left;
 }
 
 #prodottoSingolo .linkContattaci{
@@ -309,29 +304,31 @@ main h2, h3 {
 }
 
 #prodottoSingolo .linkContattaci:hover{
+    transition: 0.2s;
+    -moz-transition: none;
     color: var(--linkHoverColor);
     background-color: var(--flagColor);
 }
 
-#tabellaInfoProdotto{
-    text-align: center;
-    width: 47%;
-    border-collapse: collapse;
-    margin: 1em;
-    margin-left: auto;
-    margin-right: auto;
+#altreInfoProdotto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    max-width: 20em;
+    border-top: 1.5px solid var(--flagColor);
 }
 
-#tabellaInfoProdotto th, #tabellaInfoProdotto td{
-    text-align: left;
-    font-weight: normal;
+#altreInfoProdotto dt{
+    padding: 0.3em 0.5em;
+    border-left: 1.5px solid var(--flagColor);
+    border-right: 1.5px solid var(--flagColor);
+    border-bottom: 1.5px solid var(--flagColor);
+}
 
-    border: 1px solid var(--flagColor);
-
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+#altreInfoProdotto dd{
+    padding: 0.3em 0.5em;
+    border-right: 1.5px solid var(--flagColor);
+    border-bottom: 1.5px solid var(--flagColor);
 }
 
 
