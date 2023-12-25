@@ -165,7 +165,7 @@ main h2, h3 {
 ***************** VETRINA *******************
 ********************************************/
 
-#vetrina {
+#vetrina ul {
     display: grid;
     background-color: var(--bodyBgColor);
     grid-template-columns: 24% 24% 24% 24%;
@@ -191,23 +191,28 @@ main h2, h3 {
 }
 
 .info{
-    padding: 0.8em;
     flex-grow: 2;
-}
-
-.categoriaProdottoVetrina{
-    display: block;
-    width: 100%;
-    text-align: center;
-
-    border-top: 1.5px solid var(--flagColor);
-    border-bottom: 1.5px solid var(--flagColor);
 }
 
 .prodottoVetrina dl > dt{
     font-weight: bold;
     float: left;
     padding-right: 0.3em;
+}
+
+.info dd{
+    padding: 0.8em 0.8em;
+}
+
+.info dd:first-of-type{
+    padding: 0.3em 0;
+    border-top: 1.5px solid var(--flagColor);
+    border-bottom: 1.5px solid var(--flagColor);
+    text-align: center;
+}
+
+.info dd:last-of-type{
+    padding-top: 0;
 }
 
 .prodottoVetrina a{
@@ -218,7 +223,6 @@ main h2, h3 {
     padding-top: 0.8em;
     padding-bottom: 0.8em;
     width: 100%;
-
     border-top: 1.5px solid var(--flagColor);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -562,8 +566,9 @@ footer {
 
 #area-riservata-gestione-articoli h2 {
     display: inline-block;
-    line-height: 2em;
+    line-height: 1em;
     margin-bottom: 2em;
+    margin-top: 0.5em;
 }
 
 #area-riservata-gestione-articoli #crea-articolo, #area-riservata-gestione-articoli ul li a{

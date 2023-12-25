@@ -150,6 +150,66 @@ form input[type="submit"]{
 }
 
 /********************************************
+******************* VETRINA *****************
+********************************************/
+
+#vetrina h2 {
+    text-align: center;
+}
+
+.lista-prodotti-stampa li{
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.lista-prodotti-stampa li img {
+    width: 15%;
+}
+
+.lista-prodotti-stampa li dl {
+    margin-left: 2em;
+    flex-grow: 2;
+    align-self: center;
+}
+
+.lista-prodotti-stampa li dl dt {
+    font-weight: bold;
+    float: left;
+    padding-right: 0.5em;
+}
+
+.lista-prodotti-stampa li a {
+    display: none;
+}
+
+
+/********************************************
+************* PRODOTTO SINGOLO **************
+********************************************/
+
+#prodottoSingolo img{
+    display: block;
+    width: 30%;
+    margin: auto;
+}
+
+#prodottoSingolo a {
+    display: none;
+}
+
+#prodottoSingolo dl dt {
+    float: left;
+    margin-right: 0.4em;
+    font-weight: bold;
+}
+
+#prodottoSingolo dl dd {
+    margin-bottom: 0.4em;
+}
+
+
+/********************************************
 *************** AREA RISERVATA **************
 ********************************************/
 #area-riservata .icon-box{
@@ -174,32 +234,6 @@ form input[type="submit"]{
 
 #area-riservata-gestione-articoli h2 {
     text-align: center;
-}
-
-#area-riservata-gestione-articoli ul {
-    margin-top: 2em;
-}
-
-#area-riservata-gestione-articoli li {
-    overflow: hidden;
-    display: flex;
-    margin-bottom: 2em;
-}
-
-#area-riservata-gestione-articoli img {
-    width: 15%;
-}
-
-#area-riservata-gestione-articoli dl {
-    margin-left: 2em;
-    flex-grow: 2;
-    align-self: center;
-}
-
-#area-riservata-gestione-articoli dl dt {
-    font-weight: bold;
-    float: left;
-    padding-right: 0.5em;
 }
 
 /********************************************
@@ -246,4 +280,15 @@ form input[type="submit"]{
 
 #area-riservata-richiesta .link-button {
     display: none;
+}
+
+/********************************************
+******************** 404 ********************
+********************************************/
+#pagina-404 img{
+    display: none;
+}
+
+#pagina-404 .col-2 h1, #pagina-404 .col-2 h3 {
+    margin-bottom: 0.5em;
 }
