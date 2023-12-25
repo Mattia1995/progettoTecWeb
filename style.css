@@ -391,6 +391,25 @@ main h2, h3 {
 }
 
 
+.container caption{
+    font-size: 2em;
+    padding-bottom: 0.8em;
+}
+
+.container table,th,td{
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.container table{
+    margin: auto;
+}
+
+.container td, th{
+    padding: 0.8em;
+}
+
+
 /********************************************
 ****************** DOVE SIAMO ***************
 ********************************************/
