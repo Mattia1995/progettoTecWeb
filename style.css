@@ -910,6 +910,9 @@ footer {
 .passion-1 { 
     grid-area: 1 / 1 / 3 / 3;
     height: 600px;
+    background-image: url(imgs/passion-1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .passion-2 {
@@ -919,17 +922,23 @@ footer {
 
 .passion-3 { 
     grid-area: 3 / 1 / 5 / 3; 
-    height: 600px;  
+    height: 600px;
 }
 
 .passion-4 { 
     grid-area: 3 / 3 / 5 / 5; 
-    height: 600px;  
+    height: 600px;
+    background-image: url(imgs/passion-2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;  
 }
 
 .passion-5 { 
     grid-area: 5 / 1 / 7 / 3; 
-    height: 600px;  
+    height: 600px;
+    background-image: url(imgs/passion-3.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;  
 }
 
 .passion-6 { 
@@ -948,7 +957,7 @@ footer {
 
 .passione p {
     font-size: 1.45em;
-    line-height: 1.3em;
+    line-height: 1.5em;
     text-align: center;
     margin: 0em 2em;
     padding: 30% 0;
@@ -977,9 +986,11 @@ hr{
 }
 
 .team-section p{
-    font-size: large;
+    font-size: larger;
     text-align: center;
     margin: auto;
+    padding-bottom: 1em;
+    font-weight: 650;
 }
 
 .profile {
