@@ -9,6 +9,10 @@
     
     $connectionOK = false;
     $pageTitle = "Nuovo aticolo";
+    $testoBottoneForm = "Inserisci";
+    $fullWidthButton = "";
+    $bottoneElimina = "";
+    $toDel = false;
 	$infoMessage = "";
 	$errorMessage = "";
     $errorClassNotShowElement = "";
@@ -130,9 +134,13 @@
         return $messaggiPerForm;
     }
 
-    //TODO: Capire se fare redirect con ID sbagliato.
     if (isset ($_GET['product_id'])) {
         $product_id = $_GET['product_id'];
+    } else {
+        $fullWidthButton = "form-full-width";
+    }
+    if (isset ($_GET['to_del'])) {
+        $toDel = $_GET['to_del'];
     }
 	try {
 		$connection = new DBAccess();
@@ -157,58 +165,71 @@
                     if ($articolo["discounted_price"] != null){
                         $prezzoScontatoArticolo = $articolo["discounted_price"];
                     }
+                    $testoBottoneForm = "Aggiorna";
+                    $bottoneElimina = "
+                    <div class=\"form-col-50\">
+                        <a class=\"form-button\" id=\"delete-button\" href=\"?product_id=$product_id&to_del=true\">Elimina</a>
+                    </div>";
                 } else {
                     // Se viene fornito un product_id non esistente allora faccio redirect alla pagina del nuovo prodotto.
                     header("Location:./area-riservata-articolo.php");
                     exit;
                 }
             }
-            // Ottengo le categorie.
-            $categorie = $connection->getCategories ();
-            // QUI POPOLIAMO LA LISTA degli album verificando quello selezionato.
-            foreach ($categorie as $categoria) {
-                if (isset($_POST['submit'])) {
-                    if (isset($_POST['categoriaArticolo']) && $categoria["category_id"] == $_POST["categoriaArticolo"]) {
-                        $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\" selected>" . $categoria["name"] . "</option>";
+            // Se il prodotto esiste ed è stato passato toDel a true allora cancello l'articolo.
+            if ($toDel && $product_id != null && $articolo != null) {
+                // Cancello il prodotto.
+                $connection->deleteProduct($product_id);
+                $successFormMessage = "<p class=\"success-message\">Prodotto eliminato con successo</p>";
+                $errorClassNotShowElement = "class=\"class-not-show-element\"";
+            } else {
+                // Ottengo le categorie.
+                $categorie = $connection->getCategories ();
+                // QUI POPOLIAMO LA LISTA degli album verificando quello selezionato.
+                foreach ($categorie as $categoria) {
+                    if (isset($_POST['submit'])) {
+                        if (isset($_POST['categoriaArticolo']) && $categoria["category_id"] == $_POST["categoriaArticolo"]) {
+                            $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\" selected>" . $categoria["name"] . "</option>";
+                        } else {
+                            $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\">" . $categoria["name"] . "</option>";
+                        }
                     } else {
-                        $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\">" . $categoria["name"] . "</option>";
-                    }
-                } else {
-                    if ($idCategoria == $categoria["category_id"]) {
-                        $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\" selected>" . $categoria["name"] . "</option>";
-                    } else {
-                        $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\">" . $categoria["name"] . "</option>";
+                        if ($idCategoria == $categoria["category_id"]) {
+                            $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\" selected>" . $categoria["name"] . "</option>";
+                        } else {
+                            $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\">" . $categoria["name"] . "</option>";
+                        }
                     }
                 }
-            }
-            // Se siamo in POST vuol dire che è stato cliccato il pulsante "submit" e quindi devo inserire o modificare il prodotto.
-            if (isset($_POST['submit'])) {
-                $messaggiPerForm = insertOrUpdateProduct ($connection, $product_id, $immagineArticolo);
-                // In questo caso non ci sono stati errori di validazione e quindi stampo il messaggio di inserimento avvenuto con successo.
-                if ($messaggiPerForm == null || $messaggiPerForm == '') {
-                    $successFormMessage = "<p class=\"success-message\">Prodotto aggiornato con successo</p>";
-                    $errorClassNotShowElement = "class=\"class-not-show-element\"";
-                    if ($product_id == null) {
-                        $successFormMessage = "<p class=\"success-message\">Prodotto inserito con successo</p>";
+                // Se siamo in POST vuol dire che è stato cliccato il pulsante "submit" e quindi devo inserire o modificare il prodotto.
+                if (isset($_POST['submit'])) {
+                    $messaggiPerForm = insertOrUpdateProduct ($connection, $product_id, $immagineArticolo);
+                    // In questo caso non ci sono stati errori di validazione e quindi stampo il messaggio di inserimento avvenuto con successo.
+                    if ($messaggiPerForm == null || $messaggiPerForm == '') {
+                        $successFormMessage = "<p class=\"success-message\">Prodotto aggiornato con successo</p>";
+                        $errorClassNotShowElement = "class=\"class-not-show-element\"";
+                        if ($product_id == null) {
+                            $successFormMessage = "<p class=\"success-message\">Prodotto inserito con successo</p>";
+                        }
+                        
+                        // TODO: Capire come gestire il reinvio automatico del form con F5
+                        // $nomeArticolo = "";
+                        // $descrizioneArticolo = "";
+                        // $prezzoArticolo = null;
+                        // $prezzoScontatoArticolo = null;
+                        // $marchioArticolo = "";
+                        // $coloreArticolo = "";
+                        // $materialeArticolo = "";
+                    } else {
+                        // In caso di errori di validazione aggiungo la lista degli errori e memorizzo i valori inseriti nel form.
+                        $nomeArticolo = pulisciInput($_POST["nomeArticolo"]);
+                        $descrizioneArticolo = pulisciInput($_POST["descrizioneArticolo"]);
+                        $prezzoArticolo = pulisciInput($_POST["prezzo"]);
+                        $prezzoScontatoArticolo = pulisciInput($_POST["prezzo_scontato"]);
+                        $marchioArticolo = pulisciInput($_POST["marchioArticolo"]);
+                        $coloreArticolo = pulisciInput($_POST["coloreArticolo"]);
+                        $materialeArticolo = pulisciInput($_POST["materialeArticolo"]);
                     }
-                    
-                    // TODO: Capire come gestire il reinvio automatico del form con F5
-                    // $nomeArticolo = "";
-                    // $descrizioneArticolo = "";
-                    // $prezzoArticolo = null;
-                    // $prezzoScontatoArticolo = null;
-                    // $marchioArticolo = "";
-                    // $coloreArticolo = "";
-                    // $materialeArticolo = "";
-                } else {
-                    // In caso di errori di validazione aggiungo la lista degli errori e memorizzo i valori inseriti nel form.
-                    $nomeArticolo = pulisciInput($_POST["nomeArticolo"]);
-                    $descrizioneArticolo = pulisciInput($_POST["descrizioneArticolo"]);
-                    $prezzoArticolo = pulisciInput($_POST["prezzo"]);
-                    $prezzoScontatoArticolo = pulisciInput($_POST["prezzo_scontato"]);
-                    $marchioArticolo = pulisciInput($_POST["marchioArticolo"]);
-                    $coloreArticolo = pulisciInput($_POST["coloreArticolo"]);
-                    $materialeArticolo = pulisciInput($_POST["materialeArticolo"]);
                 }
             }
         } else {
@@ -227,6 +248,9 @@
 	$paginaHtml = str_replace ("{errorMessage}", $errorMessage, $paginaHtml);
 	$paginaHtml = str_replace ("{infoMessage}", $infoMessage, $paginaHtml);
 	$paginaHtml = str_replace ("{classNotShowElement}", $errorClassNotShowElement, $paginaHtml);
+	$paginaHtml = str_replace ("{testoBottoneForm}", $testoBottoneForm, $paginaHtml);
+	$paginaHtml = str_replace ("{bottoneElimina}", $bottoneElimina, $paginaHtml);
+	$paginaHtml = str_replace ("{fullWidthButton}", $fullWidthButton, $paginaHtml);
     $paginaHtml = str_replace ("{listacategorie}", $listaCategorie, $paginaHtml);
 	$paginaHtml = str_replace ("{pageTitle}", $pageTitle, $paginaHtml);
 	$paginaHtml = str_replace ("{nomeArticolo}", $nomeArticolo, $paginaHtml);
@@ -239,7 +263,6 @@
 	$paginaHtml = str_replace ("{materialeArticolo}", $materialeArticolo, $paginaHtml);
 	$paginaHtml = str_replace ("{successFormMessage}", $successFormMessage, $paginaHtml);
 	$paginaHtml = str_replace ("{messaggiPerForm}", $messaggiPerForm, $paginaHtml);
-
     
 	echo $paginaHtml;
 ?>

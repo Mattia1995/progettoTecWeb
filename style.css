@@ -689,18 +689,32 @@ footer {
     display: block;
 }
 
-#gestione-articolo-form form input[type="submit"]{
-    width: 98%;
-    padding: 0.6em 3em;
-    margin-top: 2em;
+#gestione-articolo-form form .form-button{
+    width: 100%;
+    padding: 0.6em 0;
     border: 2px solid var(--linkColor);
     color: var(--linkColor);
     background-color: var(--bodyBgColor);
     transition: .2s;
     -moz-transition: none;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1em;
 }
 
-#gestione-articolo-form form input[type="submit"]:hover{
+#gestione-articolo-form form .form-button#delete-button{
+    display: block;
+    text-decoration: none;
+    color: var(--errorColor);
+    border-color: var(--errorColor);
+}
+
+#gestione-articolo-form form .form-button#delete-button:hover{
+    background-color: var(--errorColor);
+    color: var(--linkHoverColor);
+}
+
+#gestione-articolo-form form .form-button:hover{
     background-color: var(--linkColor);
     color: var(--linkHoverColor);
 }
@@ -719,6 +733,11 @@ footer {
 .form-row-container .form-col-50:first-child{
     margin-left: 0;
     margin-right: 2%;
+}
+
+.form-row-container .form-col-50.form-full-width{
+    width: 100%;
+    margin: 0;
 }
 
 

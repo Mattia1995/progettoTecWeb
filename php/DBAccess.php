@@ -38,7 +38,7 @@
 		public function getListaArticoli(){
 			$query = "SELECT p.product_id, p.name, p.image_url, p.category_id, p.price, p.discounted_price, c.name as nome_cat
 			FROM products AS p INNER JOIN categories AS c ON (p.category_id = c.category_id)
-			ORDER BY p.product_id";
+			ORDER BY p.name";
 			$queryResult = mysqli_query($this -> connection, $query) or die("Errore in DBAccess" .mysqli_error($this -> connection));
 			if (mysqli_num_rows($queryResult) != 0){
 				$result = array();
@@ -91,7 +91,7 @@
 			return mysqli_affected_rows ($this->connection) > 0;
 		}
 		
-        /** Funzione che aggiorna un nuovo prodotto. */
+        /** Funzione che aggiorna un prodotto. */
 		public function updateProduct($product_id, $nomeArticolo, $descrizioneArticolo, $prezzoArticolo, $marchioArticolo, $coloreArticolo, $materialeArticolo, $idCategoria, $prezzoScontatoArticolo, $imageUrl){
 			$queryUpdate = "
 				UPDATE products
@@ -112,6 +112,13 @@
 				$queryUpdate = str_replace ("{discounted_price}", "discounted_price = null,", $queryUpdate);
 			}
 			mysqli_query ($this->connection, $queryUpdate) or die(mysqli_error($this->connection));
+			return mysqli_affected_rows ($this->connection) > 0;
+		}
+		
+        /** Funzione che elimina un prodotto. */
+		public function deleteProduct($product_id){
+			$queryDelete = "DELETE FROM products WHERE product_id = $product_id";
+			mysqli_query ($this->connection, $queryDelete) or die(mysqli_error($this->connection));
 			return mysqli_affected_rows ($this->connection) > 0;
 		}
 
