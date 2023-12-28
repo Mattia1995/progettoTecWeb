@@ -30,6 +30,8 @@ Scrivere di seguito eventuali appunti tecnici sul progetto:
 12) h1 capire se lasciare il nome del negozio? 
     -> o 2 h1 o h1 nome negozio e h2 nome pagina.
 
+13) Dimensioni per mobile css?
+
 
 
 

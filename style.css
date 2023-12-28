@@ -15,6 +15,8 @@
     --font-body-family: "Roboto Condensed", sans-serif;
     --linkColorForRgba: 0,0,0;
     --visitedLinkColorForRgba: 40,104,255;
+    --errorColor: #A30E09;
+    --successColor: #007413;
 }
 
 html {
@@ -45,6 +47,38 @@ body a:visited {
 	width: 1px;
 	overflow: hidden;
 	clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+/********************************************
+************** GESTIONE ERRORI **************
+********************************************/
+
+.error-message {
+    color: var(--errorColor);
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.success-message {
+    color: var(--successColor);
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.class-not-show-element {
+    display: none;
+}
+
+.error-form-message {
+    margin-left: 1em;
+    margin-bottom: 1.2em;
+}
+
+.error-form-message li {
+    color: var(--errorColor);
 }
 
 /********************************************
