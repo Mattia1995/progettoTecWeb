@@ -29,68 +29,66 @@
             <p>Ti trovi in: 
                 <a href="../home.html" lang="en">Home</a> &gt;&gt;
                 <a href="dashboard-area-riservata.html">Area riservata</a> &gt;&gt;
-                <a href="area-riservata-gestione-articoli.html">Articoli</a> &gt;&gt;
-                Nuovo articolo
+                <a href="area-riservata-gestione-articoli.php">Articoli</a> &gt;&gt;
+                {pageTitle}
             </p>
         </nav>
         <main id="area-riservata-articolo">
-            <h2>Nuovo articolo</h2>
-            <div id="gestione-articolo-form">
-                <form action="#azioneDaInserire" method="post" enctype="multipart/form-data">
+            {errorMessage}
+            {infoMessage}
+            {successFormMessage}
+            <h2 {classNotShowElement}>{pageTitle}</h2>
+            <div {classNotShowElement} id="gestione-articolo-form">
+                {messaggiPerForm}
+                <form method="post" action="" enctype="multipart/form-data">
                     <div>
                         <label for="nomeArticolo">Nome:</label>
-                        <input type="text" name="nomeArticolo" id="nomeArticolo" required>
+                        <input type="text" name="nomeArticolo" id="nomeArticolo" value="{nomeArticolo}" required>
                         <label for="descrizioneArticolo">Descrizione:</label>
-                        <textarea id="descrizioneArticolo" name="descrizioneArticolo" rows="4" cols="50" required></textarea>
+                        <textarea id="descrizioneArticolo" name="descrizioneArticolo" rows="4" cols="50" required>{descrizioneArticolo}</textarea>
                         <div class="form-row-container">
                             <div class="form-col-50">
                                 <label for="prezzo">Prezzo:</label>
-                                <input type="number" name="prezzo" id="prezzo" step=".01" required>
+                                <input type="number" name="prezzo" id="prezzo" step=".01" value="{prezzoArticolo}" required>
                             </div>
                             <div class="form-col-50">
                                 <label for="prezzo_scontato">Prezzo scontato:</label>
-                                <input type="number" name="prezzo_scontato" id="prezzo_scontato" step=".01">
+                                <input type="number" name="prezzo_scontato" id="prezzo_scontato" value="{prezzoScontatoArticolo}" step=".01">
                             </div>
                         </div>
                         <div class="form-row-container">
                             <div class="form-col-50">
                                 <label for="immagineArticolo">Immagine articolo:</label>
-                                <input type="file" name="immagineArticolo" id="immagineArticolo" required>
+                                <input type="file" name="immagineArticolo" id="immagineArticolo">
                             </div>
                             <div class="form-col-50">
                                 <label for="categoriaArticolo">Categoria articolo:</label>
                                 <select name="categoriaArticolo" id="categoriaArticolo" required>
                                     <option value="">Seleziona un valore</option>
-                                    <option value="batteria">Batteria</option>
-                                    <option value="chitarra">Chitarra</option>
-                                    <option value="pianoforte">Pianoforte</option>
+                                    {listacategorie}
                                 </select>
                             </div>
                         </div>
                         <div class="form-row-container">
                             <div class="form-col-50">
                                 <label for="marchioArticolo">Marchio:</label>
-                                <input type="text" name="marchioArticolo" id="marchioArticolo" required>
+                                <input type="text" name="marchioArticolo" id="marchioArticolo" value="{marchioArticolo}" required>
                             </div>
                             <div class="form-col-50">
-                                <label for="tipologiaArticolo">Tipologia:</label>
-                                <input type="text" name="tipologiaArticolo" id="tipologiaArticolo" required>    
+                                <label for="materialeArticolo">Materiale:</label>
+                                <input type="text" name="materialeArticolo" id="materialeArticolo" value="{materialeArticolo}" required>
                             </div>
                         </div>
                         <div class="form-row-container">
                             <div class="form-col-50">
-                                <label for="materialeArticolo">Materiale:</label>
-                                <input type="text" name="materialeArticolo" id="materialeArticolo" required>
-                            </div>
-                            <div class="form-col-50">
                                 <label for="coloreArticolo">Colore:</label>
-                                <input type="text" name="coloreArticolo" id="coloreArticolo" required>    
+                                <input type="text" name="coloreArticolo" id="coloreArticolo" value="{coloreArticolo}" required>    
                             </div>
                         </div>
                     </div>
                     <div>
                         <!-- TODO: Gestire regole validazione campi form -->
-                        <input type="submit" class="link-button">
+                        <input type="submit" name="submit" class="link-button">
                     </div>
                 </form>
             </div>
