@@ -98,30 +98,34 @@
                 // Verifico se è davvero un'immagine.
                 if ($check == false) {
                     $messaggiPerForm = $messaggiPerForm . "<li>Il file caricato non è valido, caricare un file con estensione .jpg o .png.</li>";
-                } else {
-                    // Verifico se il file esiste già.
-                    if (!file_exists($target_file)) {
-                        if (!move_uploaded_file($_FILES["immagineArticolo"]["tmp_name"], $target_file)) {
-                            $messaggiPerForm = "<p class=\"error-message\">Impossibile caricare il file, se l'errore persiste contattaci tramite la pagina dedicata.</p>";
-                        }
-                    }
                 }
             }
         }
         // Se non ci sono errori di validazione inserisco il valore.
         if ($messaggiPerForm == '') {
-            // Se il $product_id è null o non è stato trovato l'articolo con id fornito, allora siamo in insert.
-            if ($product_id == null) {
-                $resultInsert = $connection->insertNewProduct ($nomeArticolo, $descrizioneArticolo, $prezzoArticolo, $marchioArticolo, $coloreArticolo, $materialeArticolo, $idCategoria, $prezzoScontatoArticolo, $target_file);
-                if (!$resultInsert) {
-                    $messaggiPerForm = "<p class=\"error-message\">Erorre nell'inserimento del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
-                }
-            } else {
-                $resultUpdate = $connection->updateProduct ($product_id, $nomeArticolo, $descrizioneArticolo, $prezzoArticolo, $marchioArticolo, $coloreArticolo, $materialeArticolo, $idCategoria, $prezzoScontatoArticolo, $target_file);
-                if (!$resultUpdate) {
-                    $messaggiPerForm = "<p class=\"error-message\">Erorre nell'aggiornamento del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
+            // Verifico se il file esiste già e in caso contrario provo a aggiungerlo.
+            if (!file_exists($target_file)) {
+                if (!move_uploaded_file($_FILES["immagineArticolo"]["tmp_name"], $target_file)) {
+                    $messaggiPerForm = "<p class=\"error-message\">Impossibile caricare il file, se l'errore persiste contattaci tramite la pagina dedicata.</p>";
                 }
             }
+            // Se non c'è stato un errore nel caricamento del file allora provo a inserire l'articolo.
+            if ($messaggiPerForm == '') {
+                // Se il $product_id è null o non è stato trovato l'articolo con id fornito, allora siamo in insert.
+                if ($product_id == null) {
+                    $resultInsert = $connection->insertNewProduct ($nomeArticolo, $descrizioneArticolo, $prezzoArticolo, $marchioArticolo, $coloreArticolo, $materialeArticolo, $idCategoria, $prezzoScontatoArticolo, $target_file);
+                    if (!$resultInsert) {
+                        $messaggiPerForm = "<p class=\"error-message\">Erorre nell'inserimento del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
+                    }
+                } else {
+                    $resultUpdate = $connection->updateProduct ($product_id, $nomeArticolo, $descrizioneArticolo, $prezzoArticolo, $marchioArticolo, $coloreArticolo, $materialeArticolo, $idCategoria, $prezzoScontatoArticolo, $target_file);
+                    if (!$resultUpdate) {
+                        $messaggiPerForm = "<p class=\"error-message\">Erorre nell'aggiornamento del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
+                    }
+                }
+            }
+        } else {
+            $messaggiPerForm = "<ul class=\"error-form-message\">" . $messaggiPerForm . "</ul>";
         }
         return $messaggiPerForm;
     }
@@ -163,10 +167,18 @@
             $categorie = $connection->getCategories ();
             // QUI POPOLIAMO LA LISTA degli album verificando quello selezionato.
             foreach ($categorie as $categoria) {
-                if ($idCategoria == $categoria["category_id"] || (isset($_POST['submit']) && isset($_POST['categoriaArticolo']) && isset($_POST['categoriaArticolo']) == $_POST["categoriaArticolo"])) {
-                    $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\" selected>" . $categoria["name"] . "</option>";
+                if (isset($_POST['submit'])) {
+                    if (isset($_POST['categoriaArticolo']) && $categoria["category_id"] == $_POST["categoriaArticolo"]) {
+                        $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\" selected>" . $categoria["name"] . "</option>";
+                    } else {
+                        $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\">" . $categoria["name"] . "</option>";
+                    }
                 } else {
-                    $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\">" . $categoria["name"] . "</option>";
+                    if ($idCategoria == $categoria["category_id"]) {
+                        $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\" selected>" . $categoria["name"] . "</option>";
+                    } else {
+                        $listaCategorie .= "<option value=\"" . $categoria["category_id"] . "\">" . $categoria["name"] . "</option>";
+                    }
                 }
             }
             // Se siamo in POST vuol dire che è stato cliccato il pulsante "submit" e quindi devo inserire o modificare il prodotto.
@@ -190,7 +202,6 @@
                     // $materialeArticolo = "";
                 } else {
                     // In caso di errori di validazione aggiungo la lista degli errori e memorizzo i valori inseriti nel form.
-                    $messaggiPerForm = "<ul class=\"error-form-message\">" . $messaggiPerForm . "</ul>";
                     $nomeArticolo = pulisciInput($_POST["nomeArticolo"]);
                     $descrizioneArticolo = pulisciInput($_POST["descrizioneArticolo"]);
                     $prezzoArticolo = pulisciInput($_POST["prezzo"]);
