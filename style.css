@@ -804,6 +804,14 @@ footer {
 ********** AREA RISERVATA RICHIESTA *********
 ********************************************/
 
+#area-riservata-richiesta h2 {
+    margin-bottom: 0.3em;
+}
+
+#area-riservata-richiesta > p:first-of-type {
+    margin-bottom: 1em;
+}
+
 #area-riservata-richiesta > p {
     text-align: center;
 }

@@ -22,7 +22,7 @@
 		public function getListaRichieste(){
 			$query = "SELECT m.message_id, m.name, m.email, m.message, m.state_id, m.creation_date, ms.name as nome_stato
 			FROM messages AS m INNER JOIN message_states AS ms ON (m.state_id = ms.state_id)
-			ORDER BY ms.state_id";
+			ORDER BY ms.state_id ASC, m.creation_date ASC";
 			$queryResult = mysqli_query($this -> connection, $query) or die("Errore in DBAccess" .mysqli_error($this -> connection));
 			if (mysqli_num_rows($queryResult) != 0){
 				$result = array();
@@ -34,6 +34,33 @@
 			}else{
 				return null;
 			}
+		}
+		
+        /** Funzione che ritorna la richiesta con id uguale a message_id */
+		public function getRichiesta($message_id){
+			$query = "SELECT m.message_id, m.name, m.email, m.message, m.state_id, m.creation_date
+			FROM messages AS m
+			WHERE m.message_id = $message_id";
+			$queryResult = mysqli_query($this -> connection, $query) or die("Errore in DBAccess" .mysqli_error($this -> connection));
+			if (mysqli_num_rows($queryResult) != 0){
+				$result = array();
+				while($row = mysqli_fetch_assoc($queryResult)){
+					$result[] = $row;
+				}
+				$queryResult->free();
+				return $result;
+			}else{
+				return null;
+			}
+		}
+		
+        /** Funzione che revade la richiesta con message_id = $message_id */
+		public function evadiRichiesta($message_id){
+			$query = "UPDATE messages
+			SET state_id = 2
+			WHERE message_id = $message_id";
+			mysqli_query ($this->connection, $query) or die(mysqli_error($this->connection));
+			return mysqli_affected_rows ($this->connection) > 0;
 		}
 		
         /** Funzione che ritorna la lista delle categorie. */

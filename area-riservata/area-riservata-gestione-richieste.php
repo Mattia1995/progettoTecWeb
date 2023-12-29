@@ -16,7 +16,7 @@
 		// QUI VERIFICHIAMO SEMPRE LA CONNESSIONE
 		if ($connectionOK) {
 			$resultListaRichieste = $connection->getListaRichieste();
-			// Verifico se sono stati trovati degli articoli.
+			// Verifico se sono state trovate delle richieste.
 			if ($resultListaRichieste == null) {
 				$infoMessage = "<p class=\"info-message\">Nessun richiesta trovata.</p>";
 			} else {

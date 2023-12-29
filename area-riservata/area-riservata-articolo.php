@@ -73,6 +73,10 @@
                 } else {
                     // Se viene fornito un product_id non esistente allora faccio redirect alla pagina del nuovo prodotto.
                     header("Location:./area-riservata-articolo.php");
+                    // Chiudo la connessione, se aperta correttamente, visto che non passa nel finally con exit.
+                    if ($connectionOK) {
+                        $connection->closeConnection();
+                    }
                     exit;
                 }
             } else {
