@@ -8,15 +8,20 @@ CREATE TABLE accounts (
 	PRIMARY KEY (username)
 );
 
+CREATE TABLE message_states (
+	state_id INT NOT NULL,
+    name VARCHAR(256) NOT NULL,
+	PRIMARY KEY (state_id)
+);
+
 CREATE TABLE messages (
-	message_id INT NOT NULL,
+	message_id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(256) NOT NULL,
     email VARCHAR(256) NOT NULL,
 	message VARCHAR(2048) NOT NULL,
-	creation_date DATETIME NOT NULL, -- data inserimento, visibile solo dall'admin che visualizza un messaggio
-	first_viewed_by VARCHAR(256), -- la prima volta che il messaggio viene visualizzato inserisco lo username, NULL altrimenti
+	state_id INT NOT NULL,
 	PRIMARY KEY (message_id),
-	FOREIGN KEY (first_viewed_by) REFERENCES accounts(username)
+	FOREIGN KEY (state_id) REFERENCES message_states(state_id)
 );
 
 CREATE TABLE categories (
@@ -70,3 +75,17 @@ INSERT INTO `melodia_db`.`categories`
 VALUES
 (3,
 'batterie');
+
+INSERT INTO `melodia_db`.`message_states`
+(`state_id`,
+`name`)
+VALUES
+(1,
+'Da leggere');
+
+INSERT INTO `melodia_db`.`message_states`
+(`state_id`,
+`name`)
+VALUES
+(2,
+'Evaso');
