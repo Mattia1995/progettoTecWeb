@@ -8,7 +8,7 @@
 	$paginaHtml = file_get_contents ("../area-riservata/area-riservata-articolo.html");
     
     $connectionOK = false;
-    $pageTitle = "Nuovo aticolo";
+    $pageTitle = "Nuovo articolo";
     $testoBottoneForm = "Inserisci";
     $fullWidthButton = "";
     $bottoneElimina = "";
@@ -41,7 +41,7 @@
         return $value;
     }
 
-    function insertOrUpdateProduct ($connection, $product_id, $immagineArticolo) {
+    function insertOrUpdateProduct ($connection, $product_id, $immagineArticolo, $next_product_id) {
         // Prendo tutti i campi dalla post.
         $nomeArticolo = pulisciInput($_POST["nomeArticolo"]);
         $descrizioneArticolo = pulisciInput($_POST["descrizioneArticolo"]);
@@ -72,7 +72,7 @@
                 $messaggiPerForm = $messaggiPerForm . "<li>Il prezzo scontato dell'articolo deve essere maggiore di zero.</li>";
             }
             if ($prezzoScontatoArticolo >= $prezzoArticolo) {
-                $messaggiPerForm = $messaggiPerForm . "<li>Il prezzo scontato dell'articolo deve essere maggiore del prezzo non scontato.</li>";
+                $messaggiPerForm = $messaggiPerForm . "<li>Il prezzo scontato dell'articolo deve essere minore del prezzo non scontato.</li>";
             }
         }
         if ($idCategoria == null) {
@@ -87,16 +87,25 @@
         if ($materialeArticolo == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>Il materiale dell'articolo deve essere valorizzato.</li>";
         }
-        // Verifiche immagine
+        // Verifiche immagine.
         $target_dir = "../images/upload_file_form/";
-        $target_file = $target_dir . basename($_FILES["immagineArticolo"]["name"]);
+        // Creo il path dell'immagine concatenando l'id del prodotto e se nuovo il prossimo id del prodotto.
+        $target_file = $target_dir . $product_id . "_" . basename($_FILES["immagineArticolo"]["name"]);
+        if ($product_id == null) {
+            $target_file = $target_dir . $next_product_id . "_" . basename($_FILES["immagineArticolo"]["name"]);
+        }
+        $checkIfFileExist = true;
         if ($_FILES["immagineArticolo"]["name"] == null) {
+            // Non essendoci il file verifico se era già stato caricato in precedenza, in tal caso salvo il path vecchio.
             if ($immagineArticolo == null) {
                 $messaggiPerForm = $messaggiPerForm . "<li>L'immagine è richiesta.</li>";
+            } else {
+                $checkIfFileExist = false;
+                $target_file = $immagineArticolo;
             }
         } else {
-            if (strlen(basename($_FILES["immagineArticolo"]["name"])) > 256) {
-                $messaggiPerForm = $messaggiPerForm . "<li>Nome del file troppo lungo (Max 240 caratteri).</li>";
+            if (strlen(basename($_FILES["immagineArticolo"]["name"])) > 150) {
+                $messaggiPerForm = $messaggiPerForm . "<li>Nome del file troppo lungo (Max 150 caratteri).</li>";
             } else {
                 $check = getimagesize($_FILES["immagineArticolo"]["tmp_name"]);
                 // Verifico se è davvero un'immagine.
@@ -108,7 +117,7 @@
         // Se non ci sono errori di validazione inserisco il valore.
         if ($messaggiPerForm == '') {
             // Verifico se il file esiste già e in caso contrario provo a aggiungerlo.
-            if (!file_exists($target_file)) {
+            if ($checkIfFileExist && !file_exists($target_file)) {
                 if (!move_uploaded_file($_FILES["immagineArticolo"]["tmp_name"], $target_file)) {
                     $messaggiPerForm = "<p class=\"error-message\">Impossibile caricare il file, se l'errore persiste contattaci tramite la pagina dedicata.</p>";
                 }
@@ -145,6 +154,7 @@
 	try {
 		$connection = new DBAccess();
 		$connectionOK = $connection -> openDbConnection ();
+        $next_product_id = 1;
 		// QUI VERIFICHIAMO SEMPRE LA CONNESSIONE
 		if ($connectionOK) {
             // Ottengo l'articolo presente in GET.
@@ -175,13 +185,23 @@
                     header("Location:./area-riservata-articolo.php");
                     exit;
                 }
+            } else {
+                // Essendo in inserimento ottengo l'ultimo id inserito per avere il prossimo utile per salvare l'immagine.
+                $max_product_id = $connection->getMaxProductId ();
+                if ($max_product_id != null && sizeof($max_product_id) > 0) {
+                    $next_product_id = $max_product_id[0]["max"] + 1;
+                }
             }
             // Se il prodotto esiste ed è stato passato toDel a true allora cancello l'articolo.
             if ($toDel && $product_id != null && $articolo != null) {
                 // Cancello il prodotto.
-                $connection->deleteProduct($product_id);
-                $successFormMessage = "<p class=\"success-message\">Prodotto eliminato con successo</p>";
-                $errorClassNotShowElement = "class=\"class-not-show-element\"";
+                $resultDelete = $connection->deleteProduct($product_id);
+                if (!$resultDelete) {
+                    $messaggiPerForm = "<p class=\"error-message\">Erorre nell'eliminazione del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
+                } else {
+                    $successFormMessage = "<p class=\"success-message\">Prodotto eliminato con successo</p>";
+                    $errorClassNotShowElement = "class=\"class-not-show-element\"";
+                }
             } else {
                 // Ottengo le categorie.
                 $categorie = $connection->getCategories ();
@@ -203,7 +223,7 @@
                 }
                 // Se siamo in POST vuol dire che è stato cliccato il pulsante "submit" e quindi devo inserire o modificare il prodotto.
                 if (isset($_POST['submit'])) {
-                    $messaggiPerForm = insertOrUpdateProduct ($connection, $product_id, $immagineArticolo);
+                    $messaggiPerForm = insertOrUpdateProduct ($connection, $product_id, $immagineArticolo, $next_product_id);
                     // In questo caso non ci sono stati errori di validazione e quindi stampo il messaggio di inserimento avvenuto con successo.
                     if ($messaggiPerForm == null || $messaggiPerForm == '') {
                         $successFormMessage = "<p class=\"success-message\">Prodotto aggiornato con successo</p>";

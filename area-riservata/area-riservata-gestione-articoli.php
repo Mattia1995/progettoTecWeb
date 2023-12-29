@@ -42,7 +42,7 @@
 							"<dd>" . $articolo["price"] . "</dd>" .
 							$prezzoScontato .
 						"</dl>" .
-						"<a class=\"link-button\" href=\"area-riservata-articolo.php?product_id=" . $articolo["product_id"] . "\" title=\"" .$articolo["name"]  . "\">Modifica</a>" .
+						"<a class=\"link-button\" href=\"area-riservata-articolo.php?product_id=" . $articolo["product_id"] . "\" title=\"Modifica " .$articolo["name"]  . "\">Modifica</a>" .
 					"</li>";
 				}
 				$listaArticoli .= "</ul>";

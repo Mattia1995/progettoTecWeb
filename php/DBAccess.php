@@ -74,6 +74,22 @@
 			}
 		}
 		
+		/** Funzione che ritorna l'identificativo massimo dei prodotti inseriti. */
+		public function getMaxProductId(){
+			$query = "SELECT MAX(product_id) as max FROM products";
+			$queryResult = mysqli_query($this -> connection, $query) or die("Errore in DBAccess" .mysqli_error($this -> connection));
+			if (mysqli_num_rows($queryResult) != 0){
+				$result = array();
+				while($row = mysqli_fetch_assoc($queryResult)){
+					$result[] = $row;
+				}
+				$queryResult->free();
+				return $result;
+			}else{
+				return null;
+			}
+		}
+		
         /** Funzione che inserisce un nuovo prodotto. */
 		public function insertNewProduct($nomeArticolo, $descrizioneArticolo, $prezzoArticolo, $marchioArticolo, $coloreArticolo, $materialeArticolo, $idCategoria, $prezzoScontatoArticolo, $imageUrl){
 			$queryInsert = "

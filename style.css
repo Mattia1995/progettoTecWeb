@@ -282,9 +282,6 @@ main h2, h3 {
 .dtNonAmbiguoProdotto{
     position:absolute; /* DEVO Spostare di -999em (a sinistra) */
     left:-999em;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: auto auto auto auto auto;
-    gap: 1em 1em;
 	padding: 1em;
 }
 
