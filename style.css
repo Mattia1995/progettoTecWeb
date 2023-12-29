@@ -416,7 +416,7 @@ main h2, h3 {
 
 .errorText {
 	display: inline-block;
-	width: 22em;
+	width: 60%;
 	padding: 2em;
 	border-left: 6px solid var(--flagColor);
 	border-right: 6px solid var(--flagColor);
