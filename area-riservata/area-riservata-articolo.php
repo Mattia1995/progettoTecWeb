@@ -6,7 +6,6 @@
 	error_reporting (E_ALL);
 	setlocale (LC_ALL, 'it_IT');
 	$paginaHtml = file_get_contents ("../area-riservata/area-riservata-articolo.html");
-    
     $connectionOK = false;
     $pageTitle = "Nuovo articolo";
     $testoBottoneForm = "Inserisci";

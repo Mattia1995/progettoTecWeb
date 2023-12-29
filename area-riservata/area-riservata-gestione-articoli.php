@@ -9,6 +9,7 @@
 	setlocale (LC_ALL, 'it_IT');
 
 	$paginaHtml = file_get_contents ("../area-riservata/area-riservata-gestione-articoli.html");
+    $connectionOK = false;
 	$infoMessage = "";
 	$errorMessage = "";
 	$listaArticoli="";

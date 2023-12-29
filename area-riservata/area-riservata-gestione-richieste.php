@@ -7,6 +7,7 @@
 	error_reporting (E_ALL);
 	setlocale (LC_ALL, 'it_IT');
 	$paginaHtml = file_get_contents ("../area-riservata/area-riservata-gestione-richieste.html");
+    $connectionOK = false;
 	$infoMessage = "";
 	$errorMessage = "";
 	$listaRichieste="";

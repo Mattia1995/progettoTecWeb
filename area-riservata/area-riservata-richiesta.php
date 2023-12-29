@@ -7,11 +7,13 @@
 	error_reporting (E_ALL);
 	setlocale (LC_ALL, 'it_IT');
 	$paginaHtml = file_get_contents ("../area-riservata/area-riservata-richiesta.html");
+    $connectionOK = false;
     $message_id = null;
-	$pageTitle = "Richiesta di: ";
+	$pageTitle = "";
 	$messageDescription = "";
 	$messageDate = "";
 	$evadiAction = "";
+	$errorMessage = "";
 
     if (isset ($_GET['message_id'])) {
         $message_id = $_GET['message_id'];
@@ -51,10 +53,10 @@
 					}
 					exit;
 				}
-				$pageTitle = $pageTitle . $richiesta["name"];
-				$messageDescription = $richiesta["message"];
+				$pageTitle = "<h2>Richiesta di: " . $richiesta["name"] . "</h2>";
+				$messageDescription = "<p>" . $richiesta["message"] . "</p>";
 				$date = date_create($richiesta["creation_date"]);
-				$messageDate = date_format($date,"d F Y");
+				$messageDate = "<p>Del: " . date_format($date,"d F Y") . "</p>";
 				// Se lo stato è "Da Leggere" aggiungiamo il pulsante per evaderla.
 				if ($richiesta["state_id"] == 1) {
 					$evadiAction = "<a class=\"link-button\" href=\"?message_id=$message_id&evadi=true\">CONTRASSEGNA COME EVASA</a>";
@@ -71,6 +73,7 @@
 			$connection->closeConnection();
 		}
 	}
+	$paginaHtml = str_replace ("{errorMessage}", $errorMessage, $paginaHtml);
 	$paginaHtml = str_replace ("{pageTitle}", $pageTitle, $paginaHtml);
 	$paginaHtml = str_replace ("{messageDescription}", $messageDescription, $paginaHtml);
 	$paginaHtml = str_replace ("{messageDate}", $messageDate, $paginaHtml);
