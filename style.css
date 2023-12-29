@@ -791,10 +791,6 @@ footer {
     border-right: none;
 }
 
-.richiesta .descrizione {
-    flex-grow: 3;
-}
-
 .richiesta .stato {
     min-width: 14%;
 }

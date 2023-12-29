@@ -20,6 +20,7 @@ CREATE TABLE messages (
     email VARCHAR(256) NOT NULL,
 	message VARCHAR(2048) NOT NULL,
 	state_id INT NOT NULL,
+	creation_date DATE NOT NULL,
 	PRIMARY KEY (message_id),
 	FOREIGN KEY (state_id) REFERENCES message_states(state_id)
 );
@@ -41,7 +42,6 @@ CREATE TABLE products (
 	color VARCHAR(256) NOT NULL,
 	material VARCHAR(256) NOT NULL,
 	image_url VARCHAR(256) NOT NULL,
-	-- questi ultimi 4 campi sono visibili solo dall'area riservata, quando si modifica un prodotto già inserito in precedenza
 	PRIMARY KEY (product_id),
 	FOREIGN KEY (category_id) REFERENCES categories(category_id)
 );
