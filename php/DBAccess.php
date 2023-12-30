@@ -23,14 +23,14 @@
 			$query = "SELECT username FROM accounts
 			WHERE username = \"$username\" AND password = \"$password\"";
 			$queryResult = mysqli_query($this->connection, $query) or die("Errore in DBAccess" .mysqli_error($this -> connection));
-			if (mysqli_num_rows($queryResult) != 0){
+			if (mysqli_num_rows($queryResult) != 0) {
 				$result = array();
 				while($row = mysqli_fetch_assoc($queryResult)){
 					$result[] = $row;
 				}
 				$queryResult->free();
 				return $result;
-			}else{
+			} else {
 				return null;
 			}
 		}
