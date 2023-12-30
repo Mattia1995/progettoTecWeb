@@ -11,8 +11,13 @@
     // Verifico se è stato fatto correttamente il login e in quel caso rimando all'area riservata.
     session_start();
     if($_SESSION != null && $_SESSION['islogged']){
-		header("Location: dashboard-area-riservata.php");
-        exit;
+		// Se voglio fare il logout
+		if (isset ($_GET['logout']) && $_GET['logout']) {
+			session_destroy();
+		} else {
+			header("Location: dashboard-area-riservata.php");
+			exit;
+		}
     }
 
 	$paginaHtml = file_get_contents ("../area-riservata/area-riservata-login.html");
