@@ -544,7 +544,6 @@ footer {
     background-position: center;
     background-size: 100%;
     transition: .5s;
-    -moz-transition: none;
 }
 
 #area-riservata ul li:hover {

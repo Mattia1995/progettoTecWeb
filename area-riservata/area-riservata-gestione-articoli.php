@@ -5,8 +5,14 @@
 	ini_set('dusplay_errors',1);
 	ini_set('dusplay_startup_errors',1);
 	error_reporting (E_ALL);
-
 	setlocale (LC_ALL, 'it_IT');
+	
+    // Verifico se è stato fatto correttamente il login, in caso contrario rimando alla pagina di login.
+    session_start();
+    if(!$_SESSION['islogged']){
+        header('Location: area-riservata-login.php');
+        exit;
+    }
 
 	$paginaHtml = file_get_contents ("../area-riservata/area-riservata-gestione-articoli.html");
     $connectionOK = false;
