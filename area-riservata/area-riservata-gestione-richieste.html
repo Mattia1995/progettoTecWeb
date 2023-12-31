@@ -20,7 +20,7 @@
                         <li><a href="../vetrina.html">Vetrina</a></li>
                         <li><a href="../contatti.html">Contatti</a></li>
 						<li><a href="../dove_siamo.html">Dove siamo</a></li>
-                        <li><a href="dashboard-area-riservata.html"><span lang="en">Dashboard</span> area riservata</a></li>
+                        <li><a href="dashboard-area-riservata.php"><span lang="en">Dashboard</span> area riservata</a> | <a href="area-riservata-login.php?logout=true">Logout</a></li>
                     </ul>
                 </nav>
             </div>
@@ -29,66 +29,15 @@
             <p>
                 Ti trovi in:
                 <a href="../home.html" lang="en">Home</a> &gt;&gt;
-                <a href="dashboard-area-riservata.html">Area riservata</a> &gt;&gt;
+                <a href="dashboard-area-riservata.php">Area riservata</a> &gt;&gt;
                 Richieste
             </p>
         </nav>
         <main id="area-riservata-gestione-richieste">
             <h2>Richieste</h2>
-            <ul id="lista-richieste">
-                <li>
-                    <dl class="richiesta richiesta-da-leggere">
-                        <dt>Stato richiesta:</dt>
-                        <dd class="stato">DA LEGGERE</dd>
-                        <dt>Data richiesta:</dt>
-                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
-                        <dt>Nome richiedente:</dt>
-                        <dd>Antonio Rossi</dd>
-                        <dt>Testo richiesta:</dt>
-                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
-                    </dl>
-                    <a class="link-button" href="area-riservata-richiesta.html" title="Vai al dettaglio richiesta">></a>
-                </li>
-                <li>
-                    <dl class="richiesta richiesta-da-leggere">
-                        <dt>Stato richiesta:</dt>
-                        <dd class="stato">DA LEGGERE</dd>
-                        <dt>Data richiesta:</dt>
-                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
-                        <dt>Nome richiedente:</dt>
-                        <dd>Antonio Rossi</dd>
-                        <dt>Testo richiesta:</dt>
-                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
-                    </dl>
-                    <a class="link-button" href="#" title="Vai al dettaglio richiesta">></a>
-                </li>
-                <li>
-                    <dl class="richiesta">
-                        <dt>Stato richiesta:</dt>
-                        <dd class="stato">EVASA</dd>
-                        <dt>Data richiesta:</dt>
-                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
-                        <dt>Nome richiedente:</dt>
-                        <dd>Antonio Rossi</dd>
-                        <dt>Testo richiesta:</dt>
-                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
-                    </dl>
-                    <a class="link-button" href="prova" title="Vai al dettaglio richiesta">></a>
-                </li>
-                <li>
-                    <dl class="richiesta">
-                        <dt>Stato richiesta:</dt>
-                        <dd class="stato">EVASA</dd>
-                        <dt>Data richiesta:</dt>
-                        <dd><time datetime="1994-09-16">16 Settembre 1994</time></dd>
-                        <dt>Nome richiedente:</dt>
-                        <dd>Antonio Rossi</dd>
-                        <dt>Testo richiesta:</dt>
-                        <dd class="descrizione">Informazioni batteria prova 1.</dd>
-                    </dl>
-                    <a class="link-button" href="prova" title="Vai al dettaglio richiesta">></a>
-                </li>
-            </ul>
+            {errorMessage}
+            {infoMessage}
+            {listaRichieste}
         </main>
         <a class="aiuti-navigazione" href="#area-riservata-gestione-richieste">Torna su al contenuto</a>
         <footer>

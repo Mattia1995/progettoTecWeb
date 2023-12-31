@@ -8,15 +8,21 @@ CREATE TABLE accounts (
 	PRIMARY KEY (username)
 );
 
+CREATE TABLE message_states (
+	state_id INT NOT NULL,
+    name VARCHAR(256) NOT NULL,
+	PRIMARY KEY (state_id)
+);
+
 CREATE TABLE messages (
-	message_id INT NOT NULL,
+	message_id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(256) NOT NULL,
     email VARCHAR(256) NOT NULL,
 	message VARCHAR(2048) NOT NULL,
-	creation_date DATETIME NOT NULL, -- data inserimento, visibile solo dall'admin che visualizza un messaggio
-	first_viewed_by VARCHAR(256), -- la prima volta che il messaggio viene visualizzato inserisco lo username, NULL altrimenti
+	state_id INT NOT NULL,
+	creation_date DATE NOT NULL,
 	PRIMARY KEY (message_id),
-	FOREIGN KEY (first_viewed_by) REFERENCES accounts(username)
+	FOREIGN KEY (state_id) REFERENCES message_states(state_id)
 );
 
 CREATE TABLE categories (
@@ -26,7 +32,7 @@ CREATE TABLE categories (
 );
 
 CREATE TABLE products (
-	products_id INT NOT NULL,
+	product_id INT NOT NULL AUTO_INCREMENT,
 	name VARCHAR(256) NOT NULL,
 	category_id INT NOT NULL,
 	description VARCHAR(2048) NOT NULL,
@@ -36,16 +42,8 @@ CREATE TABLE products (
 	color VARCHAR(256) NOT NULL,
 	material VARCHAR(256) NOT NULL,
 	image_url VARCHAR(256) NOT NULL,
-	image_alt VARCHAR(256) NOT NULL,
-	created_by VARCHAR(256) NOT NULL, -- riporta l'username dell'account creatore
-	creation_date DATETIME NOT NULL,
-	last_edited_by VARCHAR(256) NOT NULL, -- riporta l'username dell'account che ha fatto la modifica più recente (uguale a created_by per il prodotto appena creato)
-	last_edited_date DATETIME NOT NULL,
-	-- questi ultimi 4 campi sono visibili solo dall'area riservata, quando si modifica un prodotto già inserito in precedenza
-	PRIMARY KEY (products_id),
-	FOREIGN KEY (category_id) REFERENCES categories(category_id),
-	FOREIGN KEY (created_by) REFERENCES accounts(username),
-	FOREIGN KEY (last_edited_by) REFERENCES accounts(username)
+	PRIMARY KEY (product_id),
+	FOREIGN KEY (category_id) REFERENCES categories(category_id)
 );
 
 INSERT INTO `melodia_db`.`accounts`
@@ -77,3 +75,17 @@ INSERT INTO `melodia_db`.`categories`
 VALUES
 (3,
 'batterie');
+
+INSERT INTO `melodia_db`.`message_states`
+(`state_id`,
+`name`)
+VALUES
+(1,
+'Da leggere');
+
+INSERT INTO `melodia_db`.`message_states`
+(`state_id`,
+`name`)
+VALUES
+(2,
+'Evaso');
