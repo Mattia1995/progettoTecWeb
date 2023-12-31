@@ -31,14 +31,15 @@
         <main id="area-riservata-login">
             <div id="login-form">
                 <h2><span lang="en">Login</span> area riservata</h2>
-                <form action="#azioneDaInserire" method="post">
+                {messaggiPerForm}
+                <form method="post">
                     <div>
                         <label for="username" lang="en">Username</label>
                         <input type="text" name="username" id="username" maxlength="20" required>
                         <label for="password" lang="en">Password</label>
-                        <input type="password" name="password" id="password" minlength="8" maxlength="20" required>
+                        <input type="password" name="password" id="password" maxlength="20" required>
                         <!-- TODO: Gestire regole validazione campi form -->
-                        <input type="submit">
+                        <input type="submit" name="submit" value="Accedi">
                     </div>
                 </form>
             </div>

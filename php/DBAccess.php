@@ -17,6 +17,23 @@
 			);
 			return mysqli_connect_errno() == 0;
 		}
+				
+        /** Funzione che ritorna l'utente dato lo username e la password. */
+		public function getUser($username, $password){
+			$query = "SELECT username FROM accounts
+			WHERE username = \"$username\" AND password = \"$password\"";
+			$queryResult = mysqli_query($this->connection, $query) or die("Errore in DBAccess" .mysqli_error($this -> connection));
+			if (mysqli_num_rows($queryResult) != 0) {
+				$result = array();
+				while($row = mysqli_fetch_assoc($queryResult)){
+					$result[] = $row;
+				}
+				$queryResult->free();
+				return $result;
+			} else {
+				return null;
+			}
+		}
 		
         /** Funzione che ritorna tutte le richieste */
 		public function getListaRichieste(){
