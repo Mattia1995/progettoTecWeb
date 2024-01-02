@@ -328,17 +328,17 @@ main h2, h3 {
 }
 
 #prodottoSingolo #immagineProdotto{
-    float: left;
-    width: 48%;
     margin-right: 1em;
 }
+
 #prodottoSingolo img{
     width: 100%;
     margin-right: 1em;
 }
 
-#prodottoSingolo #infoPrincipaliProdotto > dt{
+.sezioneProdottoSingolo{
     float: left;
+    width: 48%;
 }
 
 #prodottoSingolo #infoPrincipaliProdotto{
