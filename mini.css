@@ -90,13 +90,13 @@
 
 
 .passion-1 { 
-    grid-area: 1 / 1 / 2 / 2; 
+    grid-area: 2 / 1 / 3 / 2; 
     width: 80%;
     margin: auto;
 }
 
 .passion-2 { 
-    grid-area: 2 / 1 / 3 / 2; 
+    grid-area: 1 / 1 / 2 / 2; 
 }
 
 .passion-3 { 
@@ -110,14 +110,14 @@
 }
 
 .passion-5 { 
-    grid-area: 5 / 1 / 6 / 2; 
+    grid-area:  6 / 1 / 7 / 2; 
     width: 80%;
     margin: auto;
     margin-top: 1em;
 }
 
 .passion-6 { 
-    grid-area: 6 / 1 / 7 / 2; 
+    grid-area:  5 / 1 / 6 / 2;
 }
 
 
