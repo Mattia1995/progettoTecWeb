@@ -302,9 +302,13 @@ main h2, h3 {
     padding: 0.5em 0.5em 1em 0.5em;
 }
 
-#prodottoSingolo img{
+#prodottoSingolo #immagineProdotto{
     float: left;
-    width: 50%;
+    width: 48%;
+    margin-right: 1em;
+}
+#prodottoSingolo img{
+    width: 100%;
     margin-right: 1em;
 }
 
