@@ -94,7 +94,7 @@ header {
 
 
 #header-container h1 { 
-    width: 10%;
+    width: 72px;
     align-self: center;
     font-size: 3em;
     line-height: 1.5em;
@@ -126,11 +126,11 @@ header {
     align-items: center;
 }
 
-#menu li:last-child{
+#menu li:nth-child(2){
     margin-left: auto;
 }
 
-#menu li:first-child{
+#menu li:nth-child(7){
     margin-left: auto;
 }
 
@@ -164,6 +164,15 @@ header {
     color: var(--visitedLinkColor);
 }
 
+
+#open-menu-mobile{
+    display: none;
+}
+
+
+#close-menu-mobile{
+    display: none;
+}
 /********************************************
 ******************* MAIN ********************
 ********************************************/

@@ -1,9 +1,9 @@
-function showSideBar(){
-    const sidebar = document.querySelector('.sidebar')
+function showSidebar(){
+    const sidebar = document.querySelector('#menu ul')
     sidebar.style.display= 'flex'
 }
 
-function hideSideBar(){
-    const sidebar = document.querySelector('.sidebar')
+function hideSidebar(){
+    const sidebar = document.querySelector('#menu ul')
     sidebar.style.display= 'none'
 }
