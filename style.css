@@ -1122,22 +1122,18 @@ hr{
 .row-404{
     display: flex;
     align-items:center;
-    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 2em;
 }
 
-.row-404 .col-2{
-    flex-basis: 50%;
-    min-width: 300px;
-}
 
-.row-404 .col-2 img{
-  max-width: 100%;
+
+.row-404 img{
+  max-width: 50%;
   padding: 50px 0;
 }
 
-.row-404 .col-2 h1{
+.row-404 h1{
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0px;
@@ -1147,7 +1143,7 @@ hr{
   
 }
 
-.row-404 .col-2 h3{
+.row-404 h3{
     font-size: 35px;
     line-height: 40px;
     margin: 25px 0px;
@@ -1157,7 +1153,7 @@ hr{
   
 }
 
-.row-404 .col-2 p{
+.row-404 p{
     text-align: center;
     margin: 25px 0px;
     padding-left: 3em;
