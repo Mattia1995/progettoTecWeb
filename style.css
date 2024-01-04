@@ -945,26 +945,16 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: normal;
-    align-content: normal;
+    align-items: center;
+    align-content: center;
 }
 
-.prodotti-items{
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-}
-
-.prodotti-items a{
-    display: block;
-}
 
 .prodotti-items img{
     margin: auto;
-    display: block;
-    max-width:90%;
-    max-height: 90%;
-    transition: .3s;
+    display: flex;
+    max-width:70%;
+    transition: .3s;    
     -moz-transition: none;
 }
 
