@@ -17,6 +17,7 @@
     --visitedLinkColorForRgba: 40,104,255;
     --errorColor: #A30E09;
     --successColor: #007413;
+    --borderCardColor: #000000;
 }
 
 html {
@@ -225,20 +226,24 @@ main h2, h3 {
 ********************************************/
 
 #vetrina ul {
-    display: grid;
-    background-color: var(--bodyBgColor);
-    grid-template-columns: 24% 24% 24% 24%;
-    column-gap: 0.8em;
-    row-gap: 0.8em;
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
 }
 
 .prodottoVetrina{
-    list-style-type: none;
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
-    align-items: start;
-    border: 1.5px solid var(--flagColor);
+    flex: 1 0 200px;
+    box-sizing: border-box;
+    padding: 10px;
+    list-style: none;
+	margin: 5px 5px;
+    border: 1.5px solid var(--borderCardColor);
     border-radius: 10px;
+    position: relative;
 }
 
 .prodottoVetrina img{
@@ -249,14 +254,15 @@ main h2, h3 {
     border-top-right-radius: 9px;
 }
 
-.info{
-    flex-grow: 2;
-}
-
 .prodottoVetrina dl > dt{
     font-weight: bold;
     float: left;
     padding-right: 0.3em;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
 }
 
 .info dd{
@@ -265,8 +271,8 @@ main h2, h3 {
 
 .info dd:first-of-type{
     padding: 0.3em 0;
-    border-top: 1.5px solid var(--flagColor);
-    border-bottom: 1.5px solid var(--flagColor);
+    border-top: 1.5px solid var(--borderCardColor);
+    border-bottom: 1.5px solid var(--borderCardColor);
     text-align: center;
 }
 
@@ -278,13 +284,13 @@ main h2, h3 {
     color: var(--linkColor);
     display: block;
     text-align: center;
-    align-self: center;
     padding-top: 0.8em;
     padding-bottom: 0.8em;
     width: 100%;
-    border-top: 1.5px solid var(--flagColor);
+    border-top: 1.5px solid var(--borderCardColor);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    margin-top: auto;
 }
 
 .prodottoVetrina a:visited{
