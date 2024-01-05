@@ -324,6 +324,8 @@ main h2, h3 {
 #prodottoSingolo{
     background-color: var(--bodyBgColor);
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
 }
 
 .nomeProdottoSingolo{

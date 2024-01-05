@@ -159,3 +159,31 @@
 ************* PRODTTO SINGOLO ***************
 ********************************************/
 
+#prodottoSingolo{
+    flex-direction: column;
+    margin: auto;
+}
+
+
+.sezioneProdottoSingolo{
+    margin: auto;
+    width: 80%;
+    padding-bottom: 2em;
+}
+
+#immagineProdotto {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prodottoSingolo img{
+    margin-right: 0;
+    width: 60%;
+}
+
+#prodottoSingolo #immagineProdotto{
+    margin-right: auto;
+    width: 75%;
+}
