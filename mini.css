@@ -153,7 +153,23 @@
 ***************** VETRINA *******************
 ********************************************/
 
+.prodottoVetrina{
+    max-width: 48%;
+}
 
+@media screen and (max-width: 480px){
+    .lista-prodotti-stampa{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .prodottoVetrina{
+        max-height: 30%;
+        max-width: 60%;
+    }
+}
 
 /********************************************
 ************* PRODTTO SINGOLO ***************

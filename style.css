@@ -232,11 +232,13 @@ main h2, h3 {
     align-content: center;
 }
 
+
 .prodottoVetrina{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     flex: 1 0 200px;
+    flex-wrap: wrap;
     box-sizing: border-box;
     padding: 10px;
     list-style: none;
@@ -244,6 +246,7 @@ main h2, h3 {
     border: 1.5px solid var(--borderCardColor);
     border-radius: 10px;
     position: relative;
+    max-width: 23.5%;
 }
 
 .prodottoVetrina img{
