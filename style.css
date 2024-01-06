@@ -18,6 +18,7 @@
     --errorColor: #A30E09;
     --successColor: #007413;
     --borderCardColor: #000000;
+    --bodyDelText: #8F8F8F;
 }
 
 html {
@@ -228,10 +229,8 @@ main h2, h3 {
 #vetrina ul {
     display: flex;
 	flex-wrap: wrap;
-    justify-content: space-between;
     align-content: center;
 }
-
 
 .prodottoVetrina{
     display: flex;
@@ -240,7 +239,6 @@ main h2, h3 {
     flex: 1 0 200px;
     flex-wrap: wrap;
     box-sizing: border-box;
-    padding: 10px;
     list-style: none;
 	margin: 5px 5px;
     border: 1.5px solid var(--borderCardColor);
@@ -319,6 +317,15 @@ main h2, h3 {
 	padding: 1em;
 }
 
+.gray-text-line-through{
+    text-decoration: line-through;
+    color: var(--bodyDelText);
+    font-size: 0.9em;
+}
+
+.info dd.gray-text-line-through {
+    padding-bottom: 0;
+}
 
 /********************************************
 ************* PRODOTTO SINGOLO **************

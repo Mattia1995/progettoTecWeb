@@ -1,20 +1,13 @@
 <?php
-	require_once "../php/DBAccess.php";
+	require_once "./php/DBAccess.php";
 	use DB\DBAccess;
 
 	ini_set('dusplay_errors',1);
 	ini_set('dusplay_startup_errors',1);
 	error_reporting (E_ALL);
 	setlocale (LC_ALL, 'it_IT');
-	
-    // Verifico se è stato fatto correttamente il login, in caso contrario rimando alla pagina di login.
-    session_start();
-    if(!$_SESSION['islogged']){
-        header('Location: area-riservata-login.php');
-        exit;
-    }
 
-	$paginaHtml = file_get_contents ("../area-riservata/area-riservata-gestione-articoli.html");
+	$paginaHtml = file_get_contents ("./vetrina.html");
     $connectionOK = false;
 	$infoMessage = "";
 	$errorMessage = "";
@@ -34,22 +27,27 @@
 				// Ciclo i prodotti ottenuti per stamparli in pagina.
 				foreach ($resultListaProdotti as $articolo) {
 					$prezzoScontato = "";
+					$oldPriceClass = "";
 					if ($articolo["discounted_price"] != null) { 
-						$prezzoScontato = "<dt>Prezzo scontato:</dt>" . "<dd>" . $articolo["discounted_price"] . "€</dd>";
-					}
+						$prezzoScontato = "<dt class=\"dtNonAmbiguoProdotto\">Prezzo scontato:</dt>" 
+						. "<dd class=\"discounted-price\">" . $articolo["discounted_price"] . "€</dd>";
+						$oldPriceClass = "class=\"gray-text-line-through\"";
+					}					
+					// Rimuovo il primo caratteri per ottenere il path corretto dell'immagine.
+					$imageUrlToDb = substr($articolo["image_url"], 1);
 					$listaArticoli .= 
-					"<li>" .
-						"<img src=\"" . $articolo["image_url"] . "\" alt=\"\">" .
-						"<dl>" .
-							"<dt>Nome prodotto:</dt>" .
-							"<dd>" . $articolo["name"] . "</dd>" .
-							"<dt>Categoria:</dt>" .
+					"<li class=\"prodottoVetrina\">" .
+						"<img src=\"" . $imageUrlToDb . "\" alt=\"\">" .
+						"<dl class=\"info\">" .
+							"<dt class=\"dtNonAmbiguoProdotto\">Categoria:</dt>" .
 							"<dd>" . $articolo["nome_cat"] . "</dd>" .
-							"<dt>Prezzo:</dt>" .
-							"<dd>" . $articolo["price"] . "€</dd>" .
+							"<dt class=\"dtNonAmbiguoProdotto\">Nome:</dt>" .
+							"<dd class=\"nomeProdottoVetrina\">" . $articolo["name"] . "</dd>" .
+							"<dt class=\"dtNonAmbiguoProdotto\">Prezzo:</dt>" .
+							"<dd $oldPriceClass>" . $articolo["price"] . "€</dd>" .
 							$prezzoScontato .
 						"</dl>" .
-						"<a class=\"link-button\" href=\"area-riservata-articolo.php?product_id=" . $articolo["product_id"] . "\" title=\"Modifica " .$articolo["name"]  . "\">Modifica</a>" .
+						"<a href=\"prodottosingolo.php?product_id=" . $articolo["product_id"] . "\">Vai allo strumento</a>" .
 					"</li>";
 				}
 				$listaArticoli .= "</ul>";
