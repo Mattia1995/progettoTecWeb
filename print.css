@@ -3,12 +3,20 @@
     padding: 0;
 }
 
+:root {
+    --headerBgColor: rgb(255,255,255);
+    --bodyBgColor: rgb(255,255,255);
+    --txtColor: rgb(0,0,0);
+    --font-body-family: "Times New Roman", serif;
+    --borderColor: #8F8F8F;
+}
+
 html {
     font-size: 12pt;
-    font-family: "Times New Roman, serif";
+    font-family: var(--font-body-family);
     line-height: 1.5em;
     margin: auto;
-    background-color: white;
+    background-color: var(--bodyBgColor);
 }
 
 header {
@@ -31,13 +39,13 @@ header h1 {
     padding: 0.5em 0;
     margin-top: 0.5em;
     margin-bottom: 1.5em;
-    border-top: 1px solid #DDD;
-    border-bottom: 1px solid #DDD;
+    border-top: 1px solid var(--borderColor);
+    border-bottom: 1px solid var(--borderColor);
     font-weight: bold;
 }
 
 #breadcrumb a{
-    color: black;
+    color: var(--txtColor);
 }
 
 .aiuti-navigazione {
@@ -48,7 +56,7 @@ footer {
     text-align: center;
     font-size: 10pt;
     font-style: italic;
-    border-top: 1px solid #DDD;
+    border-top: 1px solid var(--borderColor);
     padding: 1.3em 0.5em;
     margin-top: 2em;
 }
@@ -68,7 +76,7 @@ form label{
 form input[type="submit"]{
     display: block;
     background: none;
-    border: 1px solid black;
+    border: 1px solid var(--txtColor);
     padding: 0.3em 1em;
 }
 
@@ -232,7 +240,7 @@ form input[type="submit"]{
 }
 
 #area-riservata a{
-    color: black;
+    color: var(--txtColor);
 }
 
 /********************************************

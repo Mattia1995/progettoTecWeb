@@ -35,7 +35,7 @@
 				foreach ($resultListaProdotti as $articolo) {
 					$prezzoScontato = "";
 					if ($articolo["discounted_price"] != null) { 
-						$prezzoScontato = "<dt>Prezzo scontato:</dt>" . "<dd>" . $articolo["discounted_price"] . "€</dd>";
+						$prezzoScontato = "<dt>Prezzo scontato:</dt>" . "<dd>" . $articolo["discounted_price"] . " €</dd>";
 					}
 					$listaArticoli .= 
 					"<li>" .
@@ -46,7 +46,7 @@
 							"<dt>Categoria:</dt>" .
 							"<dd>" . $articolo["nome_cat"] . "</dd>" .
 							"<dt>Prezzo:</dt>" .
-							"<dd>" . $articolo["price"] . "€</dd>" .
+							"<dd>" . $articolo["price"] . " €</dd>" .
 							$prezzoScontato .
 						"</dl>" .
 						"<a class=\"link-button\" href=\"area-riservata-articolo.php?product_id=" . $articolo["product_id"] . "\" title=\"Modifica " .$articolo["name"]  . "\">Modifica</a>" .

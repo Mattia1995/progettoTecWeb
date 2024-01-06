@@ -30,7 +30,7 @@
 					$oldPriceClass = "";
 					if ($articolo["discounted_price"] != null) { 
 						$prezzoScontato = "<dt class=\"dtNonAmbiguoProdotto\">Prezzo scontato:</dt>" 
-						. "<dd class=\"discounted-price\">" . $articolo["discounted_price"] . "€</dd>";
+						. "<dd class=\"discounted-price\">" . $articolo["discounted_price"] . " €</dd>";
 						$oldPriceClass = "class=\"gray-text-line-through\"";
 					}					
 					// Rimuovo il primo caratteri per ottenere il path corretto dell'immagine.
@@ -44,7 +44,7 @@
 							"<dt class=\"dtNonAmbiguoProdotto\">Nome:</dt>" .
 							"<dd class=\"nomeProdottoVetrina\">" . $articolo["name"] . "</dd>" .
 							"<dt class=\"dtNonAmbiguoProdotto\">Prezzo:</dt>" .
-							"<dd $oldPriceClass>" . $articolo["price"] . "€</dd>" .
+							"<dd $oldPriceClass>" . $articolo["price"] . " €</dd>" .
 							$prezzoScontato .
 						"</dl>" .
 						"<a href=\"prodottosingolo.php?product_id=" . $articolo["product_id"] . "\">Vai allo strumento</a>" .
