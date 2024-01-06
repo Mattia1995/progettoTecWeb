@@ -20,7 +20,7 @@
                 <nav id="menu">
                     <ul>
                         <li lang="en"><a href="home.html">Home</a></li>
-                        <li><a href="vetrina.html">Vetrina</a></li>
+                        <li><a href="vetrina.php">Vetrina</a></li>
                         <li>Contatti</li>
 						<li><a href="dove_siamo.html">Dove siamo</a></li>
                         <li><a href="chisiamo.html">Chi siamo</a></li>
@@ -53,7 +53,6 @@
 				<table aria-describedby="desc">
 
 					<caption>Orari di apertura</caption>
-
 					<thead>
 						<tr>
 							<th></th>
@@ -110,28 +109,25 @@
 			<div class="container">
 				<h3>Compila il seguente modulo per richiedere informazioni</h3>
 				
-				<form id="contactsForm" method="post" action="contattaci.php" autocomplete="on" onsubmit="return validazioneForm();">
-					
+				{successFormMessage}
+                {messaggiPerForm}
+				<form id="contactsForm" method="post" action="{actionForm}" onsubmit="return validazioneForm();">
 					<div>
 						<label id="labelNome" for="nome">Nome</label>
-						<input type="text" name="nome" id="nome">
+						<input type="text" name="nome" id="nome" value="{nome}">
 						<div id="messaggiNome" role="alert"></div>
 					</div>
-					
 					<div>
 						<label id="labelEmail" for="email" lang="en">E-mail</label>
-						<input type="text" name="email" id="email">
+						<input type="text" name="email" id="email" value="{email}">
 						<div id="messaggiEmail" role="alert"></div>
 					</div>
-					
 					<div>
 						<label id="labelMessaggio" for="messaggio">Messaggio</label>
-						<textarea name="messaggio" id="messaggio" rows="6" autocomplete="off"></textarea>
+						<textarea name="messaggio" id="messaggio" rows="6" autocomplete="off">{messaggio}</textarea>
 						<div id="messaggiMessaggio" role="alert"></div>
 					</div>
-					
 					<input type="submit" id="submit" name="submit" value="Invia richiesta">
-					
 				</form>
 			</div>
 		

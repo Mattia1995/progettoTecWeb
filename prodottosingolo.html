@@ -2,11 +2,11 @@
 <html lang="it">
     <head>
         <meta charset="UTF-8">
-        <title>[TODO: NOME_PRODOTTO?]</title>
-        <meta name="keywords" content="Melodia, [nome_prodotto], [tipo strumento]">
+        <title>{nomeArticolo}</title>
+        <meta name="keywords" content="Melodia, {nomeArticolo}, {categoria}">
         <meta name="description" content=""> <!-- Da inserire -->
         <link rel="stylesheet" media="screen" href="style.css">
-        <link rel="stylesheet" media="screen and (max-width:800px), only screen and (max-device-width:800px)" href="mini.css">
+        <link rel="stylesheet" media="screen and (max-width:800px)" href="mini.css">
         <link rel="stylesheet" media="print" href="print.css">
     </head>
     <body>
@@ -17,8 +17,8 @@
                 <nav id="menu">
                     <ul>
                         <li><a href="home.html"><span lang="en">Home</span></a></li>
-                        <li><a href="vetrina.html">Vetrina</a></li>
-                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="vetrina.php">Vetrina</a></li>
+                        <li><a href="contatti.php">Contatti</a></li>
 						<li><a href="dove_siamo.html">Dove siamo</a></li>
                         <li><a href="chisiamo.html">Chi siamo</a></li>
                         <li><a href="area-riservata/area-riservata-login.php">Area riservata</a></li>
@@ -27,31 +27,30 @@
             </div>
         </header>
         <nav id="breadcrumb">
-            <p>Ti trovi in: <a href="home.html" lang="en">Home</a> &gt;&gt; <a href="vetrina.html" lang="en">Vetrina</a> &gt;&gt; [Nome_Prodotto]</p>
+            <p>Ti trovi in: <a href="home.html" lang="en">Home</a> &gt;&gt; <a href="vetrina.php" lang="en">Vetrina</a> &gt;&gt; {nomeArticolo}</p>
         </nav>
+        {errorMessage}
         <main id="prodottoSingolo">
-            <div id="immagineProdotto" class="sezioneProdottoSingolo">
-                <img src="./images/immagini-con-copyright-da-cambiare/batteria-mapex-armony-ar628sra.jpg" alt="">
-            </div>
-            <div class="sezioneProdottoSingolo">
+            {immagineArticolo}
+            <div class="sezioneProdottoSingolo{classNotShowElement}">
                 <dl id="infoPrincipaliProdotto">
                     <dt class="dtNonAmbiguoProdotto">Nome:</dt>
-                    <dd class="nomeProdottoSingolo"><span lang="en">PEARL</span> RS525SBC/C31 <span lang="en">Roadshow Jet Black</span> con 3 Piatti <span lang="en">Sabian</span></dd>
+                    <dd class="nomeProdottoSingolo">{nomeArticolo}</dd>
                     <dt class="dtNonAmbiguoProdotto">Descrizione:</dt>
-                    <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dd>
+                    <dd>{descrizioneArticolo}</dd>
                 </dl>
-                <a class="linkContattaci" href="contatti.html#contactsForm">Contattaci per maggiori informazioni</a>
+                <a class="linkContattaci" href="contatti.php#contactsForm">Contattaci per maggiori informazioni</a>
                 <dl id="altreInfoProdotto">
                     <dt>Categoria</dt>
-                    <dd>Batterie</dd>
+                    <dd>{categoria}</dd>
                     <dt>Marchio</dt>
-                    <dd><span lang="en">Pearl</span></dd>
+                    <dd>{marchioArticolo}</dd>
                     <dt>Prezzo</dt>
-                    <dd>€ 419,00</dd>
+                    <dd>{prezzoArticolo}</dd>
                     <dt>Materiale</dt>
-                    <dd>Ottone</dd>
+                    <dd>{materialeArticolo}</dd>
                     <dt>Colore</dt>
-                    <dd>Silver</dd>
+                    <dd>{coloreArticolo}</dd>
                 </dl>
             </div>
         </main>

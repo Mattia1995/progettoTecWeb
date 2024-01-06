@@ -80,6 +80,16 @@
 			return mysqli_affected_rows ($this->connection) > 0;
 		}
 		
+        /** Funzione che inserisce una richiesta. */
+		public function insertNewMessage($nomePost, $emailPost, $messaggioPost, $creationDate){
+			$queryInsert = "
+				INSERT INTO messages(name, email, message, state_id, creation_date)
+				VALUES (\"$nomePost\",\"$emailPost\",\"$messaggioPost\",1,\"$creationDate\")
+			";
+			mysqli_query ($this->connection, $queryInsert) or die(mysqli_error($this->connection));
+			return mysqli_affected_rows ($this->connection) > 0;
+		}
+		
         /** Funzione che ritorna la lista delle categorie. */
 		public function getCategories(){
 			$query = "SELECT category_id, name FROM categories";
