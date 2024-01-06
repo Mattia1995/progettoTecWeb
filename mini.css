@@ -26,8 +26,6 @@
 ****************** CHI SIAMO ****************
 ********************************************/
 
-
-
 .grid-alternate {
     display: grid;
     grid-template-columns: 1fr;
@@ -36,7 +34,6 @@
     grid-row-gap: 0px;
 }
 
-    
 .grid1-alt { 
     grid-area: 1 / 1 / 2 / 4; 
 }
@@ -202,4 +199,144 @@
 #prodottoSingolo #immagineProdotto{
     margin-right: auto;
     width: 75%;
+}
+
+
+/********************************************
+****************** LOGIN ********************
+********************************************/
+
+#login-form {
+    width: 95%;
+    padding: 3em 0;
+}
+
+/********************************************
+************* AREA RISERVATA ****************
+********************************************/
+
+#area-riservata ul {
+    display: block;
+    width: 95%;
+    margin: auto;
+    margin-top: 1.3em;
+}
+
+#area-riservata li {
+    margin-bottom: 1.3em;
+}
+
+
+/********************************************
+***** AREA RISERVATA GESTIONE ARTICOLI ******
+********************************************/
+
+#area-riservata-gestione-articoli h2{
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#area-riservata-gestione-articoli #crea-articolo {
+    width: 35%;
+    float: none;
+    margin: auto;
+    margin-bottom: 3em;
+    padding: 0.5em 0;
+}
+
+#area-riservata-gestione-articoli li img {
+    width: 20%;
+}
+
+#area-riservata-gestione-articoli ul li a{
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+    width: 35%;
+    padding: 0.5em 0;
+}
+
+
+/********************************************
+********* AREA RISERVATA ARTICOLO ***********
+********************************************/
+
+#gestione-articolo-form {
+    width: 85%;
+}
+
+.form-row-container {
+    width: 100%;
+}
+
+.form-row-container .form-col-50 {
+    width: 100%;
+    margin: 0;
+}
+
+.form-row-container .form-col-50:first-child {
+    margin: 0;
+}
+
+#gestione-articolo-form input, #gestione-articolo-form textarea {
+    width: 98%;
+}
+
+#gestione-articolo-form select {
+    margin-bottom: 1em;
+}
+
+
+/********************************************
+***** AREA RISERVATA GESTIONE RICHIESTE *****
+********************************************/
+
+.richiesta.richiesta-da-leggere {
+    width: 100%;
+    display: block;
+    padding: 0.5em;
+    float: none;
+}
+
+#lista-richieste li {
+    padding: 1.5em 0;
+}
+
+.richiesta dt {
+    float: left;
+    padding-right: 0.6em;
+    position: inherit;
+    height: auto;
+    width: auto;
+}
+
+.richiesta dd {
+    border: none;
+}
+
+.richiesta .stato {
+    min-width: none;
+}
+
+#lista-richieste li a{
+    width: 93%;
+    float: none;
+    margin: auto 0.4em;
+    margin-top: 0.6em;
+    padding: 0.4em;
+    font-size: 1.3em;
+}
+
+#lista-richieste li a:before {
+    content: "Vai al dettaglio richiesta";
+    padding-right: 0.3em;
+}
+
+/********************************************
+********** AREA RISERVATA RICHIESTA *********
+********************************************/
+
+#area-riservata-richiesta a {
+    width: 90%;
+    padding: 0.6em 0;
 }
