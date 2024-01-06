@@ -8,12 +8,14 @@
 	$paginaHtml = file_get_contents ("./prodottosingolo.html");
     $connectionOK = false;
 	$errorMessage = "";
+    $errorClassNotShowElement = "";
 	$product_id = null;
 	$nomeArticolo = "";
     $descrizioneArticolo = "";
     $prezzoArticolo = "";
     $prezzoScontatoArticolo = "";
     $marchioArticolo = "";
+    $materialeArticolo = "";
     $coloreArticolo = "";
     $immagineArticolo = "";
 	$categoria = "";
@@ -37,7 +39,10 @@
                     $coloreArticolo = $articolo["color"];
                     $materialeArticolo = $articolo["material"];
                     $categoria = $articolo["nome_cat"];
-                    $immagineArticolo = substr($articolo["image_url"], 1);
+					$urlArticolo = substr($articolo["image_url"], 1);
+                    $immagineArticolo = "<div id=\"immagineProdotto\" class=\"sezioneProdottoSingolo{classNotShowElement}\">
+						<img src=\"" . $urlArticolo . "\" alt=\"\">
+					</div>";
                     // Gestione campi facoltativi.
                     if ($articolo["discounted_price"] != null){
                         $prezzoScontatoArticolo = $articolo["discounted_price"];
@@ -61,10 +66,14 @@
 				exit;
 			}
 		} else {
+			$nomeArticolo = "Errore, articolo non trovato";
 			$errorMessage = "<p class=\"error-message\">Si è verificato un errore durante il caricamento dei dati.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattarci tramite i canali indicati nella pagina contatti.</p>";
+			$errorClassNotShowElement = " class-not-show-element";
 		}
 	} catch (Exception $e) {
+		$nomeArticolo = "Errore, articolo non trovato";
 		$errorMessage = "<p class=\"error-message\">Si è verificato un errore durante il caricamento dei dati.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattarci tramite i canali indicati nella pagina contatti.</p>";
+		$errorClassNotShowElement = " class-not-show-element";
 	} finally {
 		// Se sono riuscito ad aprire con successo la connessione ed è stata emessa un'eccezione per altri motivi, allora chiudo la connessione.
 		if ($connectionOK) {
@@ -81,5 +90,6 @@
 	$paginaHtml = str_replace ("{prezzoArticolo}", $prezzoArticolo, $paginaHtml);
 	$paginaHtml = str_replace ("{materialeArticolo}", $materialeArticolo, $paginaHtml);
 	$paginaHtml = str_replace ("{coloreArticolo}", $coloreArticolo, $paginaHtml);
+	$paginaHtml = str_replace ("{classNotShowElement}", $errorClassNotShowElement, $paginaHtml);
 	echo $paginaHtml;
 ?>

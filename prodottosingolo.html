@@ -6,7 +6,7 @@
         <meta name="keywords" content="Melodia, {nomeArticolo}, {categoria}">
         <meta name="description" content=""> <!-- Da inserire -->
         <link rel="stylesheet" media="screen" href="style.css">
-        <link rel="stylesheet" media="screen and (max-width:800px), only screen and (max-device-width:800px)" href="mini.css">
+        <link rel="stylesheet" media="screen and (max-width:800px)" href="mini.css">
         <link rel="stylesheet" media="print" href="print.css">
     </head>
     <body>
@@ -29,11 +29,10 @@
         <nav id="breadcrumb">
             <p>Ti trovi in: <a href="home.html" lang="en">Home</a> &gt;&gt; <a href="vetrina.php" lang="en">Vetrina</a> &gt;&gt; {nomeArticolo}</p>
         </nav>
+        {errorMessage}
         <main id="prodottoSingolo">
-            <div id="immagineProdotto" class="sezioneProdottoSingolo">
-                <img src="{immagineArticolo}" alt="">
-            </div>
-            <div class="sezioneProdottoSingolo">
+            {immagineArticolo}
+            <div class="sezioneProdottoSingolo{classNotShowElement}">
                 <dl id="infoPrincipaliProdotto">
                     <dt class="dtNonAmbiguoProdotto">Nome:</dt>
                     <dd class="nomeProdottoSingolo">{nomeArticolo}</dd>
