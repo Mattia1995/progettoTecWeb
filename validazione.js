@@ -16,7 +16,9 @@ function initPagina() {
 }
 
 function placeholderAccessibile(input) {
-	input.value = messaggiForm[input.id][0];
+	if (input.value == null || input.value == "") {
+		input.value = messaggiForm[input.id][0];
+	}
 }
 
 function rimuoviPlaceholder(input) {

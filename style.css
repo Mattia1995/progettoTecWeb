@@ -491,6 +491,11 @@ main h2, h3 {
     padding: 0.8em;
 }
 
+.container .error-form-message{
+    width: 78%;
+    margin: auto;
+    text-align: left;
+}
 
 /********************************************
 ****************** DOVE SIAMO ***************

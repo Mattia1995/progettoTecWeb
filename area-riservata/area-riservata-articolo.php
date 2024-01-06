@@ -20,7 +20,6 @@
     $fullWidthButton = "";
     $bottoneElimina = "";
     $toDel = false;
-	$infoMessage = "";
 	$errorMessage = "";
     $errorClassNotShowElement = "";
     $listaCategorie = "";
@@ -305,7 +304,6 @@
 
     /** ----------------------- PRINT ----------------------- */
 	$paginaHtml = str_replace ("{errorMessage}", $errorMessage, $paginaHtml);
-	$paginaHtml = str_replace ("{infoMessage}", $infoMessage, $paginaHtml);
 	$paginaHtml = str_replace ("{classNotShowElement}", $errorClassNotShowElement, $paginaHtml);
 	$paginaHtml = str_replace ("{testoBottoneForm}", $testoBottoneForm, $paginaHtml);
 	$paginaHtml = str_replace ("{bottoneElimina}", $bottoneElimina, $paginaHtml);
