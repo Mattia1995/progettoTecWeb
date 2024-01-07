@@ -74,7 +74,7 @@
                     $testoBottoneForm = "Aggiorna";
                     $bottoneElimina = "
                     <div class=\"form-col-50\">
-                        <a class=\"form-button\" id=\"delete-button\" href=\"?product_id=$product_id&to_del=true\">Elimina</a>
+                        <a class=\"form-button\" id=\"delete-button\" href=\"?product_id=$product_id&to_del=true\" onclick=\"return confirmDialog()\">Elimina</a>
                     </div>";
                 } else {
                     // Se viene fornito un product_id non esistente allora faccio redirect alla pagina del nuovo prodotto.
