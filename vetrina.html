@@ -6,8 +6,9 @@
         <meta name="keywords" content="Melodia, vetrina, negozio, shop, chitarre, pianoforti, batterie">
         <meta name="description" content=""> <!-- Da inserire -->
         <link rel="stylesheet" media="screen" href="style.css">
-		<link rel="stylesheet" media="print" href="print.css">
 		<link rel="stylesheet" media="screen and (max-width:800px)" href="mini.css">
+		<link rel="stylesheet" media="print" href="print.css">
+        <script src="menu.js"></script>
     </head>
     <body>
         <header>
@@ -15,14 +16,16 @@
                 <a class="aiuti-navigazione" href="#vetrina">Vai al contenuto</a>
                 <h1>Melodia</h1>
                 <nav id="menu">
-                    <ul>
-                        <li><a href="home.html"><span lang="en">Home</span></a></li>
+                    <ul class="menu-not-visible">
+                        <li><button onclick=hideSidebar() id="close-menu-mobile"></button></li>
+                        <li lang="en"><a href="home.html">Home</a></li>
                         <li>Vetrina</li>
                         <li><a href="contatti.php">Contatti</a></li>
 						<li><a href="dove_siamo.html">Dove siamo</a></li>
                         <li><a href="chisiamo.html">Chi siamo</a></li>
                         <li><a href="area-riservata/area-riservata-login.php">Area riservata</a></li>
                     </ul>
+                        <button onclick=showSidebar() id="open-menu-mobile"></button>
                 </nav>
             </div>
         </header>
