@@ -94,17 +94,10 @@ header {
     border-bottom: 2px solid var(--flagColor);
 }
 
-#header-container {
-    max-width: 1024px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-}
 
 #header-container h1 { 
-    width: 7%;
+    width: 72px;
     align-self: center;
-    margin-right: 1%;
     font-size: 3em;
     line-height: 1.5em;
     text-indent: -999em;
@@ -114,28 +107,53 @@ header {
     background-size: contain;
 }
 
-#menu {
-    flex-grow: 2;
-    align-self: center;
-    text-align: left;
-}
 
-#menu ul {
-    padding: 1em;
-    padding-right: 0;
+#header-container{
+    max-width: 1024px;
     margin: auto;
-    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
 }
 
-#menu ul li {
-    display: inline-block;
-    padding: 0 1.5em;
+
+#menu nav{
+    width: 100%;
 }
 
-#menu ul li:last-child {
-    float: right;
-    padding-right: 0;
+#menu ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+#menu li:nth-child(7){
+    margin-left: auto;
+}
+
+#menu{
+    width: 100%;
+}
+
+#menu li{
+    height: 72px;
+}
+
+#menu a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+
+#menu a:hover{
+    background-color: var(--bodyBgColor);
+}
+
 
 #menu a:link {
     color: var(--linkColor);
@@ -143,6 +161,16 @@ header {
 
 #menu a:visited {
     color: var(--visitedLinkColor);
+}
+
+
+#open-menu-mobile{
+    display: none;
+}
+
+
+#close-menu-mobile{
+    display: none;
 }
 
 /********************************************

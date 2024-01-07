@@ -10,6 +10,7 @@
         <link rel="stylesheet" media="screen" href="style.css">
 		<link rel="stylesheet" media="print" href="print.css" >
 		<link rel="stylesheet" media="screen and (max-width:800px)" href="mini.css">
+		<script src="menu.js"></script>
 		<script src="validazione.js"></script>  
 	</head>
 	<body>
@@ -18,14 +19,16 @@
                 <h1>MELODIA</h1>
 				<a class="aiuti-navigazione" href="#contenuto">Vai al contenuto</a>
                 <nav id="menu">
-                    <ul>
+                    <ul class="menu-not-visible">
+                        <li><button onclick=hideSidebar() id="close-menu-mobile"></button></li>
                         <li lang="en"><a href="home.html">Home</a></li>
                         <li><a href="vetrina.php">Vetrina</a></li>
-                        <li>Contatti</li>
+                        <li><a href="contatti.php">Contatti</a></li>
 						<li><a href="dove_siamo.html">Dove siamo</a></li>
                         <li><a href="chisiamo.html">Chi siamo</a></li>
                         <li><a href="area-riservata/area-riservata-login.php">Area riservata</a></li>
                     </ul>
+                        <button onclick=showSidebar() id="open-menu-mobile"></button>
                 </nav>
             </div>
 		</header>
