@@ -31,7 +31,6 @@
 			if (isset($_POST['submit'])) {
 				$username = $_POST['username'];
 				$password = $_POST['password'];
-				echo "username: " . $username . " - Password: " . $password;
 				$hashed = hash("sha512", $password);
 				$loggedUser = $connection->getUser($username, $hashed);
 				if ($loggedUser == null || sizeof($loggedUser) == 0) {

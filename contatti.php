@@ -95,7 +95,7 @@
 			$creationDate =  date("Y-m-d");
 			$resultInsert = $connection->insertNewMessage ($nomePost, $emailPost, $messaggioPost, $creationDate);
 			if (!$resultInsert) {
-				$messaggiPerForm = "<p class=\"error-message\">Erorre nell'inserimento della richiesta, riprova e se l'errore persiste contattaci tramite e-mail o chiamando direttamente il numero qui sopra.</p>";
+				$messaggiPerForm = "<p class=\"error-message\">Errore nell'inserimento della richiesta, riprova e se l'errore persiste contattaci tramite e-mail o chiamando direttamente il numero qui sopra.</p>";
 			}
         } else {
             $messaggiPerForm = "<ul class=\"error-form-message\">" . $messaggiPerForm . "</ul>";

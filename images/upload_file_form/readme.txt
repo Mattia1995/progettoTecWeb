@@ -1,0 +1,1 @@
+Cartella contenente le immagini dei prodotti inseriti dagli utenti tramite l'area riservata.
