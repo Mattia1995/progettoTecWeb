@@ -51,7 +51,7 @@
 					if ($richiesta["state_id"] == 1) {
 						$resultUpdate = $connection->evadiRichiesta($message_id);
 						if (!$resultUpdate) {
-							$errorMessage = "<p class=\"error-message\">Erorre nell'aggiornamento della richiesta riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
+							$errorMessage = "<p class=\"error-message\">Errore nell'aggiornamento della richiesta riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
 						}
 					}
 					header("Location:./area-riservata-richiesta.php?message_id=$message_id");

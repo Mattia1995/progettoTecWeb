@@ -97,7 +97,7 @@
                 // Cancello il prodotto.
                 $resultDelete = $connection->deleteProduct($product_id);
                 if (!$resultDelete) {
-                    $messaggiPerForm = "<p class=\"error-message\">Erorre nell'eliminazione del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
+                    $messaggiPerForm = "<p class=\"error-message\">Errore nell'eliminazione del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
                 } else {
                     $successFormMessage = "<p class=\"success-message\">Prodotto eliminato con successo</p>";
                     $errorClassNotShowElement = "class=\"class-not-show-element\"";
@@ -283,12 +283,12 @@
                 if ($product_id == null) {
                     $resultInsert = $connection->insertNewProduct ($nome, $descrizione, $prezzo, $marchio, $colore, $materiale, $idCategoriaSelezionata, $prezzoScontato, $target_file);
                     if (!$resultInsert) {
-                        $messaggiPerForm = "<p class=\"error-message\">Erorre nell'inserimento del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
+                        $messaggiPerForm = "<p class=\"error-message\">Errore nell'inserimento del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
                     }
                 } else {
                     $resultUpdate = $connection->updateProduct ($product_id, $nome, $descrizione, $prezzo, $marchio, $colore, $materiale, $idCategoriaSelezionata, $prezzoScontato, $target_file);
                     if (!$resultUpdate) {
-                        $messaggiPerForm = "<p class=\"error-message\">Erorre nell'aggiornamento del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
+                        $messaggiPerForm = "<p class=\"error-message\">Errore nell'aggiornamento del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
                     } else if ($removeOldImage){
                         // Dopo aver aggiornato l'articolo senza errori cancello la vecchia immagine se è stata modificata.
                         unlink($immagineArticolo);
