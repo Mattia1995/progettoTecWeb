@@ -19,6 +19,7 @@
     --successColor: #007413;
     --borderCardColor: #000000;
     --bodyDelText: #8F8F8F;
+    --hoverColorNavbar: #f0f0f0;
 }
 
 html {
@@ -143,21 +144,25 @@ header {
     align-items: center;
 }
 
-#menu li:not(:first-child){
-    padding: 0 22px;
+#menu li:not(:has(a,button)){
+    padding: 0 20px;
 }
 
+#menu li:nth-child(8){
+    border-left: 2px solid var(--flagColor);
+}
 
 #menu a{
     height: 100%;
     text-decoration: none;
     display: flex;
     align-items: center;
+    padding: 0 20px;
 }
 
 
 #menu a:hover{
-    background-color: var(--bodyBgColor);
+    background-color: var(--hoverColorNavbar);
 }
 
 

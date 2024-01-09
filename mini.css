@@ -382,6 +382,10 @@
 }
 
 
+#menu li:nth-child(8){
+    border-left: none;
+}
+
 
 #menu a{
     width: 100%;
