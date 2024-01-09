@@ -132,6 +132,7 @@ header {
 
 #menu li:nth-child(7){
     margin-left: auto;
+    text-align: right;
 }
 
 #menu{
@@ -142,6 +143,7 @@ header {
     height: 72px;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 #menu li:not(:has(a,button)){
@@ -154,10 +156,16 @@ header {
 
 #menu a{
     height: 100%;
-    text-decoration: none;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 19px;
+    text-decoration: underline;
+}
+
+#menu #dashboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 

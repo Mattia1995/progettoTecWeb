@@ -391,6 +391,11 @@
     width: 100%;
 }
 
+#menu #dashboard{
+    display: flex;
+    align-items:start;
+}
+
 #menu{
     display: flex;
     justify-content: flex-end;
