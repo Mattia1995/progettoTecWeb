@@ -139,11 +139,17 @@ header {
 
 #menu li{
     height: 72px;
+    display: flex;
+    align-items: center;
 }
+
+#menu li:not(:first-child){
+    padding: 0 30px;
+}
+
 
 #menu a{
     height: 100%;
-    padding: 0 30px;
     text-decoration: none;
     display: flex;
     align-items: center;
