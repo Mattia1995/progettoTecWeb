@@ -33,7 +33,7 @@
 						. "<dd class=\"discounted-price\">" . $articolo["discounted_price"] . " €</dd>";
 						$oldPriceClass = "class=\"gray-text-line-through\"";
 					}					
-					// Rimuovo il primo caratteri per ottenere il path corretto dell'immagine.
+					// Rimuovo il primo carattere per ottenere il path corretto dell'immagine.
 					$imageUrlToDb = substr($articolo["image_url"], 1);
 					$listaArticoli .= 
 					"<li class=\"prodottoVetrina\">" .
