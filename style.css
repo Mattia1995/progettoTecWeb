@@ -147,7 +147,7 @@ header {
 }
 
 #menu li:not(:has(a,button)){
-    padding: 0 20px;
+    padding: 0 19px;
 }
 
 #menu li:nth-child(8){
