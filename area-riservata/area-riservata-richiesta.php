@@ -22,6 +22,7 @@
 	$messageDate = "";
 	$evadiAction = "";
 	$errorMessage = "";
+	$email = "";
 
     if (isset ($_GET['message_id'])) {
         $message_id = $_GET['message_id'];
@@ -72,10 +73,10 @@
 				}
 			}
 		} else {
-			$errorMessage = "<p class=\"error-message\">Si è verificato un errore durante il caricamento dei dati.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattarci tramite i canali indicati nella pagina contatti.</p>";
+			$errorMessage = "<p class=\"error-message\">Si è verificato un errore durante il caricamento dei dati.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattare l'amministratore del sito.</p>";
 		}
 	} catch (Exception $e) {
-		$errorMessage = "<p class=\"error-message\">Si è verificato un errore durante il caricamento dei dati.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattarci tramite i canali indicati nella pagina contatti.</p>";
+		$errorMessage = "<p class=\"error-message\">Si è verificato un errore durante il caricamento dei dati.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattare l'amministratore del sito.</p>";
 	} finally {
 		// Se sono riuscito ad aprire con successo la connessione ed è stata emessa un'eccezione per altri motivi, allora chiudo la connessione.
 		if ($connectionOK) {

@@ -23,6 +23,7 @@
 	$paginaHtml = file_get_contents ("../area-riservata/area-riservata-login.html");
 	$connectionOK = false;
 	$messaggiPerForm = "";
+	$errorMessage = "";
 	try {
 		$connection = new DBAccess();
 		$connectionOK = $connection->openDbConnection ();
@@ -49,7 +50,7 @@
 			}
         }
     } catch (Exception $e) {
-        $errorMessage = "<p class=\"error-message\">Si è verificato un errore durante login.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattarci tramite i canali indicati nella pagina contatti.</p>";
+        $errorMessage = "<p class=\"error-message\">Si è verificato un errore durante login.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattare l'amministratore del sito.</p>";
     } finally {
         // Se sono riuscito ad aprire con successo la connessione ed è stata emessa un'eccezione per altri motivi, allora chiudo la connessione.
         if ($connectionOK) {
@@ -57,5 +58,6 @@
         }
     }
 	$paginaHtml = str_replace ("{messaggiPerForm}", $messaggiPerForm, $paginaHtml);
+	$paginaHtml = str_replace ("{errorMessage}", $errorMessage, $paginaHtml);
 	echo $paginaHtml;
 ?>
