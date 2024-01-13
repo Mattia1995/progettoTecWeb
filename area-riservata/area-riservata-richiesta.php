@@ -65,6 +65,7 @@
 				$messageDescription = "<p>" . $richiesta["message"] . "</p>";
 				$date = date_create($richiesta["creation_date"]);
 				$messageDate = "<p>Del: " . date_format($date,"d F Y") . "</p>";
+				$email = "<p>Email: " . $richiesta["email"] . "</p>";
 				// Se lo stato è "Da Leggere" aggiungiamo il pulsante per evaderla.
 				if ($richiesta["state_id"] == 1) {
 					$evadiAction = "<a class=\"link-button\" href=\"?message_id=$message_id&evadi=true\">CONTRASSEGNA COME EVASA</a>";
@@ -85,6 +86,7 @@
 	$paginaHtml = str_replace ("{pageTitle}", $pageTitle, $paginaHtml);
 	$paginaHtml = str_replace ("{messageDescription}", $messageDescription, $paginaHtml);
 	$paginaHtml = str_replace ("{messageDate}", $messageDate, $paginaHtml);
+	$paginaHtml = str_replace ("{messageEmail}", $email, $paginaHtml);
 	$paginaHtml = str_replace ("{evadiAction}", $evadiAction, $paginaHtml);
 	echo $paginaHtml;
 ?>

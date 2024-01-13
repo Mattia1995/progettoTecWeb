@@ -45,10 +45,10 @@
 							"<dd class=\"stato\">" . $richieste["nome_stato"] . "</dd>" .
 							"<dt>Data richiesta:</dt>" .
 							"<dd><time datetime=\"". $richieste["creation_date"] . "\">" . date_format($date,"d F Y") . "</time></dd>" .
+							"<dt>Email richiedente:</dt>" .
+							"<dd>" . $richieste["email"] . "</dd>" .
 							"<dt>Nome richiedente:</dt>" .
 							"<dd>" . $richieste["name"] . "</dd>" .
-							"<dt>Testo richiesta:</dt>" .
-							"<dd>" . $richieste["email"] . "</dd>" .
 						"</dl>" .
 						"<a class=\"link-button\" href=\"area-riservata-richiesta.php?message_id=" . $richieste["message_id"] . "\" title=\"Vai al dettaglio richiesta\">></a>" .
 					"</li>";
