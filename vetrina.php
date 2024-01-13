@@ -11,14 +11,17 @@
     $connectionOK = false;
 	$infoMessage = "";
 	$errorMessage = "";
-	$listaArticoli="";
-
+	$listaArticoli = "";
+	$category_id = null;
+    if (isset ($_GET['category_id'])) {
+        $category_id = $_GET['category_id'];
+    }
 	try {
 		$connection = new DBAccess();
 		$connectionOK = $connection->openDbConnection ();
 		// QUI VERIFICHIAMO SEMPRE LA CONNESSIONE
 		if ($connectionOK) {
-			$resultListaProdotti = $connection->getListaArticoli();
+			$resultListaProdotti = $connection->getListaArticoli($category_id);
 			// Verifico se sono stati trovati degli articoli.
 			if ($resultListaProdotti == null) {
 				$infoMessage = "<p class=\"info-message\">Nessun prodotto trovato.</p>";

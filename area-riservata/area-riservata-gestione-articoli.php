@@ -25,7 +25,7 @@
 		$connectionOK = $connection->openDbConnection ();
 		// QUI VERIFICHIAMO SEMPRE LA CONNESSIONE
 		if ($connectionOK) {
-			$resultListaProdotti = $connection->getListaArticoli();
+			$resultListaProdotti = $connection->getListaArticoli(null);
 			// Verifico se sono stati trovati degli articoli.
 			if ($resultListaProdotti == null) {
 				$infoMessage = "<p class=\"info-message\">Nessun prodotto trovato.</p>";
