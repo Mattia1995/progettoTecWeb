@@ -33,9 +33,11 @@
 				$listaArticoli = "<ul class=\"lista-prodotti-stampa\">";
 				// Ciclo i prodotti ottenuti per stamparli in pagina.
 				foreach ($resultListaProdotti as $articolo) {
-					$prezzoScontato = "";
+					$prezzo = str_replace (".", ",", $articolo["price"]);
+					$prezzoScontatoStringa = "";
 					if ($articolo["discounted_price"] != null) { 
-						$prezzoScontato = "<dt>Prezzo scontato:</dt>" . "<dd>" . $articolo["discounted_price"] . " €</dd>";
+						$prezzoScontato = str_replace (".", ",", $articolo["discounted_price"]);
+						$prezzoScontatoStringa = "<dt>Prezzo scontato:</dt>" . "<dd>" . $prezzoScontato . " €</dd>";
 					}
 					$listaArticoli .= 
 					"<li>" .
@@ -46,8 +48,8 @@
 							"<dt>Categoria:</dt>" .
 							"<dd>" . $articolo["nome_cat"] . "</dd>" .
 							"<dt>Prezzo:</dt>" .
-							"<dd>" . $articolo["price"] . " €</dd>" .
-							$prezzoScontato .
+							"<dd>" . $prezzo . " €</dd>" .
+							$prezzoScontatoStringa .
 						"</dl>" .
 						"<a class=\"link-button\" href=\"area-riservata-articolo.php?product_id=" . $articolo["product_id"] . "\" title=\"Modifica " .$articolo["name"]  . "\">Modifica</a>" .
 					"</li>";

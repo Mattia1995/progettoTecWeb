@@ -180,8 +180,12 @@
 
 .sezioneProdottoSingolo{
     margin: auto;
-    width: 80%;
+    width: 90%;
     padding-bottom: 2em;
+}
+
+#infoPrincipaliProdotto dd {
+    text-align: center;
 }
 
 #immagineProdotto {
@@ -237,7 +241,7 @@
 }
 
 #area-riservata-gestione-articoli #crea-articolo {
-    width: 35%;
+    width: 40%;
     float: none;
     margin: auto;
     margin-bottom: 3em;
@@ -291,7 +295,7 @@
 ***** AREA RISERVATA GESTIONE RICHIESTE *****
 ********************************************/
 
-.richiesta.richiesta-da-leggere {
+.richiesta {
     width: 100%;
     display: block;
     padding: 0.5em;
@@ -319,7 +323,7 @@
 }
 
 #lista-richieste li a{
-    width: 93%;
+    width: 80%;
     float: none;
     margin: auto 0.4em;
     margin-top: 0.6em;
