@@ -441,3 +441,14 @@
     background-size: contain;
     border: none;
 }
+
+
+/********************************************
+************** BREADCRUMB *******************
+********************************************/
+
+#breadcrumb p{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+}
