@@ -311,10 +311,13 @@ main h2, h3 {
 .info{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .info dd{
     padding: 0.8em 0.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .info dd:first-of-type{
