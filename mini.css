@@ -319,7 +319,7 @@
 }
 
 .richiesta .stato {
-    min-width: none;
+    min-width: initial;
 }
 
 #lista-richieste li a{

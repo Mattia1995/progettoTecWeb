@@ -19,13 +19,17 @@
 	$infoMessage = "";
 	$errorMessage = "";
 	$listaArticoli="";
-
+	$category_id = null;
+	$categoryLinkList = "";
+    if (isset ($_GET['category_id'])) {
+        $category_id = $_GET['category_id'];
+    }
 	try {
 		$connection = new DBAccess();
 		$connectionOK = $connection->openDbConnection ();
 		// QUI VERIFICHIAMO SEMPRE LA CONNESSIONE
 		if ($connectionOK) {
-			$resultListaProdotti = $connection->getListaArticoli(null);
+			$resultListaProdotti = $connection->getListaArticoli($category_id);
 			// Verifico se sono stati trovati degli articoli.
 			if ($resultListaProdotti == null) {
 				$infoMessage = "<p class=\"info-message\">Nessun prodotto trovato.</p>";
@@ -56,6 +60,31 @@
 				}
 				$listaArticoli .= "</ul>";
 			}
+			
+			// Gestione lista di categorie.
+			$categoryLinkList = "<div class=\"category-container\">";
+			$categoryLinkList .= "<p>Filtro per categorie:</p>";
+			if ($category_id == null) {
+				$categoryLinkList .= "<span>Tutte</span>";
+			} else {
+				$categoryLinkList .= "<a class=\"link-button\" href=\"area-riservata-gestione-articoli.php\">Tutte</a>";
+			}
+			if ($category_id == 1) {
+				$categoryLinkList .= "<span>Chitarra</span>";
+			} else {
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=1\">Chitarra</a>";
+			}
+			if ($category_id == 2) {
+				$categoryLinkList .= "<span>Pianoforte</span>";
+			} else {
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=2\">Pianoforte</a>";
+			}
+			if ($category_id == 3) {
+				$categoryLinkList .= "<span>Batteria</span>";
+			} else {
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=3\">Batteria</a>";
+			}
+			$categoryLinkList .= "</div>";
 		} else {
 			$errorMessage = "<p class=\"error-message\">Si è verificato un errore durante il caricamento dei dati.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattarci tramite i canali indicati nella pagina contatti.</p>";
 		}
@@ -70,5 +99,6 @@
 	$paginaHtml = str_replace ("{errorMessage}", $errorMessage, $paginaHtml);
 	$paginaHtml = str_replace ("{infoMessage}", $infoMessage, $paginaHtml);
 	$paginaHtml = str_replace ("{listaArticoli}", $listaArticoli, $paginaHtml);
+	$paginaHtml = str_replace ("{categoryLinkList}", $categoryLinkList, $paginaHtml);
 	echo $paginaHtml;
 ?>
