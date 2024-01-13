@@ -374,6 +374,23 @@ main h2, h3 {
     padding-bottom: 0;
 }
 
+.category-container {
+    margin-bottom: 2em;
+}
+.category-container p{
+    margin-bottom: 1em;
+}
+
+.category-container .link-button{
+    display: inline-block;
+    padding: 0.7em 1em;
+    border-collapse: collapse;
+}
+
+.category-container span{
+    padding: 0.7em 1em;
+}
+
 /********************************************
 ************* PRODOTTO SINGOLO **************
 ********************************************/
