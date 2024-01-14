@@ -107,10 +107,13 @@
 		}
 		
         /** Funzione che ritorna tutti gli prodotti */
-		public function getListaArticoli(){
+		public function getListaArticoli($category_id){
 			$query = "SELECT p.product_id, p.name, p.image_url, p.category_id, p.price, p.discounted_price, c.name as nome_cat
-			FROM products AS p INNER JOIN categories AS c ON (p.category_id = c.category_id)
-			ORDER BY p.name";
+			FROM products AS p INNER JOIN categories AS c ON (p.category_id = c.category_id)";
+			if ($category_id != null) {
+				$query .= " WHERE p.category_id = " . $category_id;
+			}
+			$query .= " ORDER BY p.name";
 			$queryResult = mysqli_query($this -> connection, $query) or die("Errore in DBAccess" .mysqli_error($this -> connection));
 			if (mysqli_num_rows($queryResult) != 0){
 				$result = array();

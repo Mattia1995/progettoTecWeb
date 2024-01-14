@@ -27,42 +27,16 @@
 ********************************************/
 
 .grid-alternate {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.grid1-alt { 
-    grid-area: 1 / 1 / 2 / 4; 
+.grid-alternate >*{
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
-
-.grid2-alt { 
-    grid-area: 2 / 1 / 3 / 4; 
-    width: 80%;
-    margin: auto;
-}
-
-.grid3-alt { 
-    grid-area: 3 / 1 / 4 / 4; 
-}
-
-.grid4-alt { 
-    grid-area: 4 / 1 / 5 / 4; 
-    margin-top: 2.5em;
-}
-
-.grid5-alt { 
-    grid-area: 5 / 1 / 6 / 4; 
-    width: 80%;
-    margin: auto;
-}
-
-.grid6-alt { 
-    grid-area: 6 / 1 / 7 / 4; 
-} 
-
 
 /********************************************
 ******************* HOME ********************
@@ -70,11 +44,11 @@
 
 .prodotti h2{
     padding-left: 3%;
-    font-size: 25px;
+    font-size: 1.6em;
 }
 
 .prodotti-items {
-    padding-top: 25px;
+    padding-top: 1.5em;
 }
 
 .prodotti-items a{
@@ -97,12 +71,12 @@
 
 .passione h3{
     padding-left: 3%;
-    font-size: 25px;
+    font-size: 1.6em
 }
 
 .il-team h3{
     padding-left: 3%;
-    font-size: 25px;
+    font-size: 1.6em
 }
 
 .passion-grid{
@@ -180,8 +154,12 @@
 
 .sezioneProdottoSingolo{
     margin: auto;
-    width: 80%;
+    width: 90%;
     padding-bottom: 2em;
+}
+
+#infoPrincipaliProdotto dd {
+    text-align: center;
 }
 
 #immagineProdotto {
@@ -193,7 +171,7 @@
 
 #prodottoSingolo img{
     margin-right: 0;
-    width: 60%;
+    width: 75%;
 }
 
 #prodottoSingolo #immagineProdotto{
@@ -237,7 +215,7 @@
 }
 
 #area-riservata-gestione-articoli #crea-articolo {
-    width: 35%;
+    width: 40%;
     float: none;
     margin: auto;
     margin-bottom: 3em;
@@ -291,7 +269,7 @@
 ***** AREA RISERVATA GESTIONE RICHIESTE *****
 ********************************************/
 
-.richiesta.richiesta-da-leggere {
+.richiesta {
     width: 100%;
     display: block;
     padding: 0.5em;
@@ -315,11 +293,11 @@
 }
 
 .richiesta .stato {
-    min-width: none;
+    min-width: initial;
 }
 
 #lista-richieste li a{
-    width: 93%;
+    width: 80%;
     float: none;
     margin: auto 0.4em;
     margin-top: 0.6em;
@@ -346,6 +324,11 @@
 ****************** HEADER *******************
 ********************************************/
 
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+}
 
 #menu ul{
     position: fixed;
@@ -436,4 +419,16 @@
     background-position: center;
     background-size: contain;
     border: none;
+}
+
+
+/********************************************
+************** BREADCRUMB *******************
+********************************************/
+
+#breadcrumb p{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    margin-top: 90px;
 }

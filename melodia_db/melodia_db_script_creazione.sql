@@ -36,8 +36,8 @@ CREATE TABLE products (
 	name VARCHAR(256) NOT NULL,
 	category_id INT NOT NULL,
 	description VARCHAR(2048) NOT NULL,
-	price DECIMAL NOT NULL,
-	discounted_price DECIMAL, -- se NULL, allora non c'è sconto
+	price DECIMAL(10,2) NOT NULL,
+	discounted_price DECIMAL(10,2), -- se NULL, allora non c'è sconto
 	brand VARCHAR(256) NOT NULL,
 	color VARCHAR(256) NOT NULL,
 	material VARCHAR(256) NOT NULL,

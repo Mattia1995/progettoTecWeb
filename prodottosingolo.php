@@ -34,7 +34,7 @@
                     $articolo = $listaArticoli[0];
                     $nomeArticolo = $articolo["name"];
                     $descrizioneArticolo = $articolo["description"];
-                    $prezzoArticolo = $articolo["price"] . " €";
+                    $prezzoArticolo = str_replace (".", ",", $articolo["price"]) . " €";
                     $marchioArticolo = $articolo["brand"];
                     $coloreArticolo = $articolo["color"];
                     $materialeArticolo = $articolo["material"];
@@ -45,7 +45,7 @@
 					</div>";
                     // Gestione campi facoltativi.
                     if ($articolo["discounted_price"] != null){
-                        $prezzoScontatoArticolo = $articolo["discounted_price"];
+                        $prezzoScontatoArticolo = "<dt>Prezzo scontato</dt><dd>" . str_replace (".", ",", $articolo["discounted_price"]) . " €</dd>";
                     }
                 } else {
                     // Se viene fornito un product_id non esistente allora faccio redirect alla pagina del nuovo prodotto.
@@ -88,6 +88,7 @@
 	$paginaHtml = str_replace ("{categoria}", $categoria, $paginaHtml);
 	$paginaHtml = str_replace ("{marchioArticolo}", $marchioArticolo, $paginaHtml);
 	$paginaHtml = str_replace ("{prezzoArticolo}", $prezzoArticolo, $paginaHtml);
+	$paginaHtml = str_replace ("{prezzoScontatoArticolo}", $prezzoScontatoArticolo, $paginaHtml);
 	$paginaHtml = str_replace ("{materialeArticolo}", $materialeArticolo, $paginaHtml);
 	$paginaHtml = str_replace ("{coloreArticolo}", $coloreArticolo, $paginaHtml);
 	$paginaHtml = str_replace ("{classNotShowElement}", $errorClassNotShowElement, $paginaHtml);

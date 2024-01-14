@@ -45,10 +45,10 @@
 							"<dd class=\"stato\">" . $richieste["nome_stato"] . "</dd>" .
 							"<dt>Data richiesta:</dt>" .
 							"<dd><time datetime=\"". $richieste["creation_date"] . "\">" . date_format($date,"d F Y") . "</time></dd>" .
+							"<dt>Email richiedente:</dt>" .
+							"<dd>" . $richieste["email"] . "</dd>" .
 							"<dt>Nome richiedente:</dt>" .
 							"<dd>" . $richieste["name"] . "</dd>" .
-							"<dt>Testo richiesta:</dt>" .
-							"<dd>" . $richieste["email"] . "</dd>" .
 						"</dl>" .
 						"<a class=\"link-button\" href=\"area-riservata-richiesta.php?message_id=" . $richieste["message_id"] . "\" title=\"Vai al dettaglio richiesta\">></a>" .
 					"</li>";
@@ -56,10 +56,10 @@
 				$listaRichieste .= "</ul>";
 			}
 		} else {
-			$errorMessage = "<p class=\"error-message\">Si è verificato un errore durante il caricamento dei dati.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattarci tramite i canali indicati nella pagina contatti.</p>";
+			$errorMessage = "<p class=\"error-message\">Si è verificato un errore durante il caricamento dei dati.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattare l'amministratore del sito.</p>";
 		}
 	} catch (Exception $e) {
-		$errorMessage = "<p class=\"error-message\">Si è verificato un errore durante il caricamento dei dati.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattarci tramite i canali indicati nella pagina contatti.</p>";
+		$errorMessage = "<p class=\"error-message\">Si è verificato un errore durante il caricamento dei dati.</p><p class=\"error-message\"> Se l'errore dovesse persistere ti invitiamo a contattare l'amministratore del sito.</p>";
 	} finally {
 		// Se sono riuscito ad aprire con successo la connessione ed è stata emessa un'eccezione per altri motivi, allora chiudo la connessione.
 		if ($connectionOK) {
