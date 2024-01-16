@@ -43,6 +43,8 @@
 						$prezzoScontato = str_replace (".", ",", $articolo["discounted_price"]);
 						$prezzoScontatoStringa = "<dt>Prezzo scontato:</dt>" . "<dd>" . $prezzoScontato . " €</dd>";
 					}
+					// Protezione per non avere il title del link troppo lungo.
+					$nomeArticoloPrimi30Char = substr($articolo["name"], 0, 30); 
 					$listaArticoli .= 
 					"<li>" .
 						"<img src=\"" . $articolo["image_url"] . "\" alt=\"\">" .
@@ -55,7 +57,7 @@
 							"<dd>" . $prezzo . " €</dd>" .
 							$prezzoScontatoStringa .
 						"</dl>" .
-						"<a class=\"link-button\" href=\"area-riservata-articolo.php?product_id=" . $articolo["product_id"] . "\" title=\"Modifica " .$articolo["name"]  . "\">Modifica</a>" .
+						"<a class=\"link-button\" href=\"area-riservata-articolo.php?product_id=" . $articolo["product_id"] . "\" title=\"Modifica " . $nomeArticoloPrimi30Char  . "\">Modifica</a>" .
 					"</li>";
 				}
 				$listaArticoli .= "</ul>";
