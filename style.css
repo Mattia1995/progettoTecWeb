@@ -367,7 +367,7 @@ main h2, h3 {
 }
 
 .dtNonAmbiguoProdotto{
-    position:absolute; /* DEVO Spostare di -999em (a sinistra) */
+    position:absolute;
     left:-999em;
 	padding: 1em;
 }
