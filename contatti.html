@@ -118,17 +118,17 @@
 				<form id="contactsForm" method="post" action="{actionForm}" onsubmit="return validazioneForm();">
 					<div>
 						<label id="labelNome" for="nome">Nome</label>
-						<input type="text" name="nome" id="nome" value="{nome}">
+						<input type="text" name="nome" id="nome" value="{nome}" required>
 						<div id="messaggiNome" role="alert"></div>
 					</div>
 					<div>
 						<label id="labelEmail" for="email" lang="en">E-mail</label>
-						<input type="email" name="email" id="email" value="{email}">
+						<input type="email" name="email" id="email" value="{email}" required>
 						<div id="messaggiEmail" role="alert"></div>
 					</div>
 					<div>
 						<label id="labelMessaggio" for="messaggio">Messaggio</label>
-						<textarea name="messaggio" id="messaggio" rows="6" autocomplete="off">{messaggio}</textarea>
+						<textarea name="messaggio" id="messaggio" rows="6" autocomplete="off" required>{messaggio}</textarea>
 						<div id="messaggiMessaggio" role="alert"></div>
 					</div>
 					<input type="submit" id="submit" name="submit" value="Invia richiesta">
