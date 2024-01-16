@@ -394,6 +394,12 @@ main h2, h3 {
     border-collapse: collapse;
 }
 
+.category-container .link-button.selected{
+    color: var(--linkHoverColor);
+    background-color: var(--flagColor);
+    border-color: var(--flagColor);
+}
+
 .category-container span{
     padding: 0.7em 1em;
 }

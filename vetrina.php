@@ -63,22 +63,22 @@
 			$categoryLinkList = "<div class=\"category-container\">";
 			$categoryLinkList .= "<p>Filtro per categorie:</p>";
 			if ($category_id == null) {
-				$categoryLinkList .= "<span>Tutte</span>";
+				$categoryLinkList .= "<span class=\"link-button selected\">Tutte</span>";
 			} else {
 				$categoryLinkList .= "<a class=\"link-button\" href=\"vetrina.php\">Tutte</a>";
 			}
 			if ($category_id == 1) {
-				$categoryLinkList .= "<span>Chitarre</span>";
+				$categoryLinkList .= "<span class=\"link-button selected\">Chitarre</span>";
 			} else {
 				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=1\">Chitarre</a>";
 			}
 			if ($category_id == 2) {
-				$categoryLinkList .= "<span>Pianoforti</span>";
+				$categoryLinkList .= "<span class=\"link-button selected\">Pianoforti</span>";
 			} else {
 				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=2\">Pianoforti</a>";
 			}
 			if ($category_id == 3) {
-				$categoryLinkList .= "<span>Batterie</span>";
+				$categoryLinkList .= "<span class=\"link-button selected\">Batterie</span>";
 			} else {
 				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=3\">Batterie</a>";
 			}
