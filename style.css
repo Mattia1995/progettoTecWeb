@@ -367,7 +367,7 @@ main h2, h3 {
 }
 
 .dtNonAmbiguoProdotto{
-    position:absolute; /* DEVO Spostare di -999em (a sinistra) */
+    position:absolute;
     left:-999em;
 	padding: 1em;
 }
@@ -582,6 +582,10 @@ main h2, h3 {
 
 address {
 	margin: 1.5em;
+}
+
+#comeArrivare{
+    font-size: 150%;
 }
 
 
@@ -1232,36 +1236,29 @@ hr{
     margin-top: 2em;
 }
 
-
-
 .row-404 img{
-  max-width: 50%;
-  padding: 50px 0;
+    max-width: 50%;
+    padding: 3em 0;
 }
 
 .row-404 h1{
-    font-size: 50px;
-    line-height: 60px;
-    margin: 25px 0px;
+    font-size: 320%;
+    line-height: 1.2em;
+    margin: 0.5em 0em;
     text-align: center;
     padding-left: 1.5em;
     padding-right: 1.5em;
   
 }
 
-.row-404 h3{
-    font-size: 35px;
-    line-height: 40px;
-    margin: 25px 0px;
-    text-align: center;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-  
+#sottotitolo404{
+    font-size: 120%;
+    font-weight: bold;
 }
 
 .row-404 p{
     text-align: center;
-    margin: 25px 0px;
+    margin: 1em 0em;
     padding-left: 3em;
     padding-right: 3em;
 }

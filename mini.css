@@ -44,11 +44,11 @@
 
 .prodotti h2{
     padding-left: 3%;
-    font-size: 25px;
+    font-size: 1.6em;
 }
 
 .prodotti-items {
-    padding-top: 25px;
+    padding-top: 1.5em;
 }
 
 .prodotti-items a{
@@ -71,12 +71,12 @@
 
 .passione h3{
     padding-left: 3%;
-    font-size: 25px;
+    font-size: 1.6em
 }
 
 .il-team h3{
     padding-left: 3%;
-    font-size: 25px;
+    font-size: 1.6em
 }
 
 .passion-grid{
