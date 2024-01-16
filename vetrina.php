@@ -68,19 +68,19 @@
 				$categoryLinkList .= "<a class=\"link-button\" href=\"vetrina.php\">Tutte</a>";
 			}
 			if ($category_id == 1) {
-				$categoryLinkList .= "<span>Chitarra</span>";
+				$categoryLinkList .= "<span>Chitarre</span>";
 			} else {
-				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=1\">Chitarra</a>";
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=1\">Chitarre</a>";
 			}
 			if ($category_id == 2) {
-				$categoryLinkList .= "<span>Pianoforte</span>";
+				$categoryLinkList .= "<span>Pianoforti</span>";
 			} else {
-				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=2\">Pianoforte</a>";
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=2\">Pianoforti</a>";
 			}
 			if ($category_id == 3) {
-				$categoryLinkList .= "<span>Batteria</span>";
+				$categoryLinkList .= "<span>Batterie</span>";
 			} else {
-				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=3\">Batteria</a>";
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=3\">Batterie</a>";
 			}
 			$categoryLinkList .= "</div>";
 		} else {

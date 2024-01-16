@@ -60,21 +60,21 @@ INSERT INTO `melodia_db`.`categories`
 `name`)
 VALUES
 (1,
-'chitarre');
+'Chitarra');
 
 INSERT INTO `melodia_db`.`categories`
 (`category_id`,
 `name`)
 VALUES
 (2,
-'pianoforti');
+'Pianoforte');
 
 INSERT INTO `melodia_db`.`categories`
 (`category_id`,
 `name`)
 VALUES
 (3,
-'batterie');
+'Batteria');
 
 INSERT INTO `melodia_db`.`message_states`
 (`state_id`,
