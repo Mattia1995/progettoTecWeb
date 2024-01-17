@@ -43,6 +43,8 @@
 						$prezzoScontato = str_replace (".", ",", $articolo["discounted_price"]);
 						$prezzoScontatoStringa = "<dt>Prezzo scontato:</dt>" . "<dd>" . $prezzoScontato . " €</dd>";
 					}
+					// Protezione per non avere il title del link troppo lungo.
+					$nomeArticoloPrimi30Char = substr($articolo["name"], 0, 30); 
 					$listaArticoli .= 
 					"<li>" .
 						"<img src=\"" . $articolo["image_url"] . "\" alt=\"\">" .
@@ -55,7 +57,7 @@
 							"<dd>" . $prezzo . " €</dd>" .
 							$prezzoScontatoStringa .
 						"</dl>" .
-						"<a class=\"link-button\" href=\"area-riservata-articolo.php?product_id=" . $articolo["product_id"] . "\" title=\"Modifica " .$articolo["name"]  . "\">Modifica</a>" .
+						"<a class=\"link-button\" href=\"area-riservata-articolo.php?product_id=" . $articolo["product_id"] . "\" title=\"Modifica " . $nomeArticoloPrimi30Char  . "\">Modifica</a>" .
 					"</li>";
 				}
 				$listaArticoli .= "</ul>";
@@ -65,24 +67,24 @@
 			$categoryLinkList = "<div class=\"category-container\">";
 			$categoryLinkList .= "<p>Filtro per categorie:</p>";
 			if ($category_id == null) {
-				$categoryLinkList .= "<span>Tutte</span>";
+				$categoryLinkList .= "<span class=\"link-button selected\">Tutte</span>";
 			} else {
 				$categoryLinkList .= "<a class=\"link-button\" href=\"area-riservata-gestione-articoli.php\">Tutte</a>";
 			}
 			if ($category_id == 1) {
-				$categoryLinkList .= "<span>Chitarra</span>";
+				$categoryLinkList .= "<span class=\"link-button selected\">Chitarre</span>";
 			} else {
-				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=1\">Chitarra</a>";
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=1\">Chitarre</a>";
 			}
 			if ($category_id == 2) {
-				$categoryLinkList .= "<span>Pianoforte</span>";
+				$categoryLinkList .= "<span class=\"link-button selected\">Pianoforti</span>";
 			} else {
-				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=2\">Pianoforte</a>";
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=2\">Pianoforti</a>";
 			}
 			if ($category_id == 3) {
-				$categoryLinkList .= "<span>Batteria</span>";
+				$categoryLinkList .= "<span class=\"link-button selected\">Batterie</span>";
 			} else {
-				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=3\">Batteria</a>";
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=3\">Batterie</a>";
 			}
 			$categoryLinkList .= "</div>";
 		} else {

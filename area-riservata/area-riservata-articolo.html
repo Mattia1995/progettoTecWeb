@@ -12,7 +12,7 @@
         <link rel="stylesheet" media="print" href="../print.css">
         <link rel="stylesheet" media="screen and (max-width:800px)" href="../mini.css">
         <script src="../menu.js"></script>
-		<script src="area-riservata-articolo.js"></script>  
+		<script src="area-riservata-articolo.js"></script>
     </head>
     <body>
         <header>
@@ -48,20 +48,24 @@
             <h2 {classNotShowElement}>{pageTitle}</h2>
             <div {classNotShowElement} id="gestione-articolo-form">
                 {messaggiPerForm}
-                <form method="post" enctype="multipart/form-data">
+                <form method="post" enctype="multipart/form-data" onsubmit="return validazioneForm();">
                     <div>
                         <label for="nomeArticolo">Nome:</label>
                         <input type="text" name="nomeArticolo" id="nomeArticolo" value="{nomeArticolo}" required>
+                        <div id="messaggiNomeArticolo" role="alert"></div>
                         <label for="descrizioneArticolo">Descrizione:</label>
                         <textarea id="descrizioneArticolo" name="descrizioneArticolo" rows="4" cols="50" required>{descrizioneArticolo}</textarea>
+                        <div id="messaggiDescrizioneArticolo" role="alert"></div>
                         <div class="form-row-container">
                             <div class="form-col-50">
                                 <label for="prezzo">Prezzo:</label>
                                 <input type="number" name="prezzo" id="prezzo" step=".01" value="{prezzoArticolo}" required>
+                                <div id="messaggiPrezzoArticolo" role="alert"></div>
                             </div>
                             <div class="form-col-50">
                                 <label for="prezzo_scontato">Prezzo scontato:</label>
                                 <input type="number" name="prezzo_scontato" id="prezzo_scontato" value="{prezzoScontatoArticolo}" step=".01">
+                                <div id="messaggiPrezzoScontatoArticolo" role="alert"></div>
                             </div>
                         </div>
                         <div class="form-row-container">
@@ -81,16 +85,19 @@
                             <div class="form-col-50">
                                 <label for="marchioArticolo">Marchio:</label>
                                 <input type="text" name="marchioArticolo" id="marchioArticolo" value="{marchioArticolo}" required>
+                                <div id="messaggiMarchioArticolo" role="alert"></div>
                             </div>
                             <div class="form-col-50">
                                 <label for="materialeArticolo">Materiale:</label>
                                 <input type="text" name="materialeArticolo" id="materialeArticolo" value="{materialeArticolo}" required>
+                                <div id="messaggiMaterialeArticolo" role="alert"></div>
                             </div>
                         </div>
                         <div class="form-row-container">
                             <div class="form-col-50">
                                 <label for="coloreArticolo">Colore:</label>
-                                <input type="text" name="coloreArticolo" id="coloreArticolo" value="{coloreArticolo}" required>    
+                                <input type="text" name="coloreArticolo" id="coloreArticolo" value="{coloreArticolo}" required>   
+                                <div id="messaggiColoreArticolo" role="alert"></div> 
                             </div>
                         </div>
                     </div>

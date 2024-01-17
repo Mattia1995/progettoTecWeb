@@ -288,7 +288,6 @@ main h2, h3 {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    flex: 1 0 200px;
     flex-wrap: wrap;
     box-sizing: border-box;
     list-style: none;
@@ -395,6 +394,12 @@ main h2, h3 {
     border-collapse: collapse;
 }
 
+.category-container .link-button.selected{
+    color: var(--linkHoverColor);
+    background-color: var(--flagColor);
+    border-color: var(--flagColor);
+}
+
 .category-container span{
     padding: 0.7em 1em;
 }
@@ -471,9 +476,8 @@ main h2, h3 {
 
 #altreInfoProdotto{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
     margin: auto;
-    max-width: 20em;
     border-top: 1.5px solid var(--flagColor);
 }
 
