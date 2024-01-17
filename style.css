@@ -499,7 +499,8 @@ main h2, h3 {
 
 .container {
 	text-align: center;
-    margin-top: 5em;
+    margin-top: 3em;
+    margin-bottom: 2em;
     padding: 3em;
     box-shadow: 0px 0px 32px 8px rgba(var(--visitedLinkColorForRgba), 0.13);
 }
