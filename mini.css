@@ -43,7 +43,7 @@
 ********************************************/
 
 .prodotti h2{
-    padding-left: 3%;
+    padding: 0 3%;
     font-size: 1.6em;
 }
 
@@ -70,12 +70,12 @@
 }
 
 .passione h3{
-    padding-left: 3%;
+    padding: 0 3%;
     font-size: 1.6em
 }
 
 .il-team h3{
-    padding-left: 3%;
+    padding: 0 3%;
     font-size: 1.6em
 }
 
