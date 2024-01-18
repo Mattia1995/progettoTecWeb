@@ -6,7 +6,7 @@ function confirmDialog () {
 
 /** Gestione validazione */
 var messaggiForm = {
-	"nomeArticolo": ["", /^[a-zA-Z\ \'\-]{2,256}$/, "Inserisci un nome lungo almeno 2 caratteri, e al massimo 256.", "messaggiNomeArticolo"],
+	"nomeArticolo": ["", /^[a-zA-Z\ \'\-]{2,256}$/, "Inserisci un nome composto da caratteri, lungo almeno 2 caratteri e al massimo 256.", "messaggiNomeArticolo"],
 	"descrizioneArticolo": ["", /^.{2,2048}$/, "Inserisci un testo lungo almeno 2 caratteri, e al massimo 2048.", "messaggiDescrizioneArticolo"],
 	"materialeArticolo": ["", /^[a-zA-Z\ \'\-]{2,256}$/, "Il campo materiale dev'essere lungo almeno 2 caratteri, e al massimo 256.", "messaggiMaterialeArticolo"],
 	"marchioArticolo": ["", /^[a-zA-Z\ \'\-]{2,256}$/, "Il campo marchio dev'essere lungo almeno 2 caratteri, e al massimo 256.", "messaggiMarchioArticolo"],
@@ -54,24 +54,24 @@ function verificaContenuto(input) {
 	if (input.id == 'prezzo_scontato' && document.getElementById("prezzo").value <= +text) {
 		prezzoScontatoErr = true;
 		var errPrezzo = document.getElementById(messaggiForm["prezzo"][3]);
-		errPrezzo.classList.remove("errorText");
+		errPrezzo.classList.remove("error-form-message");
 		errPrezzo.innerHTML = "";
 	}
 	if (input.id == 'prezzo' && 
 		(document.getElementById("prezzo_scontato").value != null && document.getElementById("prezzo_scontato").value >= +text)) {
 		prezzoErr = true;
 		var errPrezzo = document.getElementById(messaggiForm["prezzo_scontato"][3]);
-		errPrezzo.classList.remove("errorText");
+		errPrezzo.classList.remove("error-form-message");
 		errPrezzo.innerHTML = "";
 	}
 	if (text.search(regex) != 0 ||
 		(prezzoScontatoErr) ||
 		(prezzoErr)) {
-		divErrori.className = "errorText";
+		divErrori.className = "error-form-message";
 		divErrori.innerHTML = messaggiForm[input.id][2];
 		return false;
 	} else {
-		divErrori.classList.remove("errorText");
+		divErrori.classList.remove("error-form-message");
 		divErrori.innerHTML = "";
 		return true;
 	}

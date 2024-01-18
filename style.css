@@ -76,12 +76,13 @@ body a:visited {
 }
 
 .error-form-message {
-    margin-left: 1em;
     margin-bottom: 1.2em;
+    color: var(--errorColor);
+    font-weight: bold;
 }
 
-.error-form-message li {
-    color: var(--errorColor);
+ul.error-form-message {
+    margin-left: 1em;
 }
 
 /********************************************

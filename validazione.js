@@ -62,12 +62,12 @@ function verificaContenuto(input) {
 	var divErrori = document.getElementById(messaggiForm[input.id][3]);
 	
 	if ((text == placeholder) || (text.search(regex) != 0)) {
-		divErrori.className = "errorText";
+		divErrori.className = "error-form-message";
 		divErrori.innerHTML = messaggiForm[input.id][2];
 		return false;
 	}
 	else {
-		divErrori.classList.remove("errorText");
+		divErrori.classList.remove("error-form-message");
 		divErrori.innerHTML = "";
 		return true;
 	}
