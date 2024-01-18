@@ -210,13 +210,13 @@
             $messaggiPerForm = $messaggiPerForm . "<li>Il nome dell'articolo deve essere valorizzato.</li>";
         } else {
             if (!preg_match("/^[a-zA-Z\ \'\-]{2,256}$/",$nome)) {
-                $messaggiPerForm = $messaggiPerForm . "<li>Inserisci un nome lungo almeno 2 caratteri, e al massimo 256.</li>";
+                $messaggiPerForm = $messaggiPerForm . "<li>Inserisci un nome lungo almeno 2 caratteri, e al massimo 256. Non sono ammessi numeri o simboli speciali.</li>";
             }
         }
         if ($descrizione == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>La descrizione dell'articolo deve essere valorizzata.</li>";
         } else {
-            if (!preg_match("/^[a-zA-Z\ \'\-]{2,256}$/",$descrizione)) {
+            if (!preg_match("/^.{2,2048}$/",$descrizione)) {
                 $messaggiPerForm = $messaggiPerForm . "<li>Inserisci una descrizione lunga almeno 2 caratteri, e al massimo 2048.</li>";
             }
         }
@@ -242,21 +242,21 @@
             $messaggiPerForm = $messaggiPerForm . "<li>Il marchio dell'articolo deve essere valorizzato.</li>";
         } else {
             if (!preg_match("/^[a-zA-Z\ \'\-]{2,256}$/",$marchio)) {
-                $messaggiPerForm = $messaggiPerForm . "<li>Il campo marchio dev'essere lungo almeno 2 caratteri, e al massimo 256.</li>";
+                $messaggiPerForm = $messaggiPerForm . "<li>Il campo marchio dev'essere lungo almeno 2 caratteri, e al massimo 256. Non sono ammessi numeri o simboli speciali.</li>";
             }
         }
         if ($colore == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>Il colore dell'articolo deve essere valorizzato.</li>";
         } else {
             if (!preg_match("/^[a-zA-Z\ \'\-]{2,256}$/",$colore)) {
-                $messaggiPerForm = $messaggiPerForm . "<li>Il campo colore dev'essere lungo almeno 2 caratteri, e al massimo 256.</li>";
+                $messaggiPerForm = $messaggiPerForm . "<li>Il campo colore dev'essere lungo almeno 2 caratteri, e al massimo 256. Non sono ammessi numeri o simboli speciali.</li>";
             }
         }
         if ($materiale == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>Il materiale dell'articolo deve essere valorizzato.</li>";
         } else {
             if (!preg_match("/^[a-zA-Z\ \'\-]{2,256}$/",$materiale)) {
-                $messaggiPerForm = $messaggiPerForm . "<li>Il campo materiale dev'essere lungo almeno 2 caratteri, e al massimo 256.</li>";
+                $messaggiPerForm = $messaggiPerForm . "<li>Il campo materiale dev'essere lungo almeno 2 caratteri, e al massimo 256. Non sono ammessi numeri o simboli speciali.</li>";
             }
         }
         // Verifiche immagine.

@@ -530,6 +530,10 @@ main h2, h3 {
     padding: 0.4em 0.2em;
 }
 
+#contactsForm textarea {
+    resize: vertical;
+}
+
 #contactsForm input[type="submit"] {
 	width: 50%;
     padding: 0.6em 3em;
@@ -836,6 +840,10 @@ footer {
     width: 96%;
     margin-bottom: 1em;
     padding: 0.6em 0.3em;
+}
+
+#gestione-articolo-form textarea {
+    resize: vertical;
 }
 
 #gestione-articolo-form input[type="radio"]{
