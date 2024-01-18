@@ -785,6 +785,7 @@ footer {
     width: 70%;
     align-self: center;
     flex-grow: 2;
+    padding-right: 0.5em;
 }
 
 #area-riservata-gestione-articoli li dl dt {
@@ -792,6 +793,12 @@ footer {
     float: left;
     padding-right: 0.5em;
 }
+
+#area-riservata-gestione-articoli li dl dd {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 #area-riservata-gestione-articoli li a {
     width: 15%;
@@ -809,6 +816,11 @@ footer {
 /********************************************
 ********* AREA RISERVATA ARTICOLO ***********
 ********************************************/
+
+#area-riservata-articolo h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 #gestione-articolo-form {
     width: 55%;
