@@ -208,9 +208,17 @@
         // Validazioni.
         if ($nome == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>Il nome dell'articolo deve essere valorizzato.</li>";
+        } else {
+            if (!preg_match("/^[a-zA-Z\ \'\-]{2,256}$/",$nome)) {
+                $messaggiPerForm = $messaggiPerForm . "<li>Inserisci un nome lungo almeno 2 caratteri, e al massimo 256.</li>";
+            }
         }
         if ($descrizione == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>La descrizione dell'articolo deve essere valorizzata.</li>";
+        } else {
+            if (!preg_match("/^[a-zA-Z\ \'\-]{2,256}$/",$descrizione)) {
+                $messaggiPerForm = $messaggiPerForm . "<li>Inserisci una descrizione lunga almeno 2 caratteri, e al massimo 2048.</li>";
+            }
         }
         if ($prezzo == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>Il prezzo dell'articolo deve essere valorizzato.</li>";
@@ -232,12 +240,24 @@
         }
         if ($marchio == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>Il marchio dell'articolo deve essere valorizzato.</li>";
+        } else {
+            if (!preg_match("/^[a-zA-Z\ \'\-]{2,256}$/",$marchio)) {
+                $messaggiPerForm = $messaggiPerForm . "<li>Il campo marchio dev'essere lungo almeno 2 caratteri, e al massimo 256.</li>";
+            }
         }
         if ($colore == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>Il colore dell'articolo deve essere valorizzato.</li>";
+        } else {
+            if (!preg_match("/^[a-zA-Z\ \'\-]{2,256}$/",$colore)) {
+                $messaggiPerForm = $messaggiPerForm . "<li>Il campo colore dev'essere lungo almeno 2 caratteri, e al massimo 256.</li>";
+            }
         }
         if ($materiale == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>Il materiale dell'articolo deve essere valorizzato.</li>";
+        } else {
+            if (!preg_match("/^[a-zA-Z\ \'\-]{2,256}$/",$materiale)) {
+                $messaggiPerForm = $messaggiPerForm . "<li>Il campo materiale dev'essere lungo almeno 2 caratteri, e al massimo 256.</li>";
+            }
         }
         // Verifiche immagine.
         $target_dir = "../images/upload_file_form/";
