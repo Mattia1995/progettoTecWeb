@@ -1205,7 +1205,7 @@ hr{
     box-sizing: border-box;
 }
 
-.team-section p{
+.team-section > p {
     font-size: larger;
     text-align: center;
     margin: auto;
