@@ -18,7 +18,7 @@
     --errorColor: #A30E09;
     --successColor: #007413;
     --borderCardColor: #000000;
-    --bodyDelText: #8F8F8F;
+    --bodyDelText: #6F6F6F;
     --hoverColorNavbar: #f0f0f0;
 }
 
@@ -76,12 +76,13 @@ body a:visited {
 }
 
 .error-form-message {
-    margin-left: 1em;
     margin-bottom: 1.2em;
+    color: var(--errorColor);
+    font-weight: bold;
 }
 
-.error-form-message li {
-    color: var(--errorColor);
+ul.error-form-message {
+    margin-left: 1em;
 }
 
 /********************************************
@@ -146,7 +147,7 @@ header {
     text-align: center;
 }
 
-#menu li:not(:has(a,button)){
+#menu .menu-not-link{
     padding: 0 19px;
 }
 
@@ -291,11 +292,11 @@ main h2, h3 {
     flex-wrap: wrap;
     box-sizing: border-box;
     list-style: none;
-	margin: 5px 5px;
+	margin: 0.2em;
     border: 1.5px solid var(--borderCardColor);
     border-radius: 10px;
     position: relative;
-    max-width: 23.5%;
+    max-width: 24%;
 }
 
 .prodottoVetrina img{
@@ -396,8 +397,8 @@ main h2, h3 {
 
 .category-container .link-button.selected{
     color: var(--linkHoverColor);
-    background-color: var(--flagColor);
-    border-color: var(--flagColor);
+    background-color: var(--bodyDelText);
+    border-color: var(--bodyDelText);
 }
 
 .category-container span{
@@ -529,6 +530,10 @@ main h2, h3 {
     padding: 0.4em 0.2em;
 }
 
+#contactsForm textarea {
+    resize: vertical;
+}
+
 #contactsForm input[type="submit"] {
 	width: 50%;
     padding: 0.6em 3em;
@@ -558,8 +563,9 @@ main h2, h3 {
 
 
 .container caption{
-    font-size: 2em;
+    font-size: 1.5em;
     padding-bottom: 0.8em;
+    font-weight: bold;
 }
 
 .container table,th,td{
@@ -784,6 +790,7 @@ footer {
     width: 70%;
     align-self: center;
     flex-grow: 2;
+    padding-right: 0.5em;
 }
 
 #area-riservata-gestione-articoli li dl dt {
@@ -791,6 +798,12 @@ footer {
     float: left;
     padding-right: 0.5em;
 }
+
+#area-riservata-gestione-articoli li dl dd {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 #area-riservata-gestione-articoli li a {
     width: 15%;
@@ -809,6 +822,11 @@ footer {
 ********* AREA RISERVATA ARTICOLO ***********
 ********************************************/
 
+#area-riservata-articolo h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 #gestione-articolo-form {
     width: 55%;
     margin: auto;
@@ -823,6 +841,10 @@ footer {
     width: 96%;
     margin-bottom: 1em;
     padding: 0.6em 0.3em;
+}
+
+#gestione-articolo-form textarea {
+    resize: vertical;
 }
 
 #gestione-articolo-form input[type="radio"]{

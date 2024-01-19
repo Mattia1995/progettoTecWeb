@@ -304,6 +304,7 @@
     width: 80%;
     float: none;
     margin: auto 0.4em;
+    margin: auto;
     margin-top: 0.6em;
     padding: 0.4em;
     font-size: 1.3em;
@@ -348,7 +349,7 @@ header{
     justify-content: flex-start;
 }
 
-#menu ul.menu-not-visible{
+#menu .menu-not-visible{
     display: none;
 }
 
@@ -392,37 +393,28 @@ header{
 
 #open-menu-mobile{
     display: flex;
-    height: 35px;
-    width: 35px;
-}
-
-#open-menu-mobile{
     background: url(images/more.png);
-    height: 35px;
-    width: 35px;
+    height: 44px;
+    width: 44px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     background-color: white;
     border: none;
+    text-indent: -999em;
 }
 
-#close-menu-mobile{
+#menu #close-menu-mobile{
     display: flex;
-    height: 35px;
-    width: 35px;
-    padding-left: 30px;
-}
-
-#close-menu-mobile{
     background: url(images/close.png);
-    height: 35px;
-    width: 35px;
-    padding-left: 100px;
+    height: 44px;
+    width: 44px;
+    margin-left: 19px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     border: none;
+    text-indent: -999em;
 }
 
 

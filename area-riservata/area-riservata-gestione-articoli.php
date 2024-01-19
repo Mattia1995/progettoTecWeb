@@ -44,7 +44,7 @@
 						$prezzoScontatoStringa = "<dt>Prezzo scontato:</dt>" . "<dd>" . $prezzoScontato . " €</dd>";
 					}
 					// Protezione per non avere il title del link troppo lungo.
-					$nomeArticoloPrimi30Char = substr($articolo["name"], 0, 30); 
+					$nomeArticoloPrimi30Char = substr($articolo["name"], 0, 50); 
 					$listaArticoli .= 
 					"<li>" .
 						"<img src=\"" . $articolo["image_url"] . "\" alt=\"\">" .
@@ -69,22 +69,22 @@
 			if ($category_id == null) {
 				$categoryLinkList .= "<span class=\"link-button selected\">Tutte</span>";
 			} else {
-				$categoryLinkList .= "<a class=\"link-button\" href=\"area-riservata-gestione-articoli.php\">Tutte</a>";
+				$categoryLinkList .= "<a class=\"link-button\" href=\"area-riservata-gestione-articoli.php\" title=\"Tutte le categorie\">Tutte</a>";
 			}
 			if ($category_id == 1) {
 				$categoryLinkList .= "<span class=\"link-button selected\">Chitarre</span>";
 			} else {
-				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=1\">Chitarre</a>";
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=1\" title=\"Filtra per chitarre\">Chitarre</a>";
 			}
 			if ($category_id == 2) {
 				$categoryLinkList .= "<span class=\"link-button selected\">Pianoforti</span>";
 			} else {
-				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=2\">Pianoforti</a>";
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=2\" title=\"Filtra per pianoforti\">Pianoforti</a>";
 			}
 			if ($category_id == 3) {
 				$categoryLinkList .= "<span class=\"link-button selected\">Batterie</span>";
 			} else {
-				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=3\">Batterie</a>";
+				$categoryLinkList .= "<a class=\"link-button\" href=\"?category_id=3\" title=\"Filtra per batterie\">Batterie</a>";
 			}
 			$categoryLinkList .= "</div>";
 		} else {

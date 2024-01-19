@@ -23,16 +23,16 @@
 				
                 <nav id="menu">
                     <ul class="menu-not-visible">
-                        <li><button onclick=hideSidebar() id="close-menu-mobile"></button></li>
-                        <li lang="en"><a href="home.html">Home</a></li>
+                        <li><button onclick="hideSidebar()" id="close-menu-mobile" class="menu-not-link">Chiudi il menu</button></li>
+						<li lang="en"><a href="home.html">Home</a></li>
                         <li><a href="vetrina.php">Vetrina</a></li>
                         <li><a href="contatti.php">Contatti</a></li>
 						<li><a href="dove_siamo.html">Dove siamo</a></li>
-                        <li>Chi siamo</li>
+                        <li class="menu-not-link">Chi siamo</li>
                         <li><a href="area-riservata/area-riservata-login.php">Area riservata</a></li>
                     </ul>
-                        <button onclick=showSidebar() id="open-menu-mobile"></button>
-                </nav>
+						<button onclick="showSidebar()" id="open-menu-mobile" class="menu-not-link">Apri il menu</button>
+				</nav>
             </div>
 		</header>
 		<nav id="breadcrumb">
