@@ -18,7 +18,7 @@
     --errorColor: #A30E09;
     --successColor: #007413;
     --borderCardColor: #000000;
-    --bodyDelText: #8F8F8F;
+    --bodyDelText: #6F6F6F;
     --hoverColorNavbar: #f0f0f0;
 }
 
@@ -397,8 +397,8 @@ main h2, h3 {
 
 .category-container .link-button.selected{
     color: var(--linkHoverColor);
-    background-color: var(--flagColor);
-    border-color: var(--flagColor);
+    background-color: var(--bodyDelText);
+    border-color: var(--bodyDelText);
 }
 
 .category-container span{
