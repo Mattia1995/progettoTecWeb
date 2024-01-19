@@ -292,7 +292,7 @@ main h2, h3 {
     flex-wrap: wrap;
     box-sizing: border-box;
     list-style: none;
-	margin: 5px 5px;
+	margin: 0.2em;
     border: 1.5px solid var(--borderCardColor);
     border-radius: 10px;
     position: relative;
@@ -563,8 +563,9 @@ main h2, h3 {
 
 
 .container caption{
-    font-size: 2em;
+    font-size: 1.5em;
     padding-bottom: 0.8em;
+    font-weight: bold;
 }
 
 .container table,th,td{
