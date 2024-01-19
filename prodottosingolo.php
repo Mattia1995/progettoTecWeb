@@ -19,6 +19,8 @@
     $coloreArticolo = "";
     $immagineArticolo = "";
 	$categoria = "";
+	$pageTitle = "";
+	$pageDescription = "";
 	
     if (isset ($_GET['product_id'])) {
         $product_id = $_GET['product_id'];
@@ -47,6 +49,8 @@
                     if ($articolo["discounted_price"] != null){
                         $prezzoScontatoArticolo = "<dt>Prezzo scontato</dt><dd>" . str_replace (".", ",", $articolo["discounted_price"]) . " €</dd>";
                     }
+					$pageTitle = substr($articolo["name"], 0, 60);
+					$pageDescription = substr($articolo["name"], 0, 136);
                 } else {
                     // Se viene fornito un product_id non esistente allora faccio redirect alla pagina del nuovo prodotto.
                     header("Location:./vetrina.php");
@@ -92,5 +96,7 @@
 	$paginaHtml = str_replace ("{materialeArticolo}", $materialeArticolo, $paginaHtml);
 	$paginaHtml = str_replace ("{coloreArticolo}", $coloreArticolo, $paginaHtml);
 	$paginaHtml = str_replace ("{classNotShowElement}", $errorClassNotShowElement, $paginaHtml);
+	$paginaHtml = str_replace ("{pageDescription}", $pageDescription, $paginaHtml);
+	$paginaHtml = str_replace ("{pageTitle}", $pageTitle, $paginaHtml);
 	echo $paginaHtml;
 ?>
