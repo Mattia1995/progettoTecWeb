@@ -349,7 +349,7 @@ header{
     justify-content: flex-start;
 }
 
-#menu ul.menu-not-visible{
+#menu .menu-not-visible{
     display: none;
 }
 
@@ -393,14 +393,9 @@ header{
 
 #open-menu-mobile{
     display: flex;
-    height: 35px;
-    width: 35px;
-}
-
-#open-menu-mobile{
     background: url(images/more.png);
-    height: 35px;
-    width: 35px;
+    height: 44px;
+    width: 44px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -409,23 +404,17 @@ header{
     text-indent: -999em;
 }
 
-#close-menu-mobile{
+#menu #close-menu-mobile{
     display: flex;
-    height: 35px;
-    width: 35px;
-    padding-left: 30px;
-    text-indent: -999em;
-}
-
-#close-menu-mobile{
     background: url(images/close.png);
-    height: 35px;
-    width: 35px;
-    padding-left: 100px;
+    height: 44px;
+    width: 44px;
+    margin-left: 19px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     border: none;
+    text-indent: -999em;
 }
 
 

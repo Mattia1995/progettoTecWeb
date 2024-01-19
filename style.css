@@ -147,7 +147,7 @@ header {
     text-align: center;
 }
 
-#menu li:not(:has(a,button)){
+#menu .menu-not-link{
     padding: 0 19px;
 }
 
@@ -296,7 +296,7 @@ main h2, h3 {
     border: 1.5px solid var(--borderCardColor);
     border-radius: 10px;
     position: relative;
-    max-width: 23.5%;
+    max-width: 24%;
 }
 
 .prodottoVetrina img{
