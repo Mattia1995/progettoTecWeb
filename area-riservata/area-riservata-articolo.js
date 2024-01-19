@@ -6,7 +6,7 @@ function confirmDialog () {
 
 /** Gestione validazione */
 var messaggiForm = {
-	"nomeArticolo": ["", /^[a-zA-Z\ \'\-]{2,256}$/, "Inserisci un nome lungo almeno 2 caratteri, e al massimo 256. Non sono ammessi numeri o simboli speciali.", "messaggiNomeArticolo"],
+	"nomeArticolo": ["", /^[a-zA-Z0-9\ \'\-]{2,256}$/, "Inserisci un nome lungo almeno 2 caratteri, e al massimo 256. Non sono ammessi numeri o simboli speciali.", "messaggiNomeArticolo"],
 	"descrizioneArticolo": ["", /^.{2,2048}$/, "Inserisci un testo lungo almeno 2 caratteri, e al massimo 2048.", "messaggiDescrizioneArticolo"],
 	"materialeArticolo": ["", /^[a-zA-Z\ \'\-]{2,256}$/, "Il campo materiale dev'essere lungo almeno 2 caratteri, e al massimo 256. Non sono ammessi numeri o simboli speciali.", "messaggiMaterialeArticolo"],
 	"marchioArticolo": ["", /^[a-zA-Z\ \'\-]{2,256}$/, "Il campo marchio dev'essere lungo almeno 2 caratteri, e al massimo 256. Non sono ammessi numeri o simboli speciali.", "messaggiMarchioArticolo"],
