@@ -216,7 +216,7 @@
         if ($descrizione == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>La descrizione dell'articolo deve essere valorizzata.</li>";
         } else {
-            if (!preg_match("/^.{2,2048}$/",$descrizione)) {
+            if (!preg_match("/^(.|\s){2,2048}$/",$descrizione)) {
                 $messaggiPerForm = $messaggiPerForm . "<li>Inserisci una descrizione lunga almeno 2 caratteri, e al massimo 2048.</li>";
             }
         }
