@@ -19,7 +19,6 @@
     --successColor: #007413;
     --borderCardColor: #000000;
     --bodyDelText: #6F6F6F;
-    --hoverColorNavbar: #f0f0f0;
 }
 
 html {
@@ -169,18 +168,18 @@ header {
     justify-content: center;
 }
 
-
-#menu a:hover{
-    background-color: var(--hoverColorNavbar);
-}
-
-
 #menu a:link {
     color: var(--linkColor);
 }
 
 #menu a:visited {
     color: var(--visitedLinkColor);
+}
+
+
+#menu a:hover{
+    background-color: var(--flagColor);
+    color: var(--linkHoverColor);
 }
 
 
@@ -1064,10 +1063,18 @@ footer {
     line-height: 1.5em;
 }
 
-.text-overlay p {
+.text-overlay p { 
     font-size: 2em;
     line-height: 1em;
 }
+
+.text-overlay h2 { 
+    font-size: 3em;
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: normal;
+}
+
 
 .overlay {
     position: absolute;
@@ -1080,14 +1087,6 @@ footer {
 
 .prodotti{
     margin-top: 3em;
-}
-
-.prodotti h2{
-    font-size: 30px;
-    margin-top: 1em;
-    margin-bottom: 0;
-    padding-bottom: 0.3em;
-    text-align: left;
 }
 
 .prodotti-container {
@@ -1111,7 +1110,7 @@ footer {
     transform: scale(1.2);
 }
 
-.passione h3{
+#home-container h3{
     font-size: 30px;
     margin-top: 1em;
     margin-bottom: 0;
@@ -1120,6 +1119,10 @@ footer {
     margin-top: 2em;
 }
 
+
+#home-container .il-team h3{
+    margin-top: 3em;
+}
 
 
 .passion-grid {
@@ -1210,15 +1213,6 @@ footer {
 hr{
     margin-bottom: 2em;
     color: var(--flagColor);
-}
-
-.il-team h3{
-    font-size: 30px;
-    margin-top: 1em;
-    margin-bottom: 0;
-    padding-bottom: 0.3em;
-    text-align: left;
-    margin-top: 3em;
 }
 
 .team-section {
