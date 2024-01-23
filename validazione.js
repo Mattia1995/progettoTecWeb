@@ -3,7 +3,7 @@ window.addEventListener('load', initPagina);
 var messaggiForm = {
 	"nome": ["Il tuo nome", /^[a-zA-Z\ \'\-]{2,256}$/, "Inserisci un nome lungo almeno 2 caratteri, e al massimo 256. Non sono ammessi numeri o simboli speciali.", "messaggiNome"],
 	"email": ["La tua e-mail, su cui possiamo ricontattarti", /^[a-zA-Z0-9. _-]+@[a-zA-Z0-9. -]+\.[a-zA-Z]{2,4}$/, "L'indirizzo e-mail inserito non è valido, controlla di aver digitato correttamente la tua e-mail.", "messaggiEmail"],
-	"messaggio": ["La tua richiesta per noi!", /^.{2,2048}$/, "Inserisci un testo lungo almeno 2 caratteri, e al massimo 2048.", "messaggiMessaggio"]
+	"messaggio": ["La tua richiesta per noi!", /^(.|\s){2,2048}$/, "Inserisci un testo lungo almeno 2 caratteri, e al massimo 2048.", "messaggiMessaggio"]
 }
 
 function initPagina() {

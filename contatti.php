@@ -85,7 +85,7 @@
         if ($messaggioPost == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>Il messaggio deve essere valorizzato.</li>";
         } else {
-            if (!preg_match("/^.{2,2048}$/",$messaggioPost)) {
+            if (!preg_match("/^(.|\s){2,2048}$/",$messaggioPost)) {
                 $messaggiPerForm = $messaggiPerForm . "<li>Inserisci un testo lungo almeno 2 caratteri, e al massimo 2048.</li>";
             }
         }

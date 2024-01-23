@@ -209,14 +209,14 @@
         if ($nome == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>Il nome dell'articolo deve essere valorizzato.</li>";
         } else {
-            if (!preg_match("/^[a-zA-Z\ \'\-]{2,256}$/",$nome)) {
+            if (!preg_match("/^[a-zA-Z0-9\ \'\-]{2,256}$/",$nome)) {
                 $messaggiPerForm = $messaggiPerForm . "<li>Inserisci un nome lungo almeno 2 caratteri, e al massimo 256. Non sono ammessi numeri o simboli speciali.</li>";
             }
         }
         if ($descrizione == null) {
             $messaggiPerForm = $messaggiPerForm . "<li>La descrizione dell'articolo deve essere valorizzata.</li>";
         } else {
-            if (!preg_match("/^.{2,2048}$/",$descrizione)) {
+            if (!preg_match("/^(.|\s){2,2048}$/",$descrizione)) {
                 $messaggiPerForm = $messaggiPerForm . "<li>Inserisci una descrizione lunga almeno 2 caratteri, e al massimo 2048.</li>";
             }
         }
@@ -303,12 +303,12 @@
                 if ($product_id == null) {
                     $resultInsert = $connection->insertNewProduct ($nome, $descrizione, $prezzo, $marchio, $colore, $materiale, $idCategoriaSelezionata, $prezzoScontato, $target_file);
                     if (!$resultInsert) {
-                        $messaggiPerForm = "<p class=\"error-message\">Errore nell'inserimento del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
+                        $messaggiPerForm = "<p class=\"error-message\">Errore nell'inserimento del prodotto riprova e se l'errore dovesse persistere ti invitiamo a contattare l'amministratore del sito.</p>";
                     }
                 } else {
                     $resultUpdate = $connection->updateProduct ($product_id, $nome, $descrizione, $prezzo, $marchio, $colore, $materiale, $idCategoriaSelezionata, $prezzoScontato, $target_file);
                     if (!$resultUpdate) {
-                        $messaggiPerForm = "<p class=\"error-message\">Errore nell'aggiornamento del prodotto riprova e se l'errore persiste contattaci tramite la pagina dedicata.</p>";
+                        $messaggiPerForm = "<p class=\"error-message\">Errore nell'aggiornamento del prodotto riprova e se l'errore dovesse persistere ti invitiamo a contattare l'amministratore del sito.</p>";
                     } else if ($removeOldImage){
                         // Dopo aver aggiornato l'articolo senza errori cancello la vecchia immagine se è stata modificata.
                         unlink($immagineArticolo);
