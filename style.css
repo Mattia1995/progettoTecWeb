@@ -1135,10 +1135,13 @@ footer {
     padding-bottom: 0.3em;
     text-align: left;
     margin-top: 2em;
+    border-bottom: 1px solid var(--flagColor);
+    margin-bottom: 1.5em;
 }
 
 #home-container .il-team h3{
     margin-top: 3em;
+    border-bottom: 1px solid var(--flagColor);
 }
 
 .passion-grid {
