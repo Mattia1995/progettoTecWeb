@@ -339,10 +339,12 @@ header{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    transition: .5s;
+    -moz-transition: none;
 }
 
 #menu .menu-not-visible{
-    display: none;
+    width: 0;
 }
 
 #menu li{
