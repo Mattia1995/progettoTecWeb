@@ -27,6 +27,7 @@ html {
     line-height: 1.5em;
     margin: auto;
     background-color: var(--bodyBgColor);
+    scroll-behavior: smooth;
 }
 
 body {
