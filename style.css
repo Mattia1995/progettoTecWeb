@@ -52,6 +52,21 @@ body a:visited {
 }
 
 
+.torna-su {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+    
+.torna-su a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: var(--headerBgColor);
+    color: var(--flagColor);
+    border-radius: 50px;
+    border: 3px solid var(--flagColor);
+}
+
 /********************************************
 ************** GESTIONE ERRORI **************
 ********************************************/
